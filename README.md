@@ -1,1 +1,0 @@
-# accessibility_paradox_latex

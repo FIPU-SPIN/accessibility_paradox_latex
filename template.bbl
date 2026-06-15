@@ -1,0 +1,79 @@
+\begin{thebibliography}{999}
+
+\bibitem[Zdravkova et~al.(2024)Zdravkova, Krasniqi, Dalipi, and
+  Ferati]{zdravkova2024cutting}
+Zdravkova, K.; Krasniqi, V.; Dalipi, F.; Ferati, M.
+\newblock Cutting-edge communication and learning assistive technologies for
+  disabled students: An artificial intelligence perspective.
+\newblock {\em Frontiers in Artificial Intelligence} {\bf 2024}, {\em
+  7},~1360732.
+
+\bibitem[Kortemeyer(2023)]{kortemeyer2023ai}
+Kortemeyer, G.
+\newblock Could an artificial intelligence agent be a tutor? {GPT}-4 as a tutor
+  in a university physics class.
+\newblock {\em The Physics Teacher} {\bf 2023}, {\em 61},~572--576.
+
+\bibitem[Rello and Baeza-Yates(2013)]{rello2013simplify}
+Rello, L.; Baeza-Yates, R.
+\newblock Good fonts for dyslexia.
+\newblock In Proceedings of the Proceedings of the 15th International ACM
+  SIGACCESS Conference on Computers and Accessibility,  2013, pp. 1--8.
+
+\bibitem[Stajner and Saggion(2021)]{stajner2021automatic}
+Stajner, S.; Saggion, H.
+\newblock Automatic text simplification for reading assistance: A review of
+  methods, applications, and future directions.
+\newblock {\em Natural Language Engineering} {\bf 2021}, {\em 27},~507--546.
+
+\bibitem[OpenAI et~al.(2023)OpenAI, Achiam, Adler, Agarwal,
+  et~al.]{openai2023gpt4}
+OpenAI.; Achiam, J.; Adler, S.; Agarwal, S.;  et~al.
+\newblock GPT-4 Technical Report,  2023,
+  \href{http://arxiv.org/abs/2303.08774}{{\normalfont
+  [arXiv:cs.CL/2303.08774]}}.
+
+\bibitem[Anthropic(2024)]{anthropic2024claude}
+Anthropic.
+\newblock The Claude 3 Model Family: Opus, Sonnet, Haiku,  2024.
+
+\bibitem[Harp and Mayer(1998)]{harp1998seductive}
+Harp, S.F.; Mayer, R.E.
+\newblock How seductive details do their damage: A theory of cognitive interest
+  in science learning.
+\newblock {\em Journal of Educational Psychology} {\bf 1998}, {\em 90},~414.
+
+\bibitem[Qian and Lehman(2017)]{qian2017misconceptions}
+Qian, Y.; Lehman, J.D.
+\newblock Students' misconceptions and other difficulties in introductory
+  programming: A literature review.
+\newblock {\em ACM Transactions on Computing Education} {\bf 2017}, {\em
+  18},~1--24.
+
+\bibitem[Snowling et~al.(2019)Snowling, Hulme, and
+  Nation]{snowling2019dyslexia}
+Snowling, M.J.; Hulme, C.; Nation, K.
+\newblock Defining and understanding dyslexia: past, present and future.
+\newblock {\em Oxford Review of Education} {\bf 2019}, {\em 46},~501--513.
+
+\bibitem[Barkley(2015)]{barkley2015attention}
+Barkley, R.A.
+\newblock Attention-deficit hyperactivity disorder: A handbook for diagnosis
+  and treatment {\bf 2015}.
+
+\bibitem[Stone et~al.(2024)Stone, Liao, Szafir, and Boyer]{stone2024analogies}
+Stone, M.; Liao, Y.; Szafir, D.; Boyer, K.E.
+\newblock Analogies in the Age of LLMs: When Explanatory Metaphors Mislead CS
+  Learners.
+\newblock In Proceedings of the Proceedings of the 55th ACM Technical Symposium
+  on Computer Science Education (SIGCSE 2024). ACM,  2024, pp. 1256--1262.
+
+\bibitem[Ibrahim et~al.(2026)Ibrahim, Liu, Chen, and Wang]{ibrahim2026warmth}
+Ibrahim, H.; Liu, T.; Chen, A.; Wang, D.
+\newblock The Warmth-Accuracy Trade-off: When Making LLMs More Empathetic
+  Increases Factual Errors.
+\newblock In Proceedings of the Proceedings of the 2026 ACM Conference on
+  Fairness, Accountability, and Transparency,  2026.
+\newblock Forthcoming.
+
+\end{thebibliography}
