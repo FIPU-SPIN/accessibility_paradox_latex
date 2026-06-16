@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.2.9)  15 JUN 2026 11:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.2.9)  16 JUN 2026 10:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -869,8 +869,60 @@ Package: seqsplit 2006/08/07 v0.1 Splitting long sequences (DNA, RNA, proteins, 
 \cellWidthX=\skip199
 \cellWidthY=\skip256
 \cellWidthZ=\skip257
+) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplots.sty (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.revision.tex)
+Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
+ (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.code.tex (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscore.code.tex
+\t@pgfplots@toka=\toks63
+\t@pgfplots@tokb=\toks64
+\t@pgfplots@tokc=\toks65
+\pgfplots@tmpa=\dimen340
+\c@pgfplots@coordindex=\count397
+\c@pgfplots@scanlineindex=\count398
+ (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgfplotssysgeneric.code.tex)) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgfplotslibrary.code.tex) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfcompatib\pgfplotsoldpgfsupp_loader.code.tex (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryfpu.code.tex)
+Package pgfplots: loading complementary utilities for your pgf version...
+\t@pgf@toka=\toks66
+\t@pgf@tokb=\toks67
+\t@pgf@tokc=\toks68
+(C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfcompatib\pgfplotsoldpgfsupp_pgfutil-common-lists.tex)) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsutil.code.tex (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsliststructure.code.tex) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsliststructureext.code.tex) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsarray.code.tex
+\c@pgfplotsarray@tmp=\count399
+) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsmatrix.code.tex) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\pgfplotstableshared.code.tex
+\c@pgfplotstable@counta=\count400
+\t@pgfplotstable@a=\toks69
+) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsdeque.code.tex) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsbinary.code.tex (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsbinary.data.code.tex)) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsutil.verb.code.tex) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgflibrarypgfplots.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count401
+ (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflibrarypgfplots.surfshading.pgfsys-pdftex.def))) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotscolormap.code.tex (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotscolor.code.tex)) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsstackedplots.code.tex) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsplothandlers.code.tex (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsmeshplothandler.code.tex (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsmeshplotimage.code.tex))) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.scaling.code.tex) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscoordprocessing.code.tex) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.errorbars.code.tex) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.markers.code.tex) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsticks.code.tex) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.paths.code.tex) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.code.tex (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen341
+\pgfdecoratedremainingdistance=\dimen342
+\pgfdecoratedinputsegmentcompleteddistance=\dimen343
+\pgfdecoratedinputsegmentremainingdistance=\dimen344
+\pgf@decorate@distancetomove=\dimen345
+\pgf@decorate@repeatstate=\count402
+\pgfdecorationsegmentamplitude=\dimen346
+\pgfdecorationsegmentlength=\dimen347
 )
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 128.
+\tikz@lib@dec@box=\box78
+) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.pathmorphing.code.tex (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorations\pgflibrarydecorations.pathmorphing.code.tex)) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.pathreplacing.code.tex (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorations\pgflibrarydecorations.pathreplacing.code.tex)) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlibrarypgfplots.contourlua.code.tex)
+\pgfplots@numplots=\count403
+\pgfplots@xmin@reg=\dimen348
+\pgfplots@xmax@reg=\dimen349
+\pgfplots@ymin@reg=\dimen350
+\pgfplots@ymax@reg=\dimen351
+\pgfplots@zmin@reg=\dimen352
+\pgfplots@zmax@reg=\dimen353
+) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+ (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplotmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlibrarypgfplots.statistics.code.tex) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowinset=\dimen354
+\pgfarrowlength=\dimen355
+\pgfarrowwidth=\dimen356
+\pgfarrowlinewidth=\dimen357
+)
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 183.
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.sty
@@ -882,19 +934,19 @@ Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count397
+\c@section@level=\count404
 ) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
-\@linkdim=\dimen340
-\Hy@linkcounter=\count398
-\Hy@pagecounter=\count399
+\@linkdim=\dimen358
+\Hy@linkcounter=\count405
+\Hy@pagecounter=\count406
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count400
+\Hy@SavedSpaceFactor=\count407
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -912,21 +964,21 @@ Package hyperref Info: Plain pages OFF on input line 4210.
 Package hyperref Info: Backreferencing OFF on input line 4215.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4462.
-\c@Hy@tempcnt=\count401
+\c@Hy@tempcnt=\count408
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4801.
-\XeTeXLinkMargin=\dimen341
+\XeTeXLinkMargin=\dimen359
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count402
-\Field@Width=\dimen342
-\Fld@charsize=\dimen343
+\Fld@menulength=\count409
+\Field@Width=\dimen360
+\Fld@charsize=\dimen361
 Package hyperref Info: Hyper figures OFF on input line 6078.
 Package hyperref Info: Link nesting OFF on input line 6083.
 Package hyperref Info: Hyper index ON on input line 6086.
@@ -934,16 +986,16 @@ Package hyperref Info: backreferencing OFF on input line 6093.
 Package hyperref Info: Link coloring ON on input line 6096.
 Package hyperref Info: Link coloring with OCG OFF on input line 6103.
 Package hyperref Info: PDF/A mode OFF on input line 6108.
-\Hy@abspage=\count403
-\c@Item=\count404
-\c@Hfootnote=\count405
+\Hy@abspage=\count410
+\c@Item=\count411
+\c@Hfootnote=\count412
 )
 Package hyperref Info: Driver: hpdftex.
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
 File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
 Package hyperref Info: \pdfmajorversion.\pdfminorversion:=1.7 on input line 204.
-\Fld@listcount=\count406
-\c@bookmark@seq@number=\count407
+\Fld@listcount=\count413
+\c@bookmark@seq@number=\count414
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
@@ -972,51 +1024,51 @@ Package cleveref Info: always capitalise cross-reference names on input line 785
 Package cleveref Info: no abbreviation of names on input line 7852.
 )
 ==> First Aid for cleveref.sty applied!
-LaTeX Font Info:    Trying to load font information for T1+ppl on input line 128.
+LaTeX Font Info:    Trying to load font information for T1+ppl on input line 183.
 (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 ) (template.aux)
 \openout1 = `template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count408
-\scratchdimen=\dimen344
-\scratchbox=\box78
-\nofMPsegments=\count409
-\nofMParguments=\count410
-\everyMPshowfont=\toks63
-\MPscratchCnt=\count411
-\MPscratchDim=\dimen345
-\MPnumerator=\count412
-\makeMPintoPDFobject=\count413
-\everyMPtoPDFconversion=\toks64
+\scratchcounter=\count415
+\scratchdimen=\dimen362
+\scratchbox=\box79
+\nofMPsegments=\count416
+\nofMParguments=\count417
+\everyMPshowfont=\toks70
+\MPscratchCnt=\count418
+\MPscratchDim=\dimen363
+\MPnumerator=\count419
+\makeMPintoPDFobject=\count420
+\everyMPtoPDFconversion=\toks71
 )
-LaTeX Info: Redefining \microtypecontext on input line 128.
-Package microtype Info: Applying patch `item' on input line 128.
-Package microtype Info: Applying patch `toc' on input line 128.
-Package microtype Info: Applying patch `eqnum' on input line 128.
-Package microtype Info: Applying patch `footnote' on input line 128.
-Package microtype Info: Applying patch `verbatim' on input line 128.
-LaTeX Info: Redefining \microtypesetup on input line 128.
+LaTeX Info: Redefining \microtypecontext on input line 183.
+Package microtype Info: Applying patch `item' on input line 183.
+Package microtype Info: Applying patch `toc' on input line 183.
+Package microtype Info: Applying patch `eqnum' on input line 183.
+Package microtype Info: Applying patch `footnote' on input line 183.
+Package microtype Info: Applying patch `verbatim' on input line 183.
+LaTeX Info: Redefining \microtypesetup on input line 183.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1032,13 +1084,13 @@ File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 ) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 128.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 183.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: scrextend package is loaded.
-\caption@addmargin@hsize=\dimen346
-\caption@addmargin@linewidth=\dimen347
+\caption@addmargin@hsize=\dimen364
+\caption@addmargin@linewidth=\dimen365
 Package caption Info: End \AtBeginDocument code.
 
 *geometry* detected driver: pdftex
@@ -1075,50 +1127,52 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package newfloat Info: `float' package detected.
-Package hyperref Info: Link coloring ON on input line 128.
+Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
+
+Package hyperref Info: Link coloring ON on input line 183.
 (template.out) (template.out)
 \@outlinefile=\write4
 \openout4 = `template.out'.
 
-LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 128.
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 183.
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
-LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 128.
+LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 183.
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
-LaTeX Font Info:    Trying to load font information for OML+zplm on input line 128.
+LaTeX Font Info:    Trying to load font information for OML+zplm on input line 183.
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 128.
+LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 183.
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 128.
+LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 183.
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 128.
+(Font)              scaled to size 10.42007pt on input line 183.
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 128.
+(Font)              scaled to size 7.91925pt on input line 183.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 128.
+(Font)              scaled to size 6.25204pt on input line 183.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 128.
+(Font)              scaled to size 10.42007pt on input line 183.
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 128.
+(Font)              scaled to size 7.91925pt on input line 183.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 128.
-LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 128.
+(Font)              scaled to size 6.25204pt on input line 183.
+LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 183.
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
@@ -1129,14 +1183,14 @@ Package microtype Info: Loading generic protrusion settings for font family
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-eur.cfg
 File: mt-eur.cfg 2006/07/31 v1.1 microtype config. file: AMS Euler Roman (RS)
 )
-LaTeX Font Info:    Redeclaring symbol font `AMSb' on input line 128.
+LaTeX Font Info:    Redeclaring symbol font `AMSb' on input line 183.
 LaTeX Font Info:    Overwriting symbol font `AMSb' in version `normal'
-(Font)                  U/msb/m/n --> U/msb/m/n on input line 128.
+(Font)                  U/msb/m/n --> U/msb/m/n on input line 183.
 LaTeX Font Info:    Overwriting symbol font `AMSb' in version `bold'
-(Font)                  U/msb/m/n --> U/msb/m/n on input line 128.
-Package marginnote Info: Margin note 1.1 is on absolute page 1 on input line 128.
-Package marginnote Info: right page because not two side mode on input line 128.
-Package marginnote Info: xpos seems to be 167.01753pt on input line 128.
+(Font)                  U/msb/m/n --> U/msb/m/n on input line 183.
+Package marginnote Info: Margin note 1.1 is on absolute page 1 on input line 183.
+Package marginnote Info: right page because not two side mode on input line 183.
+Package marginnote Info: xpos seems to be 167.01753pt on input line 183.
 Package epstopdf Info: Source file: <Definitions/logo-mdpi.eps>
 (epstopdf)                    date: 2026-06-15 10:18:31
 (epstopdf)                    size: 563678 bytes
@@ -1144,38 +1198,38 @@ Package epstopdf Info: Source file: <Definitions/logo-mdpi.eps>
 (epstopdf)                    date: 2026-06-15 10:32:27
 (epstopdf)                    size: 13253 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=Definitions/logo-mdpi-eps-converted-to.pdf Definitions/logo-mdpi.eps>
-(epstopdf)             \includegraphics on input line 128.
+(epstopdf)             \includegraphics on input line 183.
 Package epstopdf Info: Output file is already uptodate.
 <Definitions/logo-mdpi-eps-converted-to.pdf, id=81, 74.2775pt x 49.18375pt>
 File: Definitions/logo-mdpi-eps-converted-to.pdf Graphic file (type pdf)
 <use Definitions/logo-mdpi-eps-converted-to.pdf>
-Package pdftex.def Info: Definitions/logo-mdpi-eps-converted-to.pdf  used on input line 128.
+Package pdftex.def Info: Definitions/logo-mdpi-eps-converted-to.pdf  used on input line 183.
 (pdftex.def)             Requested size: 42.96877pt x 28.45274pt.
 <Definitions/logo-orcid.pdf, id=83, 102.3825pt x 102.3825pt>
 File: Definitions/logo-orcid.pdf Graphic file (type pdf)
 <use Definitions/logo-orcid.pdf>
-Package pdftex.def Info: Definitions/logo-orcid.pdf  used on input line 128.
+Package pdftex.def Info: Definitions/logo-orcid.pdf  used on input line 183.
 (pdftex.def)             Requested size: 9.10509pt x 9.10466pt.
 File: Definitions/logo-orcid.pdf Graphic file (type pdf)
 <use Definitions/logo-orcid.pdf>
-Package pdftex.def Info: Definitions/logo-orcid.pdf  used on input line 128.
+Package pdftex.def Info: Definitions/logo-orcid.pdf  used on input line 183.
 (pdftex.def)             Requested size: 9.10509pt x 9.10466pt.
 File: Definitions/logo-orcid.pdf Graphic file (type pdf)
 <use Definitions/logo-orcid.pdf>
-Package pdftex.def Info: Definitions/logo-orcid.pdf  used on input line 128.
+Package pdftex.def Info: Definitions/logo-orcid.pdf  used on input line 183.
 (pdftex.def)             Requested size: 9.10509pt x 9.10466pt.
 File: Definitions/logo-orcid.pdf Graphic file (type pdf)
 <use Definitions/logo-orcid.pdf>
-Package pdftex.def Info: Definitions/logo-orcid.pdf  used on input line 128.
+Package pdftex.def Info: Definitions/logo-orcid.pdf  used on input line 183.
 (pdftex.def)             Requested size: 9.10509pt x 9.10466pt.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 128.
+(Font)              scaled to size 8.33606pt on input line 183.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 128.
+(Font)              scaled to size 5.21004pt on input line 183.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 128.
+(Font)              scaled to size 8.33606pt on input line 183.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 128.
+(Font)              scaled to size 5.21004pt on input line 183.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
@@ -1224,13 +1278,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [5]
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 285.
+(Font)              scaled to size 9.37807pt on input line 353.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 285.
+(Font)              scaled to size 7.29405pt on input line 353.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 285.
+(Font)              scaled to size 9.37807pt on input line 353.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 285.
+(Font)              scaled to size 7.29405pt on input line 353.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1258,15 +1312,15 @@ Package rerunfilecheck Info: File `template.out' has not changed.
 (rerunfilecheck)             Checksum: 7085FB6AFFAE0F0D2A43AF435FCB0882;3235.
  ) 
 Here is how much of TeX's memory you used:
- 34257 strings out of 467871
- 641708 string characters out of 5418377
- 1143651 words of memory out of 5000000
- 62137 multiletter control sequences out of 15000+600000
- 698468 words of font info for 362 fonts, out of 8000000 for 9000
+ 44800 strings out of 467871
+ 1000579 string characters out of 5418377
+ 1595155 words of memory out of 5000000
+ 72543 multiletter control sequences out of 15000+600000
+ 697991 words of font info for 356 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 123i,13n,121p,5471b,703s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 123i,13n,121p,5471b,701s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\milic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi375\ecss0800.pk><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on template.pdf (7 pages, 178249 bytes).
+Output written on template.pdf (7 pages, 178524 bytes).
 PDF statistics:
  239 PDF objects out of 1000 (max. 8388607)
  39 named destinations out of 1000 (max. 500000)
