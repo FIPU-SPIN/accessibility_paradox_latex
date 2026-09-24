@@ -23,14 +23,14 @@
 \citation{zdravkova2024cutting}
 \citation{barkley2015attention}
 \citation{kortemeyer2023ai}
+\citation{rello2013simplify}
+\citation{stajner2021automatic}
+\citation{openai2023gpt4}
 \def\@LN@column{1}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Background and Related Work}{3}{section.2}\protected@file@percent }
 \newlabel{sec:related}{{2}{3}{Background and Related Work}{section.2}{}}
 \newlabel{sec:related@cref}{{[section][2][]2}{[1][3][]3}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}LLMs as Assistive Technology for Dyslexia and ADHD}{3}{subsection.2.1}\protected@file@percent }
-\citation{rello2013simplify}
-\citation{stajner2021automatic}
-\citation{openai2023gpt4}
 \citation{ibrahim2026warmth}
 \citation{stajner2021automatic}
 \def\@LN@column{1}
@@ -44,24 +44,76 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Misconceptions in Computer Science Education}{5}{subsection.2.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.5}The Accessibility Paradox: A Formal Hypothesis}{5}{subsection.2.5}\protected@file@percent }
 \def\@LN@column{1}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Methodology}{6}{section.3}\protected@file@percent }
-\newlabel{sec:method}{{3}{6}{Methodology}{section.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Materials and Methods}{6}{section.3}\protected@file@percent }
+\newlabel{sec:method}{{3}{6}{Materials and Methods}{section.3}{}}
 \newlabel{sec:method@cref}{{[section][3][]3}{[1][6][]6}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Results}{6}{section.4}\protected@file@percent }
-\newlabel{sec:results}{{4}{6}{Results}{section.4}{}}
-\newlabel{sec:results@cref}{{[section][4][]4}{[1][6][]6}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{6}{section.5}\protected@file@percent }
-\newlabel{sec:discussion}{{5}{6}{Discussion}{section.5}{}}
-\newlabel{sec:discussion@cref}{{[section][5][]5}{[1][6][]6}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Design Principles for Accessible AI Tutoring Interfaces}{6}{section.6}\protected@file@percent }
-\newlabel{sec:design}{{6}{6}{Design Principles for Accessible AI Tutoring Interfaces}{section.6}{}}
-\newlabel{sec:design@cref}{{[section][6][]6}{[1][6][]6}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Limitations}{6}{section.7}\protected@file@percent }
-\newlabel{sec:limitations}{{7}{6}{Limitations}{section.7}{}}
-\newlabel{sec:limitations@cref}{{[section][7][]7}{[1][6][]6}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusions}{6}{section.8}\protected@file@percent }
-\newlabel{sec:conclusion}{{8}{6}{Conclusions}{section.8}{}}
-\newlabel{sec:conclusion@cref}{{[section][8][]8}{[1][6][]6}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Benchmark Design Overview}{6}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Concept Selection}{6}{subsection.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Model Selection}{6}{subsection.3.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Selected open-weight LLMs}}{6}{table.caption.1}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{tab:models}{{1}{6}{Selected open-weight LLMs}{table.caption.1}{}}
+\newlabel{tab:models@cref}{{[table][1][]1}{[1][6][]6}{}{}{}}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Prompt Engineering and Condition Design}{7}{subsection.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.1}Condition A: Standard Explanation (Baseline)}{7}{subsubsection.3.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2}Condition B: Simplified Explanation (Reading Difficulties)}{7}{subsubsection.3.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.3}Condition C: Highly Simplified Explanation (Attention Difficulties)}{7}{subsubsection.3.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Data Generation Procedure}{7}{subsection.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.1}Input Format}{7}{subsubsection.3.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.2}Generation Loop}{7}{subsubsection.3.5.2}\protected@file@percent }
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.3}Output Format}{8}{subsubsection.3.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Evaluation Framework}{8}{subsection.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.6.1}Judge Model Selection}{8}{subsubsection.3.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.6.2}Error Taxonomy}{8}{subsubsection.3.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.6.3}Evaluation Procedure}{8}{subsubsection.3.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Readability Metrics}{8}{subsection.3.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.8}Statistical Analysis Plan}{8}{subsection.3.8}\protected@file@percent }
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.8.1}Primary Hypothesis Testing}{9}{subsubsection.3.8.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.8.2}Secondary Analyses}{9}{subsubsection.3.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.8.3}Effect Sizes}{9}{subsubsection.3.8.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.9}Reproducibility}{9}{subsection.3.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Results}{9}{section.4}\protected@file@percent }
+\newlabel{sec:results}{{4}{9}{Results}{section.4}{}}
+\newlabel{sec:results@cref}{{[section][4][]4}{[1][9][]9}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Readability Metrics}{9}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Strategic Misconception Rate (SMR)}{9}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Dangerous Analogy Rate (DAR)}{9}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Oversimplification Error Rate (OER)}{9}{subsection.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Accuracy Scores}{9}{subsection.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Subfield Analysis}{9}{subsection.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Model Comparison}{9}{subsection.4.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.8}Summary of Findings}{9}{subsection.4.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{9}{section.5}\protected@file@percent }
+\newlabel{sec:discussion}{{5}{9}{Discussion}{section.5}{}}
+\newlabel{sec:discussion@cref}{{[section][5][]5}{[1][9][]9}{}{}{}}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}The Accessibility Paradox Confirmed}{10}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Why Vulnerable Learners Are Disproportionately at Risk}{10}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}The Systematic Nature of Oversimplification Errors}{10}{subsection.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Implications for AI Safety in Education}{10}{subsection.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Design Principles for Accessible AI Tutoring Interfaces}{10}{section.6}\protected@file@percent }
+\newlabel{sec:design}{{6}{10}{Design Principles for Accessible AI Tutoring Interfaces}{section.6}{}}
+\newlabel{sec:design@cref}{{[section][6][]6}{[1][9][]10}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Principle 1: Visual Uncertainty Signalling}{10}{subsection.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Principle 2: Analogy Status Tagging}{10}{subsection.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Principle 3: Accessibility-First Without Text-Based Disclaimers}{10}{subsection.6.3}\protected@file@percent }
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Limitations}{11}{section.7}\protected@file@percent }
+\newlabel{sec:limitations}{{7}{11}{Limitations}{section.7}{}}
+\newlabel{sec:limitations@cref}{{[section][7][]7}{[1][11][]11}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Generalisation to Other Populations}{11}{subsection.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Generalisation to Other Domains}{11}{subsection.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Generalisation to Other Models}{11}{subsection.7.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4}Causal Interpretation of Oversimplification Errors}{11}{subsection.7.4}\protected@file@percent }
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.5}LLM-as-Judge Validation}{12}{subsection.7.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.6}Parsing Failures}{12}{subsection.7.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusions}{12}{section.8}\protected@file@percent }
+\newlabel{sec:conclusion}{{8}{12}{Conclusions}{section.8}{}}
+\newlabel{sec:conclusion@cref}{{[section][8][]8}{[1][12][]12}{}{}{}}
 \bibdata{references}
 \bibcite{zdravkova2024cutting}{{1}{2024}{{Zdravkova et~al.}}{{Zdravkova, Krasniqi, Dalipi, and Ferati}}}
 \bibcite{kortemeyer2023ai}{{2}{2023}{{Kortemeyer}}{{}}}
@@ -76,20 +128,20 @@
 \bibcite{stone2024analogies}{{11}{2024}{{Stone et~al.}}{{Stone, Liao, Szafir, and Boyer}}}
 \bibcite{ibrahim2026warmth}{{12}{2026}{{Ibrahim et~al.}}{{Ibrahim, Liu, Chen, and Wang}}}
 \def\@LN@column{1}
-\@writefile{toc}{\contentsline {section}{\numberline {A}Appendix~A}{7}{appendix.A}\protected@file@percent }
-\newlabel{appendix:concepts}{{A}{7}{\appendixname ~\thesection }{appendix.A}{}}
-\newlabel{appendix:concepts@cref}{{[section][1][]A}{[1][6][]7}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {B}Appendix~B}{7}{appendix.B}\protected@file@percent }
-\newlabel{appendix:prompts}{{B}{7}{\appendixname ~\thesection }{appendix.B}{}}
-\newlabel{appendix:prompts@cref}{{[section][2][]B}{[1][7][]7}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {C}Appendix~C}{7}{appendix.C}\protected@file@percent }
-\newlabel{appendix:codebook}{{C}{7}{\appendixname ~\thesection }{appendix.C}{}}
-\newlabel{appendix:codebook@cref}{{[section][3][]C}{[1][7][]7}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {D}Appendix~D}{7}{appendix.D}\protected@file@percent }
-\newlabel{appendix:analogies}{{D}{7}{\appendixname ~\thesection }{appendix.D}{}}
-\newlabel{appendix:analogies@cref}{{[section][4][]D}{[1][7][]7}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {E}References}{7}{appendix.E}\protected@file@percent }
-\newlabel{LastPage}{{D}{7}{Appendix~E}{page.7}{}}
-\gdef\lastpage@lastpage{7}
-\gdef\lastpage@lastpageHy{7}
-\gdef \@abspage@last{7}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Appendix~A}{13}{appendix.A}\protected@file@percent }
+\newlabel{appendix:concepts}{{A}{13}{\appendixname ~\thesection }{appendix.A}{}}
+\newlabel{appendix:concepts@cref}{{[section][1][]A}{[1][13][]13}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {B}Appendix~B}{13}{appendix.B}\protected@file@percent }
+\newlabel{appendix:prompts}{{B}{13}{\appendixname ~\thesection }{appendix.B}{}}
+\newlabel{appendix:prompts@cref}{{[section][2][]B}{[1][13][]13}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {C}Appendix~C}{13}{appendix.C}\protected@file@percent }
+\newlabel{appendix:codebook}{{C}{13}{\appendixname ~\thesection }{appendix.C}{}}
+\newlabel{appendix:codebook@cref}{{[section][3][]C}{[1][13][]13}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {D}Appendix~D}{13}{appendix.D}\protected@file@percent }
+\newlabel{appendix:analogies}{{D}{13}{\appendixname ~\thesection }{appendix.D}{}}
+\newlabel{appendix:analogies@cref}{{[section][4][]D}{[1][13][]13}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {E}References}{13}{appendix.E}\protected@file@percent }
+\newlabel{LastPage}{{D}{13}{Appendix~E}{page.13}{}}
+\gdef\lastpage@lastpage{13}
+\gdef\lastpage@lastpageHy{13}
+\gdef \@abspage@last{13}

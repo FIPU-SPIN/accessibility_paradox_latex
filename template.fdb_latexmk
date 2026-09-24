@@ -1,15 +1,16 @@
 # Fdb version 4
-["bibtex template"] 1781539223.14166 "template.aux" "template.bbl" "template" 1781600248.19668 0
+["bibtex template"] 1790245648.22869 "template.aux" "template.bbl" "template" 1790245653.74608 0
   "./Definitions/mdpi.bst" 1781511511 23683 4afe8e0b352a18c39ff91c43fd26f4b2 ""
   "./references.bib" 1781515724 4125 2ce4823890c7803f5b0784ca59ad938f ""
-  "template.aux" 1781600246 6058 f2c3676372c74911b132e903f16f5b8b "pdflatex"
+  "template.aux" 1790245652 12401 4029c99444762ce9c867e27add8d97a1 "pdflatex"
   (generated)
   "template.bbl"
   "template.blg"
   (rewritten before read)
-["pdflatex"] 1781600237.9513 "c:/Users/milic/Documents/GitHub/accessibility_paradox_latex/template.tex" "template.pdf" "template" 1781600248.19888 0
+["pdflatex"] 1790245648.65047 "c:/Users/milic/Documents/GitHub/accessibility_paradox_latex/template.tex" "template.pdf" "template" 1790245653.74699 0
   "C:/Users/milic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1776753368 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/milic/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi375/ecss0800.pk" 1773665370 10028 2b5e2e3d0bb1733bb2dc239aafe1f06c ""
+  "C:/Users/milic/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ectt1000.pk" 1776754299 20028 ce5556e90b8a72fb85fbeb541754a22f ""
   "C:/Users/milic/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1770625945 13333486 be9365b6a1b3bcc2394b287aea667c2e ""
   "C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
   "C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/palatino/pplb7t.tfm" 1136768654 1616 371d1ee60c04b008c8fd760060cd34f1 ""
@@ -33,6 +34,7 @@
   "C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1233951854 908 2921f8a10601f252058503cc6570e581 ""
   "C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi10.tfm" 1136765053 1528 abec98dbc43e172678c11b3b9031252a ""
   "C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr10.tfm" 1136765053 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
+  "C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy10.tfm" 1136765053 1124 6c73e740cf17375f03eec0ee63599741 ""
   "C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/tfm/public/mathpazo/fplmr.tfm" 1136768654 1032 7fa31d93ecd4cbdfac02c7a1ebc6facc ""
   "C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/tfm/public/mathpazo/fplmri.tfm" 1136768654 1148 56b0fdf7ca3f800294e968f64cfdcb87 ""
   "C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/tfm/public/mathpazo/zplmb7m.tfm" 1136768654 2100 38b16244127c37b323d93d4fdd707706 ""
@@ -44,6 +46,8 @@
   "C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/tfm/public/mathpazo/zplmr7y.tfm" 1136768654 1316 b4037e9c09961a72f8476628774e1ec1 ""
   "C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247596667 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
+  "C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb" 1136849748 15213 d999bbe8bd9c8f231f3f66a737c76478 ""
   "C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb" 1136849748 52406 dad2f72863a03727d5f536c64a69c452 ""
   "C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb" 1136849748 52665 661b1e6b26edb5f50dd491f8a701cb57 ""
   "C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb" 1136849748 50022 90249cba7e3e4e9845f80328d6f9bd13 ""
@@ -55,6 +59,7 @@
   "C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/vf/adobe/palatino/pplri8t.vf" 1136768654 2308 5bc0a90b83a3fd7d37d34ef3b64d7e8a ""
   "C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/vf/public/mathpazo/zplmr7m.vf" 1136768654 1812 de7624743c8bafe2ce204bec2f72ce7e ""
   "C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/vf/public/mathpazo/zplmr7t.vf" 1136768654 1532 0ba0b316cfeb3df86c9701756c9a4b71 ""
+  "C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/vf/public/mathpazo/zplmr7y.vf" 1136768654 1372 31129ac1f6b6f62aaec24c8fed41b02b ""
   "C:/Users/milic/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580390158 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "C:/Users/milic/AppData/Local/Programs/MiKTeX/tex/generic/alphalph/alphalph.sty" 1575926356 11516 2c693377218e7ce5418526bc70496cc1 ""
   "C:/Users/milic/AppData/Local/Programs/MiKTeX/tex/generic/bigintcalc/bigintcalc.sty" 1576433602 40635 c40361e206be584d448876bba8a64a3b ""
@@ -291,11 +296,11 @@
   "Definitions/logo-mdpi.eps" 1781511511 563678 5cdc8f4064e4e6cc8ec19e9f9b0d5b7c ""
   "Definitions/logo-orcid.pdf" 1781511511 12671 39a20ba789123aa897c7efc569fb5270 ""
   "Definitions/mdpi.cls" 1781511511 62350 57238b5ebd7ff11d314cfe2d16f3cb4a ""
-  "c:/Users/milic/Documents/GitHub/accessibility_paradox_latex/template.tex" 1781600235 38285 c4618474f24a8525bfd771199a5c93b4 ""
-  "template.aux" 1781600246 6058 f2c3676372c74911b132e903f16f5b8b "pdflatex"
-  "template.bbl" 1781539223 3395 6c8bef036c231caf034d1d5a9a0592fb "bibtex template"
-  "template.out" 1781600246 3235 7085fb6affae0f0d2a43af435fcb0882 "pdflatex"
-  "template.tex" 1781600235 38285 c4618474f24a8525bfd771199a5c93b4 ""
+  "c:/Users/milic/Documents/GitHub/accessibility_paradox_latex/template.tex" 1790245640 49207 34be56a51ba1c67859324f134e7302dd ""
+  "template.aux" 1790245652 12401 4029c99444762ce9c867e27add8d97a1 "pdflatex"
+  "template.bbl" 1790245648 3395 6c8bef036c231caf034d1d5a9a0592fb "bibtex template"
+  "template.out" 1790245652 12177 c30c6e576f535188f4ba1ac061a47447 "pdflatex"
+  "template.tex" 1790245640 49207 34be56a51ba1c67859324f134e7302dd ""
   (generated)
   "template.aux"
   "template.log"
