@@ -1,47 +1,117 @@
 \begin{thebibliography}{999}
 
-\bibitem[Zdravkova et~al.(2024)Zdravkova, Krasniqi, Dalipi, and
-  Ferati]{zdravkova2024cutting}
+\bibitem[Zdravkova et~al.(2022)Zdravkova, Krasniqi, Dalipi, and
+  Ferati]{zdravkova2022cutting}
 Zdravkova, K.; Krasniqi, V.; Dalipi, F.; Ferati, M.
 \newblock Cutting-edge communication and learning assistive technologies for
-  disabled students: An artificial intelligence perspective.
-\newblock {\em Frontiers in Artificial Intelligence} {\bf 2024}, {\em
-  7},~1360732.
+  disabled children: An artificial intelligence perspective.
+\newblock {\em Frontiers in Artificial Intelligence} {\bf 2022}, {\em
+  5},~970430.
+\newblock {\url{https://doi.org/10.3389/frai.2022.970430}}.
 
 \bibitem[Kortemeyer(2023)]{kortemeyer2023ai}
 Kortemeyer, G.
-\newblock Could an artificial intelligence agent be a tutor? {GPT}-4 as a tutor
-  in a university physics class.
-\newblock {\em The Physics Teacher} {\bf 2023}, {\em 61},~572--576.
+\newblock Could an artificial-intelligence agent pass an introductory physics
+  course?
+\newblock {\em Physical Review Physics Education Research} {\bf 2023}, {\em
+  19},~010132.
+\newblock {\url{https://doi.org/10.1103/PhysRevPhysEducRes.19.010132}}.
+
+\bibitem[Kasneci et~al.(2023)Kasneci, Se{\ss}ler, K{\"u}chemann, Bannert,
+  Dementieva, et~al.]{kasneci2023chatgpt}
+Kasneci, E.; Se{\ss}ler, K.; K{\"u}chemann, S.; Bannert, M.; Dementieva, D.;
+  et~al.
+\newblock ChatGPT for good? On opportunities and challenges of large language
+  models for education.
+\newblock {\em Learning and Individual Differences} {\bf 2023}, {\em
+  103},~102274.
+\newblock {\url{https://doi.org/10.1016/j.lindif.2023.102274}}.
 
 \bibitem[Rello and Baeza-Yates(2013)]{rello2013simplify}
 Rello, L.; Baeza-Yates, R.
 \newblock Good fonts for dyslexia.
 \newblock In Proceedings of the Proceedings of the 15th International ACM
   SIGACCESS Conference on Computers and Accessibility,  2013, pp. 1--8.
+\newblock {\url{https://doi.org/10.1145/2513383.2513447}}.
 
-\bibitem[Stajner and Saggion(2021)]{stajner2021automatic}
-Stajner, S.; Saggion, H.
+\bibitem[{\v{S}}tajner and Saggion(2021)]{stajner2021automatic}
+{\v{S}}tajner, S.; Saggion, H.
 \newblock Automatic text simplification for reading assistance: A review of
   methods, applications, and future directions.
 \newblock {\em Natural Language Engineering} {\bf 2021}, {\em 27},~507--546.
+\newblock {\url{https://doi.org/10.1017/S1351324920000525}}.
 
-\bibitem[OpenAI et~al.(2023)OpenAI, Achiam, Adler, Agarwal,
-  et~al.]{openai2023gpt4}
-OpenAI.; Achiam, J.; Adler, S.; Agarwal, S.;  et~al.
-\newblock GPT-4 Technical Report,  2023,
-  \href{http://arxiv.org/abs/2303.08774}{{\normalfont
-  [arXiv:cs.CL/2303.08774]}}.
+\bibitem[Finnie-Ansley et~al.(2022)Finnie-Ansley, Denny, Becker, Luxton-Reilly,
+  and Prather]{finnieansley2022robots}
+Finnie-Ansley, J.; Denny, P.; Becker, B.A.; Luxton-Reilly, A.; Prather, J.
+\newblock The robots are coming: Exploring the implications of OpenAI Codex on
+  introductory programming.
+\newblock In Proceedings of the Proceedings of the 24th Australasian Computing
+  Education Conference,  2022, pp. 10--19.
+\newblock {\url{https://doi.org/10.1145/3511861.3511863}}.
 
-\bibitem[Anthropic(2024)]{anthropic2024claude}
-Anthropic.
-\newblock The Claude 3 Model Family: Opus, Sonnet, Haiku,  2024.
+\bibitem[Prather et~al.(2023)Prather, Denny, Leinonen, Becker, Albluwi,
+  et~al.]{prather2023robots}
+Prather, J.; Denny, P.; Leinonen, J.; Becker, B.A.; Albluwi, I.;  et~al.
+\newblock The robots are here: Navigating the generative AI revolution in
+  computing education.
+\newblock In Proceedings of the Proceedings of the Working Group Reports on
+  Innovation and Technology in Computer Science Education,  2023, pp. 97--149.
+\newblock {\url{https://doi.org/10.1145/3623762.3633499}}.
 
-\bibitem[Harp and Mayer(1998)]{harp1998seductive}
-Harp, S.F.; Mayer, R.E.
-\newblock How seductive details do their damage: A theory of cognitive interest
-  in science learning.
-\newblock {\em Journal of Educational Psychology} {\bf 1998}, {\em 90},~414.
+\bibitem[Denny et~al.(2024)Denny, Prather, Becker, Finnie-Ansley, Hellas,
+  et~al.]{denny2024computing}
+Denny, P.; Prather, J.; Becker, B.A.; Finnie-Ansley, J.; Hellas, A.;  et~al.
+\newblock Computing education in the era of generative AI.
+\newblock In Proceedings of the Proceedings of the 55th ACM Technical Symposium
+  on Computer Science Education,  2024.
+\newblock {\url{https://doi.org/10.1145/3626252}}.
+
+\bibitem[Pardos and Bhandari(2024)]{pardos2024chatgpt}
+Pardos, Z.A.; Bhandari, S.
+\newblock ChatGPT-generated help produces learning gains equivalent to human
+  tutor-authored help on mathematics skills.
+\newblock {\em PLOS ONE} {\bf 2024}, {\em 19},~e0304013.
+\newblock {\url{https://doi.org/10.1371/journal.pone.0304013}}.
+
+\bibitem[Kestin et~al.(2025)Kestin, Miller, Klales, Milbourne, and
+  Ponti]{kestin2025ai}
+Kestin, G.; Miller, K.; Klales, A.; Milbourne, T.; Ponti, G.
+\newblock AI tutoring outperforms in-class active learning: An RCT introducing
+  a novel research-based design in an authentic educational setting.
+\newblock {\em Scientific Reports} {\bf 2025}, {\em 15},~17458.
+\newblock {\url{https://doi.org/10.1038/s41598-025-97652-6}}.
+
+\bibitem[Bastani et~al.(2025)Bastani, Bastani, Sungu, Ge, Kabakc{\i}, and
+  Mariman]{bastani2025generative}
+Bastani, H.; Bastani, O.; Sungu, A.; Ge, H.; Kabakc{\i}, {\"O}.; Mariman, R.
+\newblock Generative AI without guardrails can harm learning: Evidence from
+  high school mathematics.
+\newblock {\em Proceedings of the National Academy of Sciences} {\bf 2025},
+  {\em 122},~e2422633122.
+\newblock {\url{https://doi.org/10.1073/pnas.2422633122}}.
+
+\bibitem[Posner et~al.(1982)Posner, Strike, Hewson, and
+  Gertzog]{posner1982accommodation}
+Posner, G.J.; Strike, K.A.; Hewson, P.W.; Gertzog, W.A.
+\newblock Accommodation of a scientific conception: Toward a theory of
+  conceptual change.
+\newblock {\em Science Education} {\bf 1982}, {\em 66},~211--227.
+\newblock {\url{https://doi.org/10.1002/sce.3730660207}}.
+
+\bibitem[Chi et~al.(1994)Chi, Slotta, and de~Leeuw]{chi1994things}
+Chi, M.T.H.; Slotta, J.D.; de~Leeuw, N.
+\newblock From things to processes: A theory of conceptual change for learning
+  science concepts.
+\newblock {\em Learning and Instruction} {\bf 1994}, {\em 4},~27--43.
+\newblock {\url{https://doi.org/10.1016/0959-4752(94)90017-5}}.
+
+\bibitem[Vosniadou and Brewer(1992)]{vosniadou1992mental}
+Vosniadou, S.; Brewer, W.F.
+\newblock Mental models of the earth: A study of conceptual change in
+  childhood.
+\newblock {\em Cognitive Psychology} {\bf 1992}, {\em 24},~535--585.
+\newblock {\url{https://doi.org/10.1016/0010-0285(92)90018-W}}.
 
 \bibitem[Qian and Lehman(2017)]{qian2017misconceptions}
 Qian, Y.; Lehman, J.D.
@@ -49,31 +119,408 @@ Qian, Y.; Lehman, J.D.
   programming: A literature review.
 \newblock {\em ACM Transactions on Computing Education} {\bf 2017}, {\em
   18},~1--24.
+\newblock {\url{https://doi.org/10.1145/3077618}}.
+
+\bibitem[Sorva(2012)]{sorva2013notional}
+Sorva, J.
+\newblock Visual Program Simulation in Introductory Programming Education.
+\newblock PhD thesis, Aalto University,  2012.
+
+\bibitem[Reber and Schwarz(1999)]{reber1999effects}
+Reber, R.; Schwarz, N.
+\newblock Effects of perceptual fluency on judgments of truth.
+\newblock {\em Consciousness and Cognition} {\bf 1999}, {\em 8},~338--342.
+\newblock {\url{https://doi.org/10.1006/ccog.1999.0392}}.
+
+\bibitem[Alter and Oppenheimer(2009)]{alter2009uniting}
+Alter, A.L.; Oppenheimer, D.M.
+\newblock Uniting the tribes of fluency to form a metacognitive nation.
+\newblock {\em Personality and Social Psychology Review} {\bf 2009}, {\em
+  13},~219--235.
+\newblock {\url{https://doi.org/10.1177/1088868309341564}}.
+
+\bibitem[Rozenblit and Keil(2002)]{rozenblit2002misunderstood}
+Rozenblit, L.; Keil, F.
+\newblock The misunderstood limits of folk science: An illusion of explanatory
+  depth.
+\newblock {\em Cognitive Science} {\bf 2002}, {\em 26},~521--562.
+\newblock {\url{https://doi.org/10.1207/s15516709cog2605_1}}.
 
 \bibitem[Snowling et~al.(2019)Snowling, Hulme, and
   Nation]{snowling2019dyslexia}
 Snowling, M.J.; Hulme, C.; Nation, K.
 \newblock Defining and understanding dyslexia: past, present and future.
 \newblock {\em Oxford Review of Education} {\bf 2019}, {\em 46},~501--513.
+\newblock {\url{https://doi.org/10.1080/03054985.2020.1765756}}.
 
 \bibitem[Barkley(2015)]{barkley2015attention}
 Barkley, R.A.
-\newblock Attention-deficit hyperactivity disorder: A handbook for diagnosis
-  and treatment {\bf 2015}.
+\newblock {\em Attention-Deficit Hyperactivity Disorder: A Handbook for
+  Diagnosis and Treatment}, 4th ed.; Guilford Publications,  2015.
+
+\bibitem[Martinussen et~al.(2005)Martinussen, Hayden, Hogg-Johnson, and
+  Tannock]{martinussen2005meta}
+Martinussen, R.; Hayden, J.; Hogg-Johnson, S.; Tannock, R.
+\newblock A meta-analysis of working memory impairments in children with
+  attention-deficit/hyperactivity disorder.
+\newblock {\em Journal of the American Academy of Child \& Adolescent
+  Psychiatry} {\bf 2005}, {\em 44},~377--384.
+\newblock {\url{https://doi.org/10.1097/01.chi.0000153228.72591.73}}.
 
 \bibitem[Stone et~al.(2024)Stone, Liao, Szafir, and Boyer]{stone2024analogies}
 Stone, M.; Liao, Y.; Szafir, D.; Boyer, K.E.
-\newblock Analogies in the Age of LLMs: When Explanatory Metaphors Mislead CS
-  Learners.
+\newblock Analogies in the age of LLMs: When explanatory metaphors mislead CS
+  learners.
 \newblock In Proceedings of the Proceedings of the 55th ACM Technical Symposium
-  on Computer Science Education (SIGCSE 2024). ACM,  2024, pp. 1256--1262.
+  on Computer Science Education,  2024, pp. 1256--1262.
+\newblock {\url{https://doi.org/10.1145/3626253.3635473}}.
+
+\bibitem[Ben-Ari(2001)]{benari2001constructivism}
+Ben-Ari, M.
+\newblock Constructivism in computer science education.
+\newblock {\em Journal of Computers in Mathematics and Science Teaching} {\bf
+  2001}, {\em 20},~45--73.
 
 \bibitem[Ibrahim et~al.(2026)Ibrahim, Liu, Chen, and Wang]{ibrahim2026warmth}
 Ibrahim, H.; Liu, T.; Chen, A.; Wang, D.
-\newblock The Warmth-Accuracy Trade-off: When Making LLMs More Empathetic
-  Increases Factual Errors.
+\newblock The warmth-accuracy trade-off: When making LLMs more empathetic
+  increases factual errors.
 \newblock In Proceedings of the Proceedings of the 2026 ACM Conference on
   Fairness, Accountability, and Transparency,  2026.
 \newblock Forthcoming.
+
+\bibitem[Ouyang et~al.(2022)Ouyang, Wu, Jiang, Almeida, Wainwright,
+  et~al.]{ouyang2022training}
+Ouyang, L.; Wu, J.; Jiang, X.; Almeida, D.; Wainwright, C.;  et~al.
+\newblock Training language models to follow instructions with human feedback.
+\newblock In Proceedings of the Advances in Neural Information Processing
+  Systems,  2022, Vol.~35, pp. 27730--27744.
+\newblock {\url{https://doi.org/10.48550/arXiv.2203.02155}}.
+
+\bibitem[Sharma et~al.(2024)Sharma, Tong, Korbak, Duvenaud, Askell,
+  et~al.]{sharma2024towards}
+Sharma, M.; Tong, M.; Korbak, T.; Duvenaud, D.; Askell, A.;  et~al.
+\newblock Towards understanding sycophancy in language models.
+\newblock In Proceedings of the Proceedings of the 12th International
+  Conference on Learning Representations,  2024.
+\newblock {\url{https://doi.org/10.48550/arXiv.2310.13548}}.
+
+\bibitem[Perez et~al.(2023)Perez, Ringer, Luko{\v{s}}i{\=u}t{\.e}, Nguyen,
+  Chen, et~al.]{perez2023discovering}
+Perez, E.; Ringer, S.; Luko{\v{s}}i{\=u}t{\.e}, K.; Nguyen, K.; Chen, E.;
+  et~al.
+\newblock Discovering language model behaviors with model-written evaluations.
+\newblock In Proceedings of the Findings of the Association for Computational
+  Linguistics: ACL 2023,  2023, pp. 13387--13434.
+\newblock {\url{https://doi.org/10.18653/v1/2023.findings-acl.847}}.
+
+\bibitem[Lin et~al.(2022)Lin, Hilton, and Evans]{lin2022truthfulqa}
+Lin, S.; Hilton, J.; Evans, O.
+\newblock TruthfulQA: Measuring how models mimic human falsehoods.
+\newblock In Proceedings of the Proceedings of the 60th Annual Meeting of the
+  Association for Computational Linguistics,  2022, pp. 3214--3252.
+\newblock {\url{https://doi.org/10.18653/v1/2022.acl-long.229}}.
+
+\bibitem[Gadiraju et~al.(2023)Gadiraju, Kane, Dev, Taylor, Wang, Denton, and
+  Brewer]{gadiraju2023wouldnt}
+Gadiraju, V.; Kane, S.; Dev, S.; Taylor, A.; Wang, D.; Denton, E.; Brewer, R.
+\newblock "I wouldn't say offensive but...": Disability-centered perspectives
+  on large language models.
+\newblock In Proceedings of the Proceedings of the 2023 ACM Conference on
+  Fairness, Accountability, and Transparency,  2023, pp. 205--216.
+\newblock {\url{https://doi.org/10.1145/3593013.3593989}}.
+
+\bibitem[Devaraj et~al.(2022)Devaraj, Sheffield, Wallace, and
+  Li]{devaraj2022evaluating}
+Devaraj, A.; Sheffield, W.; Wallace, B.C.; Li, J.J.
+\newblock Evaluating factuality in text simplification.
+\newblock In Proceedings of the Proceedings of the 60th Annual Meeting of the
+  Association for Computational Linguistics,  2022, pp. 7331--7345.
+\newblock {\url{https://doi.org/10.18653/v1/2022.acl-long.505}}.
+
+\bibitem[Trienes et~al.(2024)Trienes, Joseph, Schl{\"o}tterer, Seifert, Lo, Xu,
+  Wallace, and Li]{trienes2024infolossqa}
+Trienes, J.; Joseph, S.; Schl{\"o}tterer, J.; Seifert, C.; Lo, K.; Xu, W.;
+  Wallace, B.C.; Li, J.J.
+\newblock InfoLossQA: Characterizing and recovering information loss in text
+  simplification.
+\newblock In Proceedings of the Proceedings of the 62nd Annual Meeting of the
+  Association for Computational Linguistics,  2024, pp. 4263--4294.
+\newblock {\url{https://doi.org/10.18653/v1/2024.acl-long.234}}.
+
+\bibitem[Zheng et~al.(2023)Zheng, Chiang, Sheng, Zhuang, Wu,
+  et~al.]{zheng2023judging}
+Zheng, L.; Chiang, W.L.; Sheng, Y.; Zhuang, S.; Wu, Z.;  et~al.
+\newblock Judging LLM-as-a-judge with MT-Bench and Chatbot Arena.
+\newblock In Proceedings of the Advances in Neural Information Processing
+  Systems,  2023, Vol.~36.
+\newblock {\url{https://doi.org/10.48550/arXiv.2306.05685}}.
+
+\bibitem[Lyon et~al.(2003)Lyon, Shaywitz, and Shaywitz]{lyon2003definition}
+Lyon, G.R.; Shaywitz, S.E.; Shaywitz, B.A.
+\newblock A definition of dyslexia.
+\newblock {\em Annals of Dyslexia} {\bf 2003}, {\em 53},~1--14.
+\newblock {\url{https://doi.org/10.1007/s11881-003-0001-9}}.
+
+\bibitem[Faraone et~al.(2015)Faraone, Asherson, Banaschewski, Biederman,
+  Buitelaar, et~al.]{faraone2015adhd}
+Faraone, S.V.; Asherson, P.; Banaschewski, T.; Biederman, J.; Buitelaar, J.K.;
+  et~al.
+\newblock Attention-deficit/hyperactivity disorder.
+\newblock {\em Nature Reviews Disease Primers} {\bf 2015}, {\em 1},~15020.
+\newblock {\url{https://doi.org/10.1038/nrdp.2015.20}}.
+
+\bibitem[Peng and Fuchs(2016)]{peng2016meta}
+Peng, P.; Fuchs, D.
+\newblock A meta-analysis of working memory deficits in children with learning
+  difficulties.
+\newblock {\em Journal of Learning Disabilities} {\bf 2016}, {\em 49},~3--20.
+\newblock {\url{https://doi.org/10.1177/0022219414528532}}.
+
+\bibitem[Rello et~al.(2013)Rello, Baeza-Yates, Bott, and
+  Saggion]{rello2013good}
+Rello, L.; Baeza-Yates, R.; Bott, S.; Saggion, H.
+\newblock Simplify or help? Text simplification strategies for people with
+  dyslexia.
+\newblock In Proceedings of the Proceedings of the 10th International
+  Cross-Disciplinary Conference on Web Accessibility,  2013, pp. 1--10.
+\newblock {\url{https://doi.org/10.1145/2461121.2461126}}.
+
+\bibitem[Ji et~al.(2023)Ji, Lee, Frieske, Yu, Su, et~al.]{ji2023survey}
+Ji, Z.; Lee, N.; Frieske, R.; Yu, T.; Su, D.;  et~al.
+\newblock Survey of hallucination in natural language generation.
+\newblock {\em ACM Computing Surveys} {\bf 2023}, {\em 55},~1--38.
+\newblock {\url{https://doi.org/10.1145/3571730}}.
+
+\bibitem[Huang et~al.(2025)Huang, Yu, Ma, Zhong, Feng, et~al.]{huang2025survey}
+Huang, L.; Yu, W.; Ma, W.; Zhong, W.; Feng, Z.;  et~al.
+\newblock A survey on hallucination in large language models: Principles,
+  taxonomy, challenges, and open questions.
+\newblock {\em ACM Transactions on Information Systems} {\bf 2025}, {\em
+  43},~1--55.
+\newblock {\url{https://doi.org/10.1145/3703155}}.
+
+\bibitem[Flesch(1948)]{flesch1948new}
+Flesch, R.
+\newblock A new readability yardstick.
+\newblock {\em Journal of Applied Psychology} {\bf 1948}, {\em 32},~221--233.
+\newblock {\url{https://doi.org/10.1037/h0057532}}.
+
+\bibitem[McNamara et~al.(1996)McNamara, Kintsch, Songer, and
+  Kintsch]{mcnamara1996good}
+McNamara, D.S.; Kintsch, E.; Songer, N.B.; Kintsch, W.
+\newblock Are good texts always better? Interactions of text coherence,
+  background knowledge, and levels of understanding in learning from text.
+\newblock {\em Cognition and Instruction} {\bf 1996}, {\em 14},~1--43.
+\newblock {\url{https://doi.org/10.1207/s1532690xci1401_1}}.
+
+\bibitem[Kalyuga et~al.(2003)Kalyuga, Ayres, Chandler, and
+  Sweller]{kalyuga2003expertise}
+Kalyuga, S.; Ayres, P.; Chandler, P.; Sweller, J.
+\newblock The expertise reversal effect.
+\newblock {\em Educational Psychologist} {\bf 2003}, {\em 38},~23--31.
+\newblock {\url{https://doi.org/10.1207/S15326985EP3801_4}}.
+
+\bibitem[Bjork and Bjork(2011)]{bjork2011making}
+Bjork, E.L.; Bjork, R.A.
+\newblock Making things hard on yourself, but in a good way: Creating desirable
+  difficulties to enhance learning. In {\em Psychology and the Real World:
+  Essays Illustrating Fundamental Contributions to Society}; Gernsbacher, M.A.;
+  Pew, R.W.; Hough, L.M.; Pomerantz, J.R., Eds.; Worth Publishers,  2011; pp.
+  56--64.
+
+\bibitem[Sweller et~al.(1998)Sweller, van Merri{\"e}nboer, and
+  Paas]{sweller1998cognitive}
+Sweller, J.; van Merri{\"e}nboer, J.J.G.; Paas, F.G.W.C.
+\newblock Cognitive architecture and instructional design.
+\newblock {\em Educational Psychology Review} {\bf 1998}, {\em 10},~251--296.
+\newblock {\url{https://doi.org/10.1023/A:1022193728205}}.
+
+\bibitem[Baddeley and Hitch(1974)]{baddeley1974working}
+Baddeley, A.D.; Hitch, G.
+\newblock Working memory.
+\newblock {\em Psychology of Learning and Motivation} {\bf 1974}, {\em
+  8},~47--89.
+\newblock {\url{https://doi.org/10.1016/S0079-7421(08)60452-1}}.
+
+\bibitem[LaBerge and Samuels(1974)]{laberge1974toward}
+LaBerge, D.; Samuels, S.J.
+\newblock Toward a theory of automatic information processing in reading.
+\newblock {\em Cognitive Psychology} {\bf 1974}, {\em 6},~293--323.
+\newblock {\url{https://doi.org/10.1016/0010-0285(74)90015-2}}.
+
+\bibitem[Kahneman(2011)]{kahneman2011thinking}
+Kahneman, D.
+\newblock {\em Thinking, Fast and Slow}; Farrar, Straus and Giroux,  2011.
+
+\bibitem[Bu{\c{c}}inca et~al.(2021)Bu{\c{c}}inca, Malaya, and
+  Gajos]{bucinca2021trust}
+Bu{\c{c}}inca, Z.; Malaya, M.B.; Gajos, K.Z.
+\newblock To trust or to think: Cognitive forcing functions can reduce
+  overreliance on AI in AI-assisted decision-making.
+\newblock {\em Proceedings of the ACM on Human-Computer Interaction} {\bf
+  2021}, {\em 5},~1--21.
+\newblock {\url{https://doi.org/10.1145/3449282}}.
+
+\bibitem[Harp and Mayer(1998)]{harp1998seductive}
+Harp, S.F.; Mayer, R.E.
+\newblock How seductive details do their damage: A theory of cognitive interest
+  in science learning.
+\newblock {\em Journal of Educational Psychology} {\bf 1998}, {\em
+  90},~414--434.
+\newblock {\url{https://doi.org/10.1037/0022-0663.90.3.414}}.
+
+\bibitem[Gentner(1983)]{gentner1983structure}
+Gentner, D.
+\newblock Structure-mapping: A theoretical framework for analogy.
+\newblock {\em Cognitive Science} {\bf 1983}, {\em 7},~155--170.
+\newblock {\url{https://doi.org/10.1207/s15516709cog0702_3}}.
+
+\bibitem[Spiro et~al.(1989)Spiro, Feltovich, Coulson, and
+  Anderson]{spiro1989multiple}
+Spiro, R.J.; Feltovich, P.J.; Coulson, R.L.; Anderson, D.K.
+\newblock Multiple analogies for complex concepts: Antidotes for
+  analogy-induced misconception in advanced knowledge acquisition. In {\em
+  Similarity and Analogical Reasoning}; Vosniadou, S.; Ortony, A., Eds.;
+  Cambridge University Press,  1989; pp. 498--531.
+\newblock {\url{https://doi.org/10.1017/CBO9780511529863.023}}.
+
+\bibitem[Glynn(1991)]{glynn1991explaining}
+Glynn, S.M.
+\newblock Explaining science concepts: A teaching-with-analogies model. In {\em
+  The Psychology of Learning Science}; Glynn, S.M.; Yeany, R.H.; Britton, B.K.,
+  Eds.; Lawrence Erlbaum Associates,  1991; pp. 219--240.
+
+\bibitem[Liu et~al.(2023)Liu, Iter, Xu, Wang, Xu, and Zhu]{liu2023geval}
+Liu, Y.; Iter, D.; Xu, Y.; Wang, S.; Xu, R.; Zhu, C.
+\newblock G-Eval: NLG evaluation using GPT-4 with better human alignment.
+\newblock In Proceedings of the Proceedings of the 2023 Conference on Empirical
+  Methods in Natural Language Processing,  2023, pp. 2511--2522.
+\newblock {\url{https://doi.org/10.18653/v1/2023.emnlp-main.153}}.
+
+\bibitem[Wang et~al.(2023)Wang, Li, Chen, Cai, Zhu, et~al.]{wang2023large}
+Wang, P.; Li, L.; Chen, L.; Cai, Z.; Zhu, D.;  et~al.
+\newblock Large language models are not fair evaluators.
+\newblock {\em arXiv preprint arXiv:2305.17926} {\bf 2023}.
+\newblock {\url{https://doi.org/10.48550/arXiv.2305.17926}}.
+
+\bibitem[Panickssery et~al.(2024)Panickssery, Bowman, and
+  Feng]{panickssery2024llm}
+Panickssery, A.; Bowman, S.R.; Feng, S.
+\newblock LLM evaluators recognize and favor their own generations.
+\newblock {\em arXiv preprint arXiv:2404.13076} {\bf 2024}.
+\newblock {\url{https://doi.org/10.48550/arXiv.2404.13076}}.
+
+\bibitem[{ACM/IEEE-CS/AAAI Joint Task Force on Computing
+  Curricula}(2023)]{acm2023cs2023}
+{ACM/IEEE-CS/AAAI Joint Task Force on Computing Curricula}.
+\newblock Computer Science Curricula 2023,  2023.
+
+\bibitem[Cohen(1960)]{cohen1960coefficient}
+Cohen, J.
+\newblock A coefficient of agreement for nominal scales.
+\newblock {\em Educational and Psychological Measurement} {\bf 1960}, {\em
+  20},~37--46.
+\newblock {\url{https://doi.org/10.1177/001316446002000104}}.
+
+\bibitem[Landis and Koch(1977)]{landis1977measurement}
+Landis, J.R.; Koch, G.G.
+\newblock The measurement of observer agreement for categorical data.
+\newblock {\em Biometrics} {\bf 1977}, {\em 33},~159--174.
+\newblock {\url{https://doi.org/10.2307/2529310}}.
+
+\bibitem[{R Core Team}(2023)]{rcore2023}
+{R Core Team}.
+\newblock R: A Language and Environment for Statistical Computing,  2023.
+
+\bibitem[Tukey(1949)]{tukey1949comparing}
+Tukey, J.W.
+\newblock Comparing individual means in the analysis of variance.
+\newblock {\em Biometrics} {\bf 1949}, {\em 5},~99--114.
+\newblock {\url{https://doi.org/10.2307/3001913}}.
+
+\bibitem[Shapiro and Wilk(1965)]{shapiro1965analysis}
+Shapiro, S.S.; Wilk, M.B.
+\newblock An analysis of variance test for normality (complete samples).
+\newblock {\em Biometrika} {\bf 1965}, {\em 52},~591--611.
+\newblock {\url{https://doi.org/10.1093/biomet/52.3-4.591}}.
+
+\bibitem[Levene(1960)]{levene1960robust}
+Levene, H.
+\newblock Robust tests for equality of variances. In {\em Contributions to
+  Probability and Statistics: Essays in Honor of Harold Hotelling}; Olkin, I.,
+  Ed.; Stanford University Press,  1960; pp. 278--292.
+
+\bibitem[Cochran(1950)]{cochran1950comparison}
+Cochran, W.G.
+\newblock The comparison of percentages in matched samples.
+\newblock {\em Biometrika} {\bf 1950}, {\em 37},~256--266.
+\newblock {\url{https://doi.org/10.2307/2332343}}.
+
+\bibitem[McNemar(1947)]{mcnemar1947note}
+McNemar, Q.
+\newblock Note on the sampling error of the difference between correlated
+  proportions or percentages.
+\newblock {\em Psychometrika} {\bf 1947}, {\em 12},~153--157.
+\newblock {\url{https://doi.org/10.1007/BF02295996}}.
+
+\bibitem[Bates et~al.(2015)Bates, M{\"a}chler, Bolker, and
+  Walker]{bates2015fitting}
+Bates, D.; M{\"a}chler, M.; Bolker, B.; Walker, S.
+\newblock Fitting linear mixed-effects models using lme4.
+\newblock {\em Journal of Statistical Software} {\bf 2015}, {\em 67},~1--48.
+\newblock {\url{https://doi.org/10.18637/jss.v067.i01}}.
+
+\bibitem[Benjamini and Hochberg(1995)]{benjamini1995controlling}
+Benjamini, Y.; Hochberg, Y.
+\newblock Controlling the false discovery rate: A practical and powerful
+  approach to multiple testing.
+\newblock {\em Journal of the Royal Statistical Society: Series B} {\bf 1995},
+  {\em 57},~289--300.
+\newblock {\url{https://doi.org/10.1111/j.2517-6161.1995.tb02031.x}}.
+
+\bibitem[Cohen(1988)]{cohen1988statistical}
+Cohen, J.
+\newblock {\em Statistical Power Analysis for the Behavioral Sciences}, 2nd
+  ed.; Lawrence Erlbaum Associates,  1988.
+
+\bibitem[Lakens(2013)]{lakens2013calculating}
+Lakens, D.
+\newblock Calculating and reporting effect sizes to facilitate cumulative
+  science.
+\newblock {\em Frontiers in Psychology} {\bf 2013}, {\em 4},~863.
+\newblock {\url{https://doi.org/10.3389/fpsyg.2013.00863}}.
+
+\bibitem[Rose and Meyer(2002)]{rose2002teaching}
+Rose, D.H.; Meyer, A.
+\newblock Teaching every student in the digital age: Universal design for
+  learning; Association for Supervision and Curriculum Development,  2002.
+
+\bibitem[Wobbrock et~al.(2011)Wobbrock, Kane, Gajos, Harada, and
+  Froehlich]{wobbrock2011ability}
+Wobbrock, J.O.; Kane, S.K.; Gajos, K.Z.; Harada, S.; Froehlich, J.
+\newblock Ability-based design: Concept, principles and examples.
+\newblock {\em ACM Transactions on Accessible Computing} {\bf 2011}, {\em
+  3},~1--27.
+\newblock {\url{https://doi.org/10.1145/1952383.1952384}}.
+
+\bibitem[Treisman and Gelade(1980)]{treisman1980feature}
+Treisman, A.M.; Gelade, G.
+\newblock A feature-integration theory of attention.
+\newblock {\em Cognitive Psychology} {\bf 1980}, {\em 12},~97--136.
+\newblock {\url{https://doi.org/10.1016/0010-0285(80)90005-5}}.
+
+\bibitem[Hullman et~al.(2019)Hullman, Qiao, Correll, Kale, and
+  Kay]{hullman2019pursuit}
+Hullman, J.; Qiao, X.; Correll, M.; Kale, A.; Kay, M.
+\newblock In pursuit of error: A survey of uncertainty visualization
+  evaluation.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics} {\bf
+  2019}, {\em 25},~903--913.
+\newblock {\url{https://doi.org/10.1109/TVCG.2018.2864885}}.
+
+\bibitem[{W3C}(2023)]{w3c2023wcag}
+{W3C}.
+\newblock Web Content Accessibility Guidelines (WCAG) 2.2,  2023.
 
 \end{thebibliography}
