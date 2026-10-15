@@ -27,12 +27,14 @@ Kasneci, E.; Se{\ss}ler, K.; K{\"u}chemann, S.; Bannert, M.; Dementieva, D.;
   103},~102274.
 \newblock {\url{https://doi.org/10.1016/j.lindif.2023.102274}}.
 
-\bibitem[Rello and Baeza-Yates(2013)]{rello2013simplify}
-Rello, L.; Baeza-Yates, R.
-\newblock Good fonts for dyslexia.
-\newblock In Proceedings of the Proceedings of the 15th International ACM
-  SIGACCESS Conference on Computers and Accessibility,  2013, pp. 1--8.
-\newblock {\url{https://doi.org/10.1145/2513383.2513447}}.
+\bibitem[Rello et~al.(2013)Rello, Baeza-Yates, Bott, and
+  Saggion]{rello2013good}
+Rello, L.; Baeza-Yates, R.; Bott, S.; Saggion, H.
+\newblock Simplify or help? Text simplification strategies for people with
+  dyslexia.
+\newblock In Proceedings of the Proceedings of the 10th International
+  Cross-Disciplinary Conference on Web Accessibility,  2013, pp. 1--10.
+\newblock {\url{https://doi.org/10.1145/2461121.2461126}}.
 
 \bibitem[{\v{S}}tajner and Saggion(2021)]{stajner2021automatic}
 {\v{S}}tajner, S.; Saggion, H.
@@ -277,14 +279,12 @@ Peng, P.; Fuchs, D.
 \newblock {\em Journal of Learning Disabilities} {\bf 2016}, {\em 49},~3--20.
 \newblock {\url{https://doi.org/10.1177/0022219414528532}}.
 
-\bibitem[Rello et~al.(2013)Rello, Baeza-Yates, Bott, and
-  Saggion]{rello2013good}
-Rello, L.; Baeza-Yates, R.; Bott, S.; Saggion, H.
-\newblock Simplify or help? Text simplification strategies for people with
-  dyslexia.
-\newblock In Proceedings of the Proceedings of the 10th International
-  Cross-Disciplinary Conference on Web Accessibility,  2013, pp. 1--10.
-\newblock {\url{https://doi.org/10.1145/2461121.2461126}}.
+\bibitem[Rello and Baeza-Yates(2013)]{rello2013simplify}
+Rello, L.; Baeza-Yates, R.
+\newblock Good fonts for dyslexia.
+\newblock In Proceedings of the Proceedings of the 15th International ACM
+  SIGACCESS Conference on Computers and Accessibility,  2013, pp. 1--8.
+\newblock {\url{https://doi.org/10.1145/2513383.2513447}}.
 
 \bibitem[Ji et~al.(2023)Ji, Lee, Frieske, Yu, Su, et~al.]{ji2023survey}
 Ji, Z.; Lee, N.; Frieske, R.; Yu, T.; Su, D.;  et~al.
@@ -490,37 +490,5 @@ Lakens, D.
   science.
 \newblock {\em Frontiers in Psychology} {\bf 2013}, {\em 4},~863.
 \newblock {\url{https://doi.org/10.3389/fpsyg.2013.00863}}.
-
-\bibitem[Rose and Meyer(2002)]{rose2002teaching}
-Rose, D.H.; Meyer, A.
-\newblock Teaching every student in the digital age: Universal design for
-  learning; Association for Supervision and Curriculum Development,  2002.
-
-\bibitem[Wobbrock et~al.(2011)Wobbrock, Kane, Gajos, Harada, and
-  Froehlich]{wobbrock2011ability}
-Wobbrock, J.O.; Kane, S.K.; Gajos, K.Z.; Harada, S.; Froehlich, J.
-\newblock Ability-based design: Concept, principles and examples.
-\newblock {\em ACM Transactions on Accessible Computing} {\bf 2011}, {\em
-  3},~1--27.
-\newblock {\url{https://doi.org/10.1145/1952383.1952384}}.
-
-\bibitem[Treisman and Gelade(1980)]{treisman1980feature}
-Treisman, A.M.; Gelade, G.
-\newblock A feature-integration theory of attention.
-\newblock {\em Cognitive Psychology} {\bf 1980}, {\em 12},~97--136.
-\newblock {\url{https://doi.org/10.1016/0010-0285(80)90005-5}}.
-
-\bibitem[Hullman et~al.(2019)Hullman, Qiao, Correll, Kale, and
-  Kay]{hullman2019pursuit}
-Hullman, J.; Qiao, X.; Correll, M.; Kale, A.; Kay, M.
-\newblock In pursuit of error: A survey of uncertainty visualization
-  evaluation.
-\newblock {\em IEEE Transactions on Visualization and Computer Graphics} {\bf
-  2019}, {\em 25},~903--913.
-\newblock {\url{https://doi.org/10.1109/TVCG.2018.2864885}}.
-
-\bibitem[{W3C}(2023)]{w3c2023wcag}
-{W3C}.
-\newblock Web Content Accessibility Guidelines (WCAG) 2.2,  2023.
 
 \end{thebibliography}
