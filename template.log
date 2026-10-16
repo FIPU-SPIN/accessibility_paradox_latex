@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.2.9)  15 OCT 2026 18:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.2.9)  16 OCT 2026 11:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -922,7 +922,7 @@ File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfarrowwidth=\dimen356
 \pgfarrowlinewidth=\dimen357
 )
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 177.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 124.
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.sty
@@ -1024,30 +1024,30 @@ Package cleveref Info: always capitalise cross-reference names on input line 785
 Package cleveref Info: no abbreviation of names on input line 7852.
 )
 ==> First Aid for cleveref.sty applied!
-LaTeX Font Info:    Trying to load font information for T1+ppl on input line 177.
+LaTeX Font Info:    Trying to load font information for T1+ppl on input line 124.
 (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 ) (template.aux)
 \openout1 = `template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count415
@@ -1062,13 +1062,13 @@ LaTeX Font Info:    ... okay on input line 177.
 \makeMPintoPDFobject=\count420
 \everyMPtoPDFconversion=\toks71
 )
-LaTeX Info: Redefining \microtypecontext on input line 177.
-Package microtype Info: Applying patch `item' on input line 177.
-Package microtype Info: Applying patch `toc' on input line 177.
-Package microtype Info: Applying patch `eqnum' on input line 177.
-Package microtype Info: Applying patch `footnote' on input line 177.
-Package microtype Info: Applying patch `verbatim' on input line 177.
-LaTeX Info: Redefining \microtypesetup on input line 177.
+LaTeX Info: Redefining \microtypecontext on input line 124.
+Package microtype Info: Applying patch `item' on input line 124.
+Package microtype Info: Applying patch `toc' on input line 124.
+Package microtype Info: Applying patch `eqnum' on input line 124.
+Package microtype Info: Applying patch `footnote' on input line 124.
+Package microtype Info: Applying patch `verbatim' on input line 124.
+LaTeX Info: Redefining \microtypesetup on input line 124.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1084,7 +1084,7 @@ File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 ) (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 177.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 124.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: hyperref package is loaded.
@@ -1129,50 +1129,50 @@ Package caption Info: End \AtBeginDocument code.
 Package newfloat Info: `float' package detected.
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-Package hyperref Info: Link coloring ON on input line 177.
+Package hyperref Info: Link coloring ON on input line 124.
 (template.out) (template.out)
 \@outlinefile=\write4
 \openout4 = `template.out'.
 
-LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 177.
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 124.
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
-LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 177.
+LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 124.
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
-LaTeX Font Info:    Trying to load font information for OML+zplm on input line 177.
+LaTeX Font Info:    Trying to load font information for OML+zplm on input line 124.
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 177.
+LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 124.
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 177.
+LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 124.
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 177.
+(Font)              scaled to size 10.42007pt on input line 124.
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 177.
+(Font)              scaled to size 7.91925pt on input line 124.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 177.
+(Font)              scaled to size 6.25204pt on input line 124.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 177.
+(Font)              scaled to size 10.42007pt on input line 124.
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 177.
+(Font)              scaled to size 7.91925pt on input line 124.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 177.
-LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 177.
+(Font)              scaled to size 6.25204pt on input line 124.
+LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 124.
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
@@ -1183,14 +1183,31 @@ Package microtype Info: Loading generic protrusion settings for font family
  (C:\Users\milic\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-eur.cfg
 File: mt-eur.cfg 2006/07/31 v1.1 microtype config. file: AMS Euler Roman (RS)
 )
-LaTeX Font Info:    Redeclaring symbol font `AMSb' on input line 177.
+LaTeX Font Info:    Redeclaring symbol font `AMSb' on input line 124.
 LaTeX Font Info:    Overwriting symbol font `AMSb' in version `normal'
-(Font)                  U/msb/m/n --> U/msb/m/n on input line 177.
+(Font)                  U/msb/m/n --> U/msb/m/n on input line 124.
 LaTeX Font Info:    Overwriting symbol font `AMSb' in version `bold'
-(Font)                  U/msb/m/n --> U/msb/m/n on input line 177.
-Package marginnote Info: Margin note 1.1 is on absolute page 1 on input line 177.
-Package marginnote Info: right page because not two side mode on input line 177.
-Package marginnote Info: xpos seems to be 167.01753pt on input line 177.
+(Font)                  U/msb/m/n --> U/msb/m/n on input line 124.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 124.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 124.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 124.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 124.
+
+Package marginnote Info: Margin note 1.1 is on absolute page 1 on input line 124.
+Package marginnote Info: right page because not two side mode on input line 124.
+Package marginnote Info: xpos seems to be 167.01753pt on input line 124.
 Package epstopdf Info: Source file: <Definitions/logo-mdpi.eps>
 (epstopdf)                    date: 2026-06-15 10:18:31
 (epstopdf)                    size: 563678 bytes
@@ -1198,43 +1215,42 @@ Package epstopdf Info: Source file: <Definitions/logo-mdpi.eps>
 (epstopdf)                    date: 2026-06-15 10:32:27
 (epstopdf)                    size: 13253 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=Definitions/logo-mdpi-eps-converted-to.pdf Definitions/logo-mdpi.eps>
-(epstopdf)             \includegraphics on input line 177.
+(epstopdf)             \includegraphics on input line 124.
 Package epstopdf Info: Output file is already uptodate.
-<Definitions/logo-mdpi-eps-converted-to.pdf, id=217, 74.2775pt x 49.18375pt>
+<Definitions/logo-mdpi-eps-converted-to.pdf, id=321, 74.2775pt x 49.18375pt>
 File: Definitions/logo-mdpi-eps-converted-to.pdf Graphic file (type pdf)
 <use Definitions/logo-mdpi-eps-converted-to.pdf>
-Package pdftex.def Info: Definitions/logo-mdpi-eps-converted-to.pdf  used on input line 177.
+Package pdftex.def Info: Definitions/logo-mdpi-eps-converted-to.pdf  used on input line 124.
 (pdftex.def)             Requested size: 42.96877pt x 28.45274pt.
-<Definitions/logo-orcid.pdf, id=219, 102.3825pt x 102.3825pt>
+<Definitions/logo-orcid.pdf, id=323, 102.3825pt x 102.3825pt>
 File: Definitions/logo-orcid.pdf Graphic file (type pdf)
 <use Definitions/logo-orcid.pdf>
-Package pdftex.def Info: Definitions/logo-orcid.pdf  used on input line 177.
+Package pdftex.def Info: Definitions/logo-orcid.pdf  used on input line 124.
 (pdftex.def)             Requested size: 9.10509pt x 9.10466pt.
 File: Definitions/logo-orcid.pdf Graphic file (type pdf)
 <use Definitions/logo-orcid.pdf>
-Package pdftex.def Info: Definitions/logo-orcid.pdf  used on input line 177.
+Package pdftex.def Info: Definitions/logo-orcid.pdf  used on input line 124.
 (pdftex.def)             Requested size: 9.10509pt x 9.10466pt.
 File: Definitions/logo-orcid.pdf Graphic file (type pdf)
 <use Definitions/logo-orcid.pdf>
-Package pdftex.def Info: Definitions/logo-orcid.pdf  used on input line 177.
+Package pdftex.def Info: Definitions/logo-orcid.pdf  used on input line 124.
 (pdftex.def)             Requested size: 9.10509pt x 9.10466pt.
 File: Definitions/logo-orcid.pdf Graphic file (type pdf)
 <use Definitions/logo-orcid.pdf>
-Package pdftex.def Info: Definitions/logo-orcid.pdf  used on input line 177.
+Package pdftex.def Info: Definitions/logo-orcid.pdf  used on input line 124.
 (pdftex.def)             Requested size: 9.10509pt x 9.10466pt.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 177.
+(Font)              scaled to size 8.33606pt on input line 124.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 177.
+(Font)              scaled to size 5.21004pt on input line 124.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 177.
+(Font)              scaled to size 8.33606pt on input line 124.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 177.
+(Font)              scaled to size 5.21004pt on input line 124.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 20.0pt, for example:
@@ -1262,18 +1278,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [3]
 
-LaTeX Warning: Reference `sec:discussion' on page 4 undefined on input line 214.
-
-
-LaTeX Warning: Reference `sec:design' on page 4 undefined on input line 214.
-
-
-LaTeX Warning: Reference `sec:limitations' on page 4 undefined on input line 214.
-
-
-LaTeX Warning: Reference `sec:limitations' on page 4 undefined on input line 224.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.18796pt}.
@@ -1290,9 +1294,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [5]
 
-LaTeX Warning: Reference `sec:design' on page 6 undefined on input line 246.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.18796pt}.
@@ -1301,9 +1302,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [6]
 
-LaTeX Warning: Reference `sec:design' on page 7 undefined on input line 270.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.18796pt}.
@@ -1311,9 +1309,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
 [7]
-
-LaTeX Warning: Reference `sec:limitations' on page 8 undefined on input line 286.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -1334,9 +1329,14 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-
-LaTeX Warning: Reference `sec:limitations' on page 10 undefined on input line 371.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 309.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 309.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 309.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 309.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1347,9 +1347,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [10]
 
-LaTeX Warning: Reference `sec:limitations' on page 11 undefined on input line 422.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.18796pt}.
@@ -1357,9 +1354,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
 [11]
-
-LaTeX Warning: Reference `sec:limitations' on page 12 undefined on input line 442.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -1384,15 +1378,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
 [14]
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 563.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 563.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 563.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 563.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -1409,12 +1394,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
 [16]
-<figures/fig_smr_by_model.png, id=537, 648.62325pt x 287.27325pt>
-File: figures/fig_smr_by_model.png Graphic file (type png)
-<use figures/fig_smr_by_model.png>
-Package pdftex.def Info: figures/fig_smr_by_model.png  used on input line 668.
-(pdftex.def)             Requested size: 394.35522pt x 174.6622pt.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -1423,12 +1402,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
 [17]
-<figures/fig_model_delta_smr.png, id=547, 576.35326pt x 280.04625pt>
-File: figures/fig_model_delta_smr.png Graphic file (type png)
-<use figures/fig_model_delta_smr.png>
-Package pdftex.def Info: figures/fig_model_delta_smr.png  used on input line 679.
-(pdftex.def)             Requested size: 394.35522pt x 191.61685pt.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -1436,13 +1409,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[18 <./figures/fig_smr_by_model.png> <./figures/fig_model_delta_smr.png>]
-<figures/fig_rates_by_condition.png, id=560, 518.53725pt x 258.36525pt>
-File: figures/fig_rates_by_condition.png Graphic file (type png)
-<use figures/fig_rates_by_condition.png>
-Package pdftex.def Info: figures/fig_rates_by_condition.png  used on input line 740.
-(pdftex.def)             Requested size: 394.35522pt x 196.48972pt.
-
+[18]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -1458,12 +1425,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[20 <./figures/fig_rates_by_condition.png>]
-<figures/fig_accuracy_by_condition.png, id=580, 402.90524pt x 251.13824pt>
-File: figures/fig_accuracy_by_condition.png Graphic file (type png)
-<use figures/fig_accuracy_by_condition.png>
-Package pdftex.def Info: figures/fig_accuracy_by_condition.png  used on input line 830.
-(pdftex.def)             Requested size: 295.76642pt x 184.36787pt.
+[20]
+<figures/fig_smr_by_model.png, id=692, 648.62325pt x 287.27325pt>
+File: figures/fig_smr_by_model.png Graphic file (type png)
+<use figures/fig_smr_by_model.png>
+Package pdftex.def Info: figures/fig_smr_by_model.png  used on input line 690.
+(pdftex.def)             Requested size: 394.35522pt x 174.6622pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1473,19 +1440,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
 [21]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 18.18796pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.18796pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
-
-[22 <./figures/fig_accuracy_by_condition.png>]
-<figures/fig_subfield_heatmap.png, id=598, 417.2388pt x 229.45724pt>
-File: figures/fig_subfield_heatmap.png Graphic file (type png)
-<use figures/fig_subfield_heatmap.png>
-Package pdftex.def Info: figures/fig_subfield_heatmap.png  used on input line 895.
-(pdftex.def)             Requested size: 315.48538pt x 173.5035pt.
+<figures/fig_model_delta_smr.png, id=702, 576.35326pt x 280.04625pt>
+File: figures/fig_model_delta_smr.png Graphic file (type png)
+<use figures/fig_model_delta_smr.png>
+Package pdftex.def Info: figures/fig_model_delta_smr.png  used on input line 701.
+(pdftex.def)             Requested size: 394.35522pt x 191.61685pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1494,7 +1453,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[23 <./figures/fig_subfield_heatmap.png>]
+[22 <./figures/fig_smr_by_model.png> <./figures/fig_model_delta_smr.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -1502,7 +1461,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[24]
+[23]
+<figures/fig_rates_by_condition.png, id=721, 518.53725pt x 258.36525pt>
+File: figures/fig_rates_by_condition.png Graphic file (type png)
+<use figures/fig_rates_by_condition.png>
+Package pdftex.def Info: figures/fig_rates_by_condition.png  used on input line 763.
+(pdftex.def)             Requested size: 394.35522pt x 196.48972pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.18796pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.18796pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
+
+[24 <./figures/fig_rates_by_condition.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -1519,9 +1492,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
 [26]
-Overfull \hbox (211.9596pt too wide) in paragraph at lines 1107--1148
- [][] 
- []
+<figures/fig_accuracy_by_condition.png, id=754, 402.90524pt x 251.13824pt>
+File: figures/fig_accuracy_by_condition.png Graphic file (type png)
+<use figures/fig_accuracy_by_condition.png>
+Package pdftex.def Info: figures/fig_accuracy_by_condition.png  used on input line 913.
+(pdftex.def)             Requested size: 295.76642pt x 184.36787pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1538,9 +1513,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[28]
-
-LaTeX Warning: Reference `sec:discussion' on page 29 undefined on input line 1174.
+[28 <./figures/fig_accuracy_by_condition.png>]
+<figures/fig_subfield_heatmap.png, id=772, 417.2388pt x 229.45724pt>
+File: figures/fig_subfield_heatmap.png Graphic file (type png)
+<use figures/fig_subfield_heatmap.png>
+Package pdftex.def Info: figures/fig_subfield_heatmap.png  used on input line 977.
+(pdftex.def)             Requested size: 315.48538pt x 173.5035pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1549,10 +1527,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[29]
-
-LaTeX Warning: Reference `sec:limitations' on page 30 undefined on input line 1215.
-
+[29 <./figures/fig_subfield_heatmap.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -1561,10 +1536,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
 [30]
-
-LaTeX Warning: Reference `sec:discussion' on page 31 undefined on input line 1247.
-
-(template.bbl
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -1588,7 +1559,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[33])
+[33]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -1596,7 +1567,178 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[34] 
+[34]
+
+LaTeX Warning: Reference `tab:glmm' on page 35 undefined on input line 1169.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.18796pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.18796pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
+
+[35]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.18796pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.18796pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
+
+[36]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.18796pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.18796pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
+
+[37]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.18796pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.18796pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
+
+[38]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.18796pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.18796pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
+
+[39]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.18796pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.18796pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
+
+[40]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.18796pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.18796pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
+
+[41]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.18796pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.18796pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
+
+[42]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.18796pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.18796pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
+
+[43]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.18796pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.18796pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
+
+[44]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.18796pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.18796pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
+
+[45]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.18796pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.18796pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
+
+[46]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.18796pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.18796pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
+
+[47]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.18796pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.18796pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
+
+[48]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.18796pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.18796pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
+
+[49]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.18796pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.18796pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
+
+[50]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.18796pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.18796pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
+
+[51] (template.bbl
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.18796pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.18796pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
+
+[52]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.18796pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.18796pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
+
+[53])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.18796pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.18796pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
+
+[54]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.18796pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.18796pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
+
+[55] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (template.aux)
  ***********
@@ -1608,20 +1750,20 @@ L3 programming layer <2025-12-24>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `template.out' has not changed.
-(rerunfilecheck)             Checksum: BB486F4B0E65FBD464A96983A206AC97;10482.
+(rerunfilecheck)             Checksum: 3839E6FFEE32685EAB3195F96617AC25;16908.
  ) 
 Here is how much of TeX's memory you used:
- 45634 strings out of 467871
- 1015221 string characters out of 5418377
- 1613564 words of memory out of 5000000
- 72960 multiletter control sequences out of 15000+600000
- 714163 words of font info for 542 fonts, out of 8000000 for 9000
+ 45836 strings out of 467871
+ 1017794 string characters out of 5418377
+ 1612859 words of memory out of 5000000
+ 73020 multiletter control sequences out of 15000+600000
+ 719237 words of font info for 599 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 123i,13n,121p,5471b,967s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\milic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\milic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0900.pk> <C:\Users\milic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi375\ecss0800.pk><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on template.pdf (34 pages, 1382585 bytes).
+ 123i,16n,121p,5471b,949s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\milic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\milic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0900.pk> <C:\Users\milic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi375\ecss0800.pk><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on template.pdf (55 pages, 1538076 bytes).
 PDF statistics:
- 922 PDF objects out of 1000 (max. 8388607)
- 186 named destinations out of 1000 (max. 500000)
- 111056 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 1283 PDF objects out of 1440 (max. 8388607)
+ 246 named destinations out of 1000 (max. 500000)
+ 111264 words of extra memory for PDF output out of 128383 (max. 10000000)
 

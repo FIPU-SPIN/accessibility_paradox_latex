@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex template"] 1792080157.15803 "template.aux" "template.bbl" "template" 1792080166.74659 0
+["bibtex template"] 1792141784.52277 "template.aux" "template.bbl" "template" 1792141795.88017 0
   "./Definitions/mdpi.bst" 1781511511 23683 4afe8e0b352a18c39ff91c43fd26f4b2 ""
   "./references.bib" 1790754855 29363 d0458e249a4dcd52e703abd9478189ec ""
-  "template.aux" 1792080165 30003 2b2fce0aa56856564a8c1292491e526e "pdflatex"
+  "template.aux" 1792141794 40538 685cafc88319eaad1d05bba10d404eef "pdflatex"
   (generated)
   "template.bbl"
   "template.blg"
   (rewritten before read)
-["pdflatex"] 1792080157.52612 "c:/Users/milic/Documents/GitHub/accessibility_paradox_latex/template.tex" "template.pdf" "template" 1792080166.74763 0
+["pdflatex"] 1792141784.95604 "c:/Users/milic/Documents/GitHub/accessibility_paradox_latex/template.tex" "template.pdf" "template" 1792141795.88173 0
   "C:/Users/milic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1776753368 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/milic/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi375/ecss0800.pk" 1773665370 10028 2b5e2e3d0bb1733bb2dc239aafe1f06c ""
   "C:/Users/milic/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ectt0900.pk" 1780659056 17512 2e11e61b9b15d9ba9eece0f72830060a ""
@@ -51,6 +51,7 @@
   "C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247596667 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
   "C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1247596673 31764 459c573c03a4949a528c2cc7f557e217 ""
   "C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb" 1136849748 9356 3e1f7eacbb57d05d0b682da8d83eb600 ""
   "C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb" 1136849748 15213 d999bbe8bd9c8f231f3f66a737c76478 ""
   "C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb" 1136849748 52406 dad2f72863a03727d5f536c64a69c452 ""
@@ -302,16 +303,16 @@
   "Definitions/logo-mdpi.eps" 1781511511 563678 5cdc8f4064e4e6cc8ec19e9f9b0d5b7c ""
   "Definitions/logo-orcid.pdf" 1781511511 12671 39a20ba789123aa897c7efc569fb5270 ""
   "Definitions/mdpi.cls" 1781511511 62350 57238b5ebd7ff11d314cfe2d16f3cb4a ""
-  "c:/Users/milic/Documents/GitHub/accessibility_paradox_latex/template.tex" 1792080137 118267 82869bf63a57344b04fc35d5fda8987e ""
+  "c:/Users/milic/Documents/GitHub/accessibility_paradox_latex/template.tex" 1792141771 197117 91478af86817e2dd3b99342563b64ae0 ""
   "figures/fig_accuracy_by_condition.png" 1792065319 159120 9d082c0d9818159ef74727eee3697263 ""
   "figures/fig_model_delta_smr.png" 1792065321 212834 912a4006d56e0bd32af11e0ff3f2da52 ""
   "figures/fig_rates_by_condition.png" 1792065322 181575 0a3d2b3feddd290b81467fc5a3f4edb5 ""
   "figures/fig_smr_by_model.png" 1792065324 226418 12208adc46476e9bbe9fa869141858ca ""
   "figures/fig_subfield_heatmap.png" 1792065327 222081 cc9cfe5e4c51a86753d35d53b646d147 ""
-  "template.aux" 1792080165 30003 2b2fce0aa56856564a8c1292491e526e "pdflatex"
-  "template.bbl" 1792080157 23443 68290871643197860136bcf1b4cb0eda "bibtex template"
-  "template.out" 1792080165 10482 bb486f4b0e65fbd464a96983a206ac97 "pdflatex"
-  "template.tex" 1792080137 118267 82869bf63a57344b04fc35d5fda8987e ""
+  "template.aux" 1792141794 40538 685cafc88319eaad1d05bba10d404eef "pdflatex"
+  "template.bbl" 1792141784 24142 394aea0ce6f44b4d34ce1c69ef7500a6 "bibtex template"
+  "template.out" 1792141794 16908 3839e6ffee32685eab3195f96617ac25 "pdflatex"
+  "template.tex" 1792141771 197117 91478af86817e2dd3b99342563b64ae0 ""
   (generated)
   "template.aux"
   "template.log"

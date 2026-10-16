@@ -429,15 +429,11 @@ Landis, J.R.; Koch, G.G.
 \newblock {\em Biometrics} {\bf 1977}, {\em 33},~159--174.
 \newblock {\url{https://doi.org/10.2307/2529310}}.
 
-\bibitem[{R Core Team}(2023)]{rcore2023}
-{R Core Team}.
-\newblock R: A Language and Environment for Statistical Computing,  2023.
-
-\bibitem[Tukey(1949)]{tukey1949comparing}
-Tukey, J.W.
-\newblock Comparing individual means in the analysis of variance.
-\newblock {\em Biometrics} {\bf 1949}, {\em 5},~99--114.
-\newblock {\url{https://doi.org/10.2307/3001913}}.
+\bibitem[Cochran(1950)]{cochran1950comparison}
+Cochran, W.G.
+\newblock The comparison of percentages in matched samples.
+\newblock {\em Biometrika} {\bf 1950}, {\em 37},~256--266.
+\newblock {\url{https://doi.org/10.2307/2332343}}.
 
 \bibitem[Shapiro and Wilk(1965)]{shapiro1965analysis}
 Shapiro, S.S.; Wilk, M.B.
@@ -451,25 +447,12 @@ Levene, H.
   Probability and Statistics: Essays in Honor of Harold Hotelling}; Olkin, I.,
   Ed.; Stanford University Press,  1960; pp. 278--292.
 
-\bibitem[Cochran(1950)]{cochran1950comparison}
-Cochran, W.G.
-\newblock The comparison of percentages in matched samples.
-\newblock {\em Biometrika} {\bf 1950}, {\em 37},~256--266.
-\newblock {\url{https://doi.org/10.2307/2332343}}.
-
 \bibitem[McNemar(1947)]{mcnemar1947note}
 McNemar, Q.
 \newblock Note on the sampling error of the difference between correlated
   proportions or percentages.
 \newblock {\em Psychometrika} {\bf 1947}, {\em 12},~153--157.
 \newblock {\url{https://doi.org/10.1007/BF02295996}}.
-
-\bibitem[Bates et~al.(2015)Bates, M{\"a}chler, Bolker, and
-  Walker]{bates2015fitting}
-Bates, D.; M{\"a}chler, M.; Bolker, B.; Walker, S.
-\newblock Fitting linear mixed-effects models using lme4.
-\newblock {\em Journal of Statistical Software} {\bf 2015}, {\em 67},~1--48.
-\newblock {\url{https://doi.org/10.18637/jss.v067.i01}}.
 
 \bibitem[Benjamini and Hochberg(1995)]{benjamini1995controlling}
 Benjamini, Y.; Hochberg, Y.
@@ -490,5 +473,37 @@ Lakens, D.
   science.
 \newblock {\em Frontiers in Psychology} {\bf 2013}, {\em 4},~863.
 \newblock {\url{https://doi.org/10.3389/fpsyg.2013.00863}}.
+
+\bibitem[Rose and Meyer(2002)]{rose2002teaching}
+Rose, D.H.; Meyer, A.
+\newblock Teaching every student in the digital age: Universal design for
+  learning; Association for Supervision and Curriculum Development,  2002.
+
+\bibitem[Wobbrock et~al.(2011)Wobbrock, Kane, Gajos, Harada, and
+  Froehlich]{wobbrock2011ability}
+Wobbrock, J.O.; Kane, S.K.; Gajos, K.Z.; Harada, S.; Froehlich, J.
+\newblock Ability-based design: Concept, principles and examples.
+\newblock {\em ACM Transactions on Accessible Computing} {\bf 2011}, {\em
+  3},~1--27.
+\newblock {\url{https://doi.org/10.1145/1952383.1952384}}.
+
+\bibitem[Treisman and Gelade(1980)]{treisman1980feature}
+Treisman, A.M.; Gelade, G.
+\newblock A feature-integration theory of attention.
+\newblock {\em Cognitive Psychology} {\bf 1980}, {\em 12},~97--136.
+\newblock {\url{https://doi.org/10.1016/0010-0285(80)90005-5}}.
+
+\bibitem[Hullman et~al.(2019)Hullman, Qiao, Correll, Kale, and
+  Kay]{hullman2019pursuit}
+Hullman, J.; Qiao, X.; Correll, M.; Kale, A.; Kay, M.
+\newblock In pursuit of error: A survey of uncertainty visualization
+  evaluation.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics} {\bf
+  2019}, {\em 25},~903--913.
+\newblock {\url{https://doi.org/10.1109/TVCG.2018.2864885}}.
+
+\bibitem[{W3C}(2023)]{w3c2023wcag}
+{W3C}.
+\newblock Web Content Accessibility Guidelines (WCAG) 2.2,  2023.
 
 \end{thebibliography}
