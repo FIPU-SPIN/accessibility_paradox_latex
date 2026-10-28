@@ -8,43 +8,43 @@ Database file #1: references.bib
 Warning--empty booktitle in rose2002teaching
 You've used 70 entries,
             2887 wiz_defined-function locations,
-            1026 strings with 18979 characters,
-and the built_in function-call counts, 30907 in all, are:
-= -- 2816
-> -- 1733
+            1025 strings with 19112 characters,
+and the built_in function-call counts, 30736 in all, are:
+= -- 2802
+> -- 1724
 < -- 52
-+ -- 764
-- -- 462
-* -- 2506
-:= -- 4620
-add.period$ -- 263
++ -- 761
+- -- 460
+* -- 2477
+:= -- 4598
+add.period$ -- 264
 call.type$ -- 70
 change.case$ -- 72
 chr.to.int$ -- 70
 cite$ -- 71
-duplicate$ -- 1442
-empty$ -- 2529
-format.name$ -- 625
-if$ -- 6676
+duplicate$ -- 1430
+empty$ -- 2515
+format.name$ -- 620
+if$ -- 6640
 int.to.chr$ -- 1
 int.to.str$ -- 70
-missing$ -- 70
-newline$ -- 402
+missing$ -- 67
+newline$ -- 403
 num.names$ -- 218
-pop$ -- 676
+pop$ -- 678
 preamble$ -- 0
 purify$ -- 70
 quote$ -- 0
-skip$ -- 976
+skip$ -- 975
 stack$ -- 0
-substring$ -- 1544
-swap$ -- 372
+substring$ -- 1519
+swap$ -- 370
 text.length$ -- 18
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 481
+type$ -- 484
 warning$ -- 1
-while$ -- 266
+while$ -- 264
 width$ -- 0
-write$ -- 971
+write$ -- 972
 (There was 1 warning)

@@ -93,6 +93,46 @@ Bastani, H.; Bastani, O.; Sungu, A.; Ge, H.; Kabakc{\i}, {\"O}.; Mariman, R.
   {\em 122},~e2422633122.
 \newblock {\url{https://doi.org/10.1073/pnas.2422633122}}.
 
+\bibitem[Ibrahim et~al.(2026)Ibrahim, Liu, Chen, and Wang]{ibrahim2026warmth}
+Ibrahim, H.; Liu, T.; Chen, A.; Wang, D.
+\newblock The warmth-accuracy trade-off: When making LLMs more empathetic
+  increases factual errors.
+\newblock In Proceedings of the Proceedings of the 2026 ACM Conference on
+  Fairness, Accountability, and Transparency,  2026.
+\newblock Forthcoming.
+
+\bibitem[Ouyang et~al.(2022)Ouyang, Wu, Jiang, Almeida, Wainwright,
+  et~al.]{ouyang2022training}
+Ouyang, L.; Wu, J.; Jiang, X.; Almeida, D.; Wainwright, C.;  et~al.
+\newblock Training language models to follow instructions with human feedback.
+\newblock In Proceedings of the Advances in Neural Information Processing
+  Systems,  2022, Vol.~35, pp. 27730--27744.
+\newblock {\url{https://doi.org/10.48550/arXiv.2203.02155}}.
+
+\bibitem[Sharma et~al.(2024)Sharma, Tong, Korbak, Duvenaud, Askell,
+  et~al.]{sharma2024towards}
+Sharma, M.; Tong, M.; Korbak, T.; Duvenaud, D.; Askell, A.;  et~al.
+\newblock Towards understanding sycophancy in language models.
+\newblock In Proceedings of the Proceedings of the 12th International
+  Conference on Learning Representations,  2024.
+\newblock {\url{https://doi.org/10.48550/arXiv.2310.13548}}.
+
+\bibitem[Perez et~al.(2023)Perez, Ringer, Luko{\v{s}}i{\=u}t{\.e}, Nguyen,
+  Chen, et~al.]{perez2023discovering}
+Perez, E.; Ringer, S.; Luko{\v{s}}i{\=u}t{\.e}, K.; Nguyen, K.; Chen, E.;
+  et~al.
+\newblock Discovering language model behaviors with model-written evaluations.
+\newblock In Proceedings of the Findings of the Association for Computational
+  Linguistics: ACL 2023,  2023, pp. 13387--13434.
+\newblock {\url{https://doi.org/10.18653/v1/2023.findings-acl.847}}.
+
+\bibitem[Lin et~al.(2022)Lin, Hilton, and Evans]{lin2022truthfulqa}
+Lin, S.; Hilton, J.; Evans, O.
+\newblock TruthfulQA: Measuring how models mimic human falsehoods.
+\newblock In Proceedings of the Proceedings of the 60th Annual Meeting of the
+  Association for Computational Linguistics,  2022, pp. 3214--3252.
+\newblock {\url{https://doi.org/10.18653/v1/2022.acl-long.229}}.
+
 \bibitem[Posner et~al.(1982)Posner, Strike, Hewson, and
   Gertzog]{posner1982accommodation}
 Posner, G.J.; Strike, K.A.; Hewson, P.W.; Gertzog, W.A.
@@ -182,46 +222,6 @@ Ben-Ari, M.
 \newblock Constructivism in computer science education.
 \newblock {\em Journal of Computers in Mathematics and Science Teaching} {\bf
   2001}, {\em 20},~45--73.
-
-\bibitem[Ibrahim et~al.(2026)Ibrahim, Liu, Chen, and Wang]{ibrahim2026warmth}
-Ibrahim, H.; Liu, T.; Chen, A.; Wang, D.
-\newblock The warmth-accuracy trade-off: When making LLMs more empathetic
-  increases factual errors.
-\newblock In Proceedings of the Proceedings of the 2026 ACM Conference on
-  Fairness, Accountability, and Transparency,  2026.
-\newblock Forthcoming.
-
-\bibitem[Ouyang et~al.(2022)Ouyang, Wu, Jiang, Almeida, Wainwright,
-  et~al.]{ouyang2022training}
-Ouyang, L.; Wu, J.; Jiang, X.; Almeida, D.; Wainwright, C.;  et~al.
-\newblock Training language models to follow instructions with human feedback.
-\newblock In Proceedings of the Advances in Neural Information Processing
-  Systems,  2022, Vol.~35, pp. 27730--27744.
-\newblock {\url{https://doi.org/10.48550/arXiv.2203.02155}}.
-
-\bibitem[Sharma et~al.(2024)Sharma, Tong, Korbak, Duvenaud, Askell,
-  et~al.]{sharma2024towards}
-Sharma, M.; Tong, M.; Korbak, T.; Duvenaud, D.; Askell, A.;  et~al.
-\newblock Towards understanding sycophancy in language models.
-\newblock In Proceedings of the Proceedings of the 12th International
-  Conference on Learning Representations,  2024.
-\newblock {\url{https://doi.org/10.48550/arXiv.2310.13548}}.
-
-\bibitem[Perez et~al.(2023)Perez, Ringer, Luko{\v{s}}i{\=u}t{\.e}, Nguyen,
-  Chen, et~al.]{perez2023discovering}
-Perez, E.; Ringer, S.; Luko{\v{s}}i{\=u}t{\.e}, K.; Nguyen, K.; Chen, E.;
-  et~al.
-\newblock Discovering language model behaviors with model-written evaluations.
-\newblock In Proceedings of the Findings of the Association for Computational
-  Linguistics: ACL 2023,  2023, pp. 13387--13434.
-\newblock {\url{https://doi.org/10.18653/v1/2023.findings-acl.847}}.
-
-\bibitem[Lin et~al.(2022)Lin, Hilton, and Evans]{lin2022truthfulqa}
-Lin, S.; Hilton, J.; Evans, O.
-\newblock TruthfulQA: Measuring how models mimic human falsehoods.
-\newblock In Proceedings of the Proceedings of the 60th Annual Meeting of the
-  Association for Computational Linguistics,  2022, pp. 3214--3252.
-\newblock {\url{https://doi.org/10.18653/v1/2022.acl-long.229}}.
 
 \bibitem[Gadiraju et~al.(2023)Gadiraju, Kane, Dev, Taylor, Wang, Denton, and
   Brewer]{gadiraju2023wouldnt}
@@ -336,40 +336,6 @@ Sweller, J.; van Merri{\"e}nboer, J.J.G.; Paas, F.G.W.C.
 \newblock {\em Educational Psychology Review} {\bf 1998}, {\em 10},~251--296.
 \newblock {\url{https://doi.org/10.1023/A:1022193728205}}.
 
-\bibitem[Baddeley and Hitch(1974)]{baddeley1974working}
-Baddeley, A.D.; Hitch, G.
-\newblock Working memory.
-\newblock {\em Psychology of Learning and Motivation} {\bf 1974}, {\em
-  8},~47--89.
-\newblock {\url{https://doi.org/10.1016/S0079-7421(08)60452-1}}.
-
-\bibitem[LaBerge and Samuels(1974)]{laberge1974toward}
-LaBerge, D.; Samuels, S.J.
-\newblock Toward a theory of automatic information processing in reading.
-\newblock {\em Cognitive Psychology} {\bf 1974}, {\em 6},~293--323.
-\newblock {\url{https://doi.org/10.1016/0010-0285(74)90015-2}}.
-
-\bibitem[Kahneman(2011)]{kahneman2011thinking}
-Kahneman, D.
-\newblock {\em Thinking, Fast and Slow}; Farrar, Straus and Giroux,  2011.
-
-\bibitem[Bu{\c{c}}inca et~al.(2021)Bu{\c{c}}inca, Malaya, and
-  Gajos]{bucinca2021trust}
-Bu{\c{c}}inca, Z.; Malaya, M.B.; Gajos, K.Z.
-\newblock To trust or to think: Cognitive forcing functions can reduce
-  overreliance on AI in AI-assisted decision-making.
-\newblock {\em Proceedings of the ACM on Human-Computer Interaction} {\bf
-  2021}, {\em 5},~1--21.
-\newblock {\url{https://doi.org/10.1145/3449282}}.
-
-\bibitem[Harp and Mayer(1998)]{harp1998seductive}
-Harp, S.F.; Mayer, R.E.
-\newblock How seductive details do their damage: A theory of cognitive interest
-  in science learning.
-\newblock {\em Journal of Educational Psychology} {\bf 1998}, {\em
-  90},~414--434.
-\newblock {\url{https://doi.org/10.1037/0022-0663.90.3.414}}.
-
 \bibitem[Gentner(1983)]{gentner1983structure}
 Gentner, D.
 \newblock Structure-mapping: A theoretical framework for analogy.
@@ -415,6 +381,19 @@ Panickssery, A.; Bowman, S.R.; Feng, S.
   Curricula}(2023)]{acm2023cs2023}
 {ACM/IEEE-CS/AAAI Joint Task Force on Computing Curricula}.
 \newblock Computer Science Curricula 2023,  2023.
+
+\bibitem[{Ollama}(2023)]{ollama2023}
+{Ollama}.
+\newblock Ollama: Run Large Language Models Locally.
+\newblock \url{https://ollama.com},  2023.
+\newblock Accessed: 2025.
+
+\bibitem[{University of Zagreb University Computing Centre
+  (Srce)}(2023)]{srce2023supek}
+{University of Zagreb University Computing Centre (Srce)}.
+\newblock Nova nacionalna e-infrastruktura {HR-ZOO} pu{\v{s}}tena u rad --
+  predstavljeno najja{\v{c}}e hrvatsko superra{\v{c}}unalo ``{Supek}''.
+\newblock Srce, Zagreb,  2023.
 
 \bibitem[Cohen(1960)]{cohen1960coefficient}
 Cohen, J.
@@ -474,6 +453,19 @@ Lakens, D.
 \newblock {\em Frontiers in Psychology} {\bf 2013}, {\em 4},~863.
 \newblock {\url{https://doi.org/10.3389/fpsyg.2013.00863}}.
 
+\bibitem[Baddeley and Hitch(1974)]{baddeley1974working}
+Baddeley, A.D.; Hitch, G.
+\newblock Working memory.
+\newblock {\em Psychology of Learning and Motivation} {\bf 1974}, {\em
+  8},~47--89.
+\newblock {\url{https://doi.org/10.1016/S0079-7421(08)60452-1}}.
+
+\bibitem[LaBerge and Samuels(1974)]{laberge1974toward}
+LaBerge, D.; Samuels, S.J.
+\newblock Toward a theory of automatic information processing in reading.
+\newblock {\em Cognitive Psychology} {\bf 1974}, {\em 6},~293--323.
+\newblock {\url{https://doi.org/10.1016/0010-0285(74)90015-2}}.
+
 \bibitem[Rose and Meyer(2002)]{rose2002teaching}
 Rose, D.H.; Meyer, A.
 \newblock Teaching every student in the digital age: Universal design for
@@ -505,5 +497,14 @@ Hullman, J.; Qiao, X.; Correll, M.; Kale, A.; Kay, M.
 \bibitem[{W3C}(2023)]{w3c2023wcag}
 {W3C}.
 \newblock Web Content Accessibility Guidelines (WCAG) 2.2,  2023.
+
+\bibitem[Bu{\c{c}}inca et~al.(2021)Bu{\c{c}}inca, Malaya, and
+  Gajos]{bucinca2021trust}
+Bu{\c{c}}inca, Z.; Malaya, M.B.; Gajos, K.Z.
+\newblock To trust or to think: Cognitive forcing functions can reduce
+  overreliance on AI in AI-assisted decision-making.
+\newblock {\em Proceedings of the ACM on Human-Computer Interaction} {\bf
+  2021}, {\em 5},~1--21.
+\newblock {\url{https://doi.org/10.1145/3449282}}.
 
 \end{thebibliography}
