@@ -818,8 +818,7 @@ Condition effect in the human consensus. In the consensus (Table~\ref{tab:review
 \caption{Number of the 30 validation responses per condition flagged by the human consensus and by each judge (J1 = primary, Qwen3.6:35b; J2 = secondary, Qwen3:32b). OER is rated for B and C only. Consensus percentages: SM 0.0, 16.7, 26.7; DA 0.0, 30.0, 36.7; OER 16.7 (B), 13.3 (C).}
 \label{tab:reviewer:consensus}
 \centering
-\footnotesize
-\resizebox{\linewidth}{!}{%
+\small
 \begin{tabular}{lccccccccc}
 \toprule
 \multirow{2}{*}{Condition} & \multicolumn{3}{c}{SM} & \multicolumn{3}{c}{DA} & \multicolumn{3}{c}{OER} \\
@@ -830,7 +829,7 @@ A (standard) & 0 & 2 & 0 & 0 & 0 & 0 & -- & -- & -- \\
 B (simplified) & 5 & 2 & 1 & 9 & 4 & 7 & 5 & 2 & 24 \\
 C (highly simplified) & 8 & 1 & 0 & 11 & 5 & 13 & 4 & 1 & 24 \\
 \bottomrule
-\end{tabular}}
+\end{tabular}
 \end{table}
 
 Judge validation. Table~\ref{tab:judge:validation} reports agreement of each judge with the consensus. The primary judge agrees poorly: $\kappa = 0.034$ (SM), $0.160$ (DA), $0.099$ (OER); recall 0.077, 0.200, 0.111 (1 of 13 consensus SM, 4 of 20 DA, 1 of 9 OER). Of its five SM flags, four were not confirmed, including both in A. Consensus prevalence was $14.4\%$ for SM against $5.6\%$ for the judge, and $22.2\%$ against $10.0\%$ for DA. Mean accuracy was 3.39 for h1 (3.67 for the two-annotator mean) and 4.58 for the primary judge. The secondary judge fails differently: for SM it flagged a single response (confirmed; recall 0.077); for DA it reproduces the consensus prevalence exactly ($22.2\%$) but with precision and recall of only 0.350, so it agrees on how many analogies are dangerous but only partly on which; for OER it flagged $80.0\%$ of simplified responses against a consensus prevalence of $15.0\%$ (recall 0.889, precision 0.167). Its accuracy scores are closer to the human level than the primary judge's (4.24 vs.\ 4.58).
