@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex template"] 1793191102.65093 "template.aux" "template.bbl" "template" 1793191116.86649 0
+["bibtex template"] 1793262873.78443 "template.aux" "template.bbl" "template" 1793262883.10113 0
   "./Definitions/mdpi.bst" 1781511511 23683 4afe8e0b352a18c39ff91c43fd26f4b2 ""
-  "./references.bib" 1793190852 30047 49d54f33b33ede943314ddcefa03b7da ""
-  "template.aux" 1793191115 38064 1164b233a2699443c40e9a3c2bc22faa "pdflatex"
+  "./references.bib" 1793261651 30047 49d54f33b33ede943314ddcefa03b7da ""
+  "template.aux" 1793262881 34114 2357a1f43e099834088c2fd9afad7400 "pdflatex"
   (generated)
   "template.bbl"
   "template.blg"
   (rewritten before read)
-["pdflatex"] 1793191103.43362 "c:/Users/milic/Documents/GitHub/accessibility_paradox_latex/template.tex" "template.pdf" "template" 1793191116.86806 0
+["pdflatex"] 1793262874.17178 "c:/Users/milic/Documents/GitHub/accessibility_paradox_latex/template.tex" "template.pdf" "template" 1793262883.10229 0
   "C:/Users/milic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1776753368 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/milic/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi375/ecss0800.pk" 1773665370 10028 2b5e2e3d0bb1733bb2dc239aafe1f06c ""
   "C:/Users/milic/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ectt0900.pk" 1780659056 17512 2e11e61b9b15d9ba9eece0f72830060a ""
@@ -303,15 +303,16 @@
   "Definitions/logo-mdpi.eps" 1781511511 563678 5cdc8f4064e4e6cc8ec19e9f9b0d5b7c ""
   "Definitions/logo-orcid.pdf" 1781511511 12671 39a20ba789123aa897c7efc569fb5270 ""
   "Definitions/mdpi.cls" 1781511511 62350 57238b5ebd7ff11d314cfe2d16f3cb4a ""
-  "c:/Users/milic/Documents/GitHub/accessibility_paradox_latex/template.tex" 1793191090 143622 cd05155889cac75b8897df0622aa99dc ""
+  "c:/Users/milic/Documents/GitHub/accessibility_paradox_latex/template.tex" 1793262863 117222 d3ef64d6e70dca5c4a75133ee3ce56aa ""
   "figures/fig_accuracy_by_condition.png" 1792402402 159120 9d082c0d9818159ef74727eee3697263 ""
   "figures/fig_model_delta_smr.png" 1792402403 212834 912a4006d56e0bd32af11e0ff3f2da52 ""
   "figures/fig_rates_by_condition.png" 1792402404 181575 0a3d2b3feddd290b81467fc5a3f4edb5 ""
   "figures/fig_smr_by_model.png" 1792402405 226418 12208adc46476e9bbe9fa869141858ca ""
-  "template.aux" 1793191115 38064 1164b233a2699443c40e9a3c2bc22faa "pdflatex"
-  "template.bbl" 1793191103 24182 5cbd3ea90f8598fd79ed413ecb91751b "bibtex template"
-  "template.out" 1793191115 13630 e2656eccada452658041a9ea2817ee7f "pdflatex"
-  "template.tex" 1793191090 143622 cd05155889cac75b8897df0622aa99dc ""
+  "figures/fig_subfield_heatmap.png" 1792402407 222081 cc9cfe5e4c51a86753d35d53b646d147 ""
+  "template.aux" 1793262881 34114 2357a1f43e099834088c2fd9afad7400 "pdflatex"
+  "template.bbl" 1793262874 24182 1f3a76ffd16271ae6212184e02bcd48f "bibtex template"
+  "template.out" 1793262881 7999 94c02b0f3235c9ecc931d12c0677f77d "pdflatex"
+  "template.tex" 1793262863 117222 d3ef64d6e70dca5c4a75133ee3ce56aa ""
   (generated)
   "template.aux"
   "template.log"

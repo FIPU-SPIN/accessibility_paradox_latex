@@ -119,7 +119,7 @@ $^{2}$ \quad Faculty of Engineering, University of Rijeka, Vukovarska 58, 51000 
 \corres{Correspondence: ivan.lorencin@unipu.hr}
 
 % Abstract (Do not insert blank lines, i.e. \\) 
-\abstract{Large language models (LLMs) are increasingly used by students with reading and attention difficulties to simplify complex texts. We ask whether accessibility-style prompts change the conceptual risk profile of LLM explanations of computer science (CS) concepts, and we focus on the most robust finding: dangerous analogies. We introduce AccessTrap-CS, a corpus of 735 responses from seven open-weight LLMs to 35 CS concepts under standard, simplified, and highly simplified prompts. Responses were scored by two LLM judges, and a stratified subsample of 90 responses was annotated by two experts, with disagreements adjudicated to consensus labels. By human consensus, dangerous analogies were absent under the standard prompt and present in $30.0\%$ and $36.7\%$ of simplified responses, and strategic misconceptions rose monotonically ($0.0\%$, $16.7\%$, $26.7\%$; $p = 0.012$). The two LLM judges reproduced the direction of the dangerous-analogy effect (primary: $0.8\%$ to $20.4\%$ and $24.6\%$; secondary: $1.6\%$ to $31.0\%$ and $55.1\%$) but agreed poorly with the human consensus on strategic misconceptions and dangerous analogies ($\kappa \leq 0.16$). In the validation subsample every simplified response contained an analogy, as the prompts request, and $30$--$37\%$ of these analogies were dangerous by consensus; the DAR increase is therefore produced by analogy frequency, and per-analogy danger in simplified responses is substantial but cannot be compared with the baseline. In a small single-model pilot, a simplified prompt that explicitly forbade analogies still elicited one in 57\% of responses (20 of 35). Because the prompts bundle several constraints, the main results describe the risk of requesting analogy-based simplification rather than a causal effect of simplification alone. We conclude that such requests reliably produce analogy-based explanations of which a substantial fraction mislead, and that single LLM judges are unreliable for detecting this without human validation. We derive testable hypotheses for interface design.}
+\abstract{Large language models (LLMs) are increasingly used by students with reading and attention difficulties to simplify complex texts. We ask whether accessibility-style prompts change the conceptual risk profile of LLM explanations of computer science (CS) concepts, focusing on the most robust finding: dangerous analogies. We introduce AccessTrap-CS, a corpus of 735 responses from seven open-weight LLMs to 35 CS concepts under standard, simplified, and highly simplified prompts. Responses were scored by two LLM judges, and a stratified subsample of 90 responses was annotated by two experts, with disagreements adjudicated to consensus labels. By human consensus, dangerous analogies were absent under the standard prompt and present in $30.0\%$ and $36.7\%$ of simplified responses, and strategic misconceptions rose monotonically ($0.0\%$, $16.7\%$, $26.7\%$; $p = 0.012$). Both LLM judges reproduced the direction of the dangerous-analogy effect but agreed poorly with the consensus on strategic misconceptions and dangerous analogies ($\kappa \leq 0.16$). Every simplified response in the validation subsample contained an analogy, as the prompts request, and $30$--$37\%$ of these were dangerous; the increase is therefore produced by analogy frequency. In a small single-model pilot, a prompt that forbade analogies still elicited them in 57\% of responses (20 of 35). Because the prompts bundle several constraints, the results describe the risk of requesting analogy-based simplification, not a causal effect of simplification alone. Single LLM judges are unreliable for detecting such errors without human validation, and we derive testable hypotheses for interface design.}
 
 % Keywords
 \keyword{large language models; inclusive education; strategic misconceptions; accessibility; dyslexia; ADHD; assistive technology; computer science education; oversimplification errors; dangerous analogies; LLM-as-judge} 
@@ -129,93 +129,72 @@ $^{2}$ \quad Faculty of Engineering, University of Rijeka, Vukovarska 58, 51000 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 
-Large language models (LLMs) are rapidly being adopted as assistive technology by students with reading and attention difficulties \cite{zdravkova2022cutting, kortemeyer2023ai, kasneci2023chatgpt}. For learners with dyslexia, who struggle with text decoding, and students with ADHD, who face sustained attention challenges, LLMs offer a patient, private tutor, available on demand, that can rephrase complex academic texts in flexible ways \cite{rello2013good, stajner2021automatic}. General-purpose assistants are increasingly used in this capacity, often without institutional oversight or teacher involvement, mirroring the wider shift of generative AI from curiosity to routine study aid in computing education \cite{finnieansley2022robots, prather2023robots, denny2024computing}. Early evidence on AI tutoring is encouraging \cite{pardos2024chatgpt, kestin2025ai}, but unrestricted access to a generative assistant can raise performance while it is available and lower it once it is removed \cite{bastani2025generative}. What the assistant says, and how it says it, matters for what the student learns.
+Large language models (LLMs) are rapidly being adopted as assistive technology by students with reading and attention difficulties \cite{zdravkova2022cutting, kortemeyer2023ai, kasneci2023chatgpt}. For learners with dyslexia, who struggle with text decoding, and students with ADHD, who face sustained-attention challenges, LLMs offer a patient, private, on-demand tutor that can rephrase complex academic texts \cite{rello2013good, stajner2021automatic}, increasingly without institutional oversight \cite{finnieansley2022robots, prather2023robots, denny2024computing}. Early evidence on AI tutoring is encouraging \cite{pardos2024chatgpt, kestin2025ai}, but unrestricted access to a generative assistant can raise performance while it is available and lower it once it is removed \cite{bastani2025generative}. What the assistant says, and how it says it, matters for what the student learns.
 
-The features that make LLMs attractive for these students, such as simplified language, short sentences, concrete analogies, and avoidance of jargon, may also shift the risk profile of the explanations. We call this possibility the accessibility trade-off: well-intentioned requests for accessible explanations may not increase the total number of errors, but may replace technically precise statements with memorable analogies that mislead about properties defining the target concept. A related warmth--accuracy trade-off has been documented: fine-tuning LLMs to be warmer and more empathetic increases error rates and sycophantic validation of incorrect beliefs \cite{ibrahim2026warmth}. This fits evidence that preference-based alignment can reward agreeable, confident-sounding answers over correct ones \cite{ouyang2022training, sharma2024towards, perez2023discovering}. Accessibility-style instructions may exert an analogous pressure that standard benchmarks do not detect \cite{lin2022truthfulqa}. The present paper argues, however, that the accessibility trade-off is best studied not as a single causal effect of simplification, but as a decomposition into analogy frequency and per-analogy quality, because these two channels have different remedies.
+The features that make LLMs attractive for these students (simplified language, short sentences, concrete analogies, no jargon) may also shift the risk profile of the explanations. We call this possibility the accessibility trade-off: well-intentioned requests for accessible explanations may replace technically precise statements with memorable analogies that mislead about properties defining the target concept. A related warmth--accuracy trade-off has been documented: fine-tuning LLMs to be warmer increases error rates and sycophantic validation of incorrect beliefs \cite{ibrahim2026warmth}, which fits evidence that preference-based alignment can reward agreeable, confident-sounding answers over correct ones \cite{ouyang2022training, sharma2024towards, perez2023discovering}. Accessibility-style instructions may exert an analogous pressure that standard benchmarks do not detect \cite{lin2022truthfulqa}. We argue that this trade-off is best studied not as a single causal effect of simplification, but as a decomposition into analogy frequency and per-analogy quality, because the two channels have different remedies.
 
-We define a strategic misconception as an explanation that is conceptually coherent, internally consistent, and often intuitively appealing, yet contains a fundamental misunderstanding of the target concept. Such errors are dangerous because of their plausibility: the reader is not alerted to an error but builds a systematically wrong mental model. This definition draws on the conceptual-change tradition \cite{posner1982accommodation, chi1994things, vosniadou1992mental} and on the misconception literature in computing \cite{qian2017misconceptions, sorva2013notional}, which shows that intuitive but incorrect conceptions are hard to dislodge. Fluent, easy-to-process statements are judged more likely to be true \cite{reber1999effects, alter2009uniting}, and readers overestimate their understanding of mechanisms after a satisfying but shallow explanation \cite{rozenblit2002misunderstood}. For students who already spend substantial effort on decoding and attention regulation \cite{snowling2019dyslexia, barkley2015attention, martinussen2005meta}, spare capacity for parallel fact-verification is plausibly reduced. We stress that this is a situational vulnerability arising from processing load and missing scaffolding, not a deficit in intelligence, and that it applies to any novice reading under high load. Our experiment does not measure learner cognition; this argument is theoretical motivation only.
+We define a strategic misconception as an explanation that is conceptually coherent, internally consistent, and often intuitively appealing, yet contains a fundamental misunderstanding of the target concept. Such errors are dangerous because of their plausibility: the reader is not alerted to an error but builds a systematically wrong mental model \cite{posner1982accommodation, chi1994things, vosniadou1992mental, qian2017misconceptions, sorva2013notional}. Fluent statements are judged more likely to be true \cite{reber1999effects, alter2009uniting}, and readers overestimate their understanding after a satisfying but shallow explanation \cite{rozenblit2002misunderstood}. For students who already spend substantial effort on decoding and attention regulation \cite{snowling2019dyslexia, barkley2015attention, martinussen2005meta}, spare capacity for parallel fact-checking is plausibly reduced. This is a situational vulnerability arising from processing load, not a deficit in intelligence, and it applies to any novice under high load. Our experiment does not measure learner cognition; this argument is theoretical motivation only.
 
-CS makes the problem acute. Concepts are abstract, hierarchical, and resistant to faithful simplification through everyday analogy \cite{stone2024analogies, sorva2013notional, benari2001constructivism}. Comparing a semaphore to a traffic light fails to convey atomicity and counting semantics, and describing a deadlock as two people stuck in a doorway omits resource holding and circular wait. We call errors that appear in a simplified explanation but not in a standard explanation of the same concept oversimplification errors (OER). Prior work has documented benefits of LLMs for students with disabilities \cite{zdravkova2022cutting, gadiraju2023wouldnt}, factual errors introduced by automatic text simplification of general-purpose text \cite{devaraj2022evaluating, trienes2024infolossqa}, and misconceptions in CS education \cite{qian2017misconceptions, stone2024analogies}. To our knowledge, no study has examined whether accessibility-style prompts change the rate of strategic misconceptions and dangerous analogies in LLM-generated CS explanations, or separated the frequency of analogies from their per-analogy danger.
+CS makes the problem acute. Concepts are abstract, hierarchical, and resistant to faithful simplification through everyday analogy \cite{stone2024analogies, sorva2013notional, benari2001constructivism}: a semaphore as a traffic light loses atomicity and counting semantics, and a deadlock as two people stuck in a doorway loses resource holding and circular wait. We call errors that appear in a simplified explanation but not in a standard explanation of the same concept oversimplification errors (OER). Prior work has documented benefits of LLMs for students with disabilities \cite{zdravkova2022cutting, gadiraju2023wouldnt}, factual errors introduced by automatic text simplification of general-purpose text \cite{devaraj2022evaluating, trienes2024infolossqa}, and misconceptions in CS education \cite{qian2017misconceptions, stone2024analogies}. To our knowledge, no study has examined whether accessibility-style prompts change the rate of strategic misconceptions and dangerous analogies in LLM-generated CS explanations, or separated analogy frequency from per-analogy danger.
 
 \subsection*{Research questions and hypotheses}
-
-The study is guided by five research questions that separate the existence of an effect from its mechanism and from its moderation by model and subfield. The first two questions concern the existence of a condition effect; the third decomposes it; the fourth targets errors that exist only in simplified responses; and the fifth is exploratory.
 
 \begin{itemize}
     \item RQ1. Do accessibility-style prompts increase the strategic misconception rate? H1: $\mathrm{SMR(B) > SMR(A)}$ and $\mathrm{SMR(C) > SMR(A)}$.
     \item RQ2. Do they increase the dangerous analogy rate? H2: $\mathrm{DAR(C) \geq DAR(B) > DAR(A)}$.
-    \item RQ3. Is the DAR increase driven by the frequency of analogies, by their per-analogy danger, or both? H3a: analogy presence is higher in B and C than in A. H3b: conditional DAR remains elevated in B and C.
+    \item RQ3. Is the DAR increase driven by analogy frequency, per-analogy danger, or both? H3a: analogy presence is higher in B and C than in A. H3b: conditional DAR remains elevated in B and C.
     \item RQ4. Do simplified responses contain errors absent from the standard response, and do these grow with intensity? H4: $\mathrm{OER(B) > 0}$, $\mathrm{OER(C) > 0}$, and $\mathrm{OER(C) > OER(B)}$.
-    \item RQ5. Are these effects moderated by model and CS subfield? (Exploratory; no directional prediction.)
+    \item RQ5. Are these effects moderated by model and CS subfield? (Exploratory.)
 \end{itemize}
 
-We present AccessTrap-CS, a corpus of 735 responses generated by seven open-weight LLMs for 35 core CS concepts across five subfields (7 each). Each concept was prompted under (A) a standard explanation for a first-year student, (B) a simplified explanation for a student with reading difficulties, and (C) a highly simplified explanation for a student with attention difficulties. Responses were scored by two LLM judges \cite{zheng2023judging} (Qwen3.6:35b, primary, 720 of 735 responses; Qwen3:32b, secondary, all 735) and validated against a stratified human-annotated subsample of 90 responses, which was also coded for analogy presence. The main empirical claims rest on the human consensus, with the judges used as scalable indicators whose calibration is itself under test.
+We present AccessTrap-CS, a corpus of 735 responses generated by seven open-weight LLMs for 35 core CS concepts across five subfields (7 each). Each concept was prompted under (A) a standard explanation for a first-year student, (B) a simplified explanation for a student with reading difficulties, and (C) a highly simplified explanation for a student with attention difficulties. Responses were scored by two LLM judges \cite{zheng2023judging} (Qwen3.6:35b, primary, 720 of 735 responses; Qwen3:32b, secondary, all 735) and validated against a stratified human-annotated subsample of 90 responses, which was also coded for analogy presence. The main claims rest on the human consensus; the judges are scalable indicators whose calibration is itself under test.
 
-Our contributions are: (1) empirical evidence from three raters (two LLM judges and a human consensus) that dangerous analogies are markedly more frequent under accessibility-style prompts, together with the near-universal appearance of analogies in simplified responses; (2) a first conditional dangerous analogy rate for this setting ($30$--$37\%$ by human consensus); (3) an operationalisation of oversimplification errors as a contrast against a same-model, same-concept baseline; (4) a validation of both judges against two experts and an adjudicated consensus, showing that single LLM judges are unreliable for these constructs; (5) a crossed random-effects GLMM sensitivity analysis; (6) a small single-model pilot ablation showing that analogies persist even when explicitly forbidden; and (7) design hypotheses for interfaces, clearly separated from the empirical findings.
-
-Section~\ref{sec:related} reviews related work, Section~\ref{sec:method} describes the methodology, Section~\ref{sec:results} presents results, Section~\ref{sec:discussion} discusses them, Section~\ref{sec:design} states interface design hypotheses, Section~\ref{sec:limitations} lists limitations, and Section~\ref{sec:conclusion} concludes.
+Our contributions are: (1) evidence from three raters that dangerous analogies are markedly more frequent under accessibility-style prompts, with near-universal analogy presence in simplified responses; (2) a first conditional dangerous analogy rate for this setting ($30$--$37\%$ by human consensus); (3) an operationalisation of OER as a contrast against a same-model, same-concept baseline; (4) a validation of both judges against two experts, showing that single LLM judges are unreliable for these constructs; (5) a crossed random-effects sensitivity analysis and a small single-model pilot showing that analogies persist when explicitly forbidden; and (6) interface design hypotheses, clearly separated from the empirical findings.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Background and Related Work}
 \label{sec:related}
 
-This section positions the study at the intersection of three literatures: LLMs as assistive technology for dyslexia and ADHD, LLM reliability and sycophancy, and analogies and misconceptions in computing education. It closes with a formal statement of the accessibility trade-off that motivates the frequency--quality decomposition used in the rest of the paper. Prior work has documented benefits of LLMs for students with disabilities and factual errors introduced by automatic text simplification, but the frequency and per-analogy quality of dangerous analogies in accessibility-conditioned CS explanations have not been separated.
+This section positions the study at the intersection of LLMs as assistive technology, LLM reliability, and analogies and misconceptions in computing education, and closes with a formal statement of the accessibility trade-off.
 
 \subsection{LLMs as Assistive Technology for Dyslexia and ADHD}
 
-Dyslexia is a neurodevelopmental difference characterised by difficulties with accurate and fluent word recognition and spelling \cite{lyon2003definition, snowling2019dyslexia}; ADHD is characterised by persistent inattention and/or hyperactivity-impulsivity \cite{faraone2015adhd, barkley2015attention}, with meta-analytic evidence of working-memory impairments \cite{martinussen2005meta, peng2016meta}. These are group-level tendencies; individual profiles vary widely, and the personas in our prompts operationalise an interaction style (simplified language, brevity), not clinical simulations (Section~\ref{sec:limitations}).
+Dyslexia is a neurodevelopmental difference characterised by difficulties with accurate and fluent word recognition and spelling \cite{lyon2003definition, snowling2019dyslexia}; ADHD by persistent inattention and/or hyperactivity-impulsivity \cite{faraone2015adhd, barkley2015attention}, with meta-analytic evidence of working-memory impairments \cite{martinussen2005meta, peng2016meta}. These are group-level tendencies; the personas in our prompts operationalise an interaction style (simplified language, brevity), not clinical simulations. LLMs can rephrase dense prose into shorter sentences and common vocabulary without the social cost of asking a human tutor repeatedly \cite{zdravkova2022cutting}, and text presentation and vocabulary measurably affect readability for dyslexic readers \cite{rello2013good, rello2013simplify}. For ADHD, evidence is thin and largely self-reported \cite{kortemeyer2023ai, gadiraju2023wouldnt}. Assistive simplification has been evaluated mainly through readability and satisfaction \cite{rello2013good, stajner2021automatic}, not the conceptual accuracy of simplified technical content.
 
-LLMs can rephrase dense prose into shorter sentences and common vocabulary without the social cost of asking a human tutor repeatedly \cite{zdravkova2022cutting}, and text presentation and vocabulary measurably affect readability for dyslexic readers \cite{rello2013good, rello2013simplify}. For ADHD, LLMs offer summarisation and task segmentation \cite{kortemeyer2023ai}, but evidence is thin and largely self-reported; disability-centred studies stress both benefits and reliability concerns \cite{gadiraju2023wouldnt}. Assistive simplification has been evaluated mainly through readability and satisfaction \cite{rello2013good, stajner2021automatic}, not conceptual accuracy of simplified technical content.
+\subsection{LLM Reliability, Sycophancy, and LLM-as-Judge Evaluation}
 
-\subsection{LLM Reliability, Sycophancy, and the Warmth--Accuracy Trade-Off}
+LLMs produce fluent text that is not necessarily faithful to fact \cite{ji2023survey, huang2025survey}, and can reproduce popular misconceptions: on TruthfulQA the largest models were often least truthful because they imitated common human falsehoods \cite{lin2022truthfulqa}. Analogies are precisely the popular, widely repeated framings of technical ideas. Preference-based training optimises for approved outputs \cite{ouyang2022training}; approval and correctness are correlated but not identical, and the result can be sycophancy \cite{sharma2024towards, perez2023discovering}. Standard evaluations measure knowledge under a fixed, neutral prompt; a model can score well and still degrade when told to address a particular learner. AccessTrap-CS probes such audience-conditioned degradation.
 
-LLMs produce fluent text that is not necessarily faithful to fact \cite{ji2023survey, huang2025survey}. They can reproduce popular misconceptions; on TruthfulQA the largest models were often least truthful because they imitated common human falsehoods \cite{lin2022truthfulqa}. Analogies are precisely the popular, widely repeated framings of technical ideas. Preference-based training optimises for approved outputs \cite{ouyang2022training}, and approval and correctness are correlated but not identical; the result can be sycophancy \cite{sharma2024towards, perez2023discovering}, including warmer models validating incorrect beliefs more often \cite{ibrahim2026warmth}.
+Strong LLM judges can reach agreement with humans comparable to human--human agreement on chat tasks \cite{zheng2023judging}, and rubric prompting improves alignment \cite{liu2023geval}, but known biases include position sensitivity \cite{wang2023large}, verbosity preference, and self-preference \cite{panickssery2024llm}. Section~\ref{sec:method} describes how we address these and validate against experts.
 
-Widely used evaluations measure knowledge under a fixed, neutral prompt \cite{lin2022truthfulqa}; a model can score well and still degrade when told to address a particular learner. AccessTrap-CS is designed to probe such audience-conditioned degradation. A natural remedy is to have models flag their own uncertainty, but verbalised confidence is often overconfident and better estimators require extra computation (e.g., semantic entropy), which matters for Section~\ref{sec:design}.
+\subsection{Text Simplification and Analogies in CS Education}
 
-\subsection{Text Simplification: Pedagogical Benefits and Technical Risks}
+Automatic text simplification has moved from rule-based systems to neural models and LLMs \cite{stajner2021automatic}, traditionally evaluated by readability \cite{flesch1948new}, semantic preservation, and fluency. Simplification is not information-preserving by default: models insert errors or drop information in ways standard metrics miss \cite{devaraj2022evaluating, trienes2024infolossqa}. These studies concern news, encyclopedic and medical text; we move to technical CS concepts, where the lost information is often the boundary condition that defines the concept. Easier does not always mean better for learning \cite{mcnamara1996good, kalyuga2003expertise, bjork2011making}: accessibility should reduce extraneous load (decoding, layout, jargon) while preserving germane content (conditions, invariants, exceptions) \cite{sweller1998cognitive}.
 
-Automatic text simplification has moved from rule-based systems to neural models and LLMs \cite{stajner2021automatic}, traditionally evaluated by readability \cite{flesch1948new}, semantic preservation, and fluency. Simplification is not information-preserving by default: models insert errors or drop information in ways standard metrics miss \cite{devaraj2022evaluating, trienes2024infolossqa}. These studies concern news, encyclopedic and medical text. We move to technical CS concepts, where the information lost is often the boundary condition that defines the concept.
-
-Easier does not always mean better for learning. Coherence-enhancing revisions helped low-knowledge readers on shallow tests but limited deeper learning for others \cite{mcnamara1996good}, support that helps novices can hinder as knowledge grows \cite{kalyuga2003expertise}, and some difficulty is desirable \cite{bjork2011making}. The implication is not that learners should face inaccessible text, but that accessibility should reduce extraneous load (decoding, layout, jargon) while preserving germane content (conditions, invariants, exceptions) \cite{sweller1998cognitive}. Models asked to simplify can drop boundary conditions and promote analogies from illustration to definition.
-
-\subsection{Analogies and Misconceptions in CS Education}
-
-Learners build intuitive models that instruction must restructure \cite{posner1982accommodation, vosniadou1992mental}, and misconceptions consistent with everyday experience resist correction \cite{chi1994things}. Structure-mapping theory holds that a good analogy transfers relational structure, not surface attributes \cite{gentner1983structure}. Analogies can improve learning but also produce analogy-induced misconceptions when learners import source features the target lacks \cite{spiro1989multiple}; recommended practice maps shared features and states where the analogy breaks down \cite{glynn1991explaining}, and multiple complementary analogies are proposed as an antidote \cite{spiro1989multiple}.
-
-Condition C requests one vivid analogy, which is the situation the analogy literature warns against: a single analogy without stated limits as the core of the explanation. \citet{stone2024analogies} documented that common GPT-4 analogies for CS concepts frequently misrepresent technical properties, but under standard prompting, without accessibility constraints, simplification conditions, or a frequency/quality decomposition. We build on that work.
-
-\subsection{LLM-as-Judge Evaluation}
-
-Strong LLM judges can reach agreement with humans comparable to human--human agreement on chat tasks \cite{zheng2023judging}, and rubric prompting improves alignment \cite{liu2023geval}. Known biases include position sensitivity \cite{wang2023large}, verbosity preference, and self-preference \cite{panickssery2024llm}. Section~\ref{sec:method} describes how we address these and validate against experts.
+Learners build intuitive models that instruction must restructure \cite{posner1982accommodation, vosniadou1992mental}, and misconceptions consistent with everyday experience resist correction \cite{chi1994things}. A good analogy transfers relational structure, not surface attributes \cite{gentner1983structure}; analogies can improve learning but also produce analogy-induced misconceptions when learners import source features the target lacks \cite{spiro1989multiple}. Recommended practice maps shared features and states where the analogy breaks down \cite{glynn1991explaining}. Condition C requests one vivid analogy, the situation this literature warns against: a single analogy without stated limits as the core of the explanation. \citet{stone2024analogies} showed that common GPT-4 analogies for CS concepts frequently misrepresent technical properties, but under standard prompting and without a frequency/quality decomposition. We build on that work.
 
 \subsection{The Accessibility Trade-off: A Formal Hypothesis}
 
-For a CS concept $c$, let $E_s(c)$ be an explanation under a standard prompt and $E_a(c)$ one under an accessibility-style prompt. The strategic misconception rate $\mathrm{SMR}(E)$ is the probability that $E$ contains a coherent but fundamentally incorrect understanding of $c$. The oversimplification error rate $\mathrm{OER}(E)$ is the probability that $E$ contains an error present in $E_a$ but absent from $E_s$ for the same concept and model. The dangerous analogy rate $\mathrm{DAR}(E)$ is the unconditional probability that $E$ contains a dangerous analogy, and $\mathrm{DAR}_{\text{cond}}(E)$ is the same probability restricted to responses containing at least one analogy.
-
-The accessibility trade-off hypothesis states that accessibility-style prompts shift the risk profile towards analogy-driven errors:
+For a CS concept $c$, let $E_s(c)$ be an explanation under a standard prompt and $E_a(c)$ one under an accessibility-style prompt. The strategic misconception rate $\mathrm{SMR}(E)$ is the probability that $E$ contains a coherent but fundamentally incorrect understanding of $c$. The oversimplification error rate $\mathrm{OER}(E)$ is the probability that $E$ contains an error present in $E_a$ but absent from $E_s$ for the same concept and model. The dangerous analogy rate $\mathrm{DAR}(E)$ is the unconditional probability that $E$ contains a dangerous analogy, and $\mathrm{DAR}_{\text{cond}}(E)$ the same probability restricted to responses containing at least one analogy. The accessibility trade-off hypothesis states
 \begin{equation}
     \mathrm{SMR}(E_a) \gtrsim \mathrm{SMR}(E_s) \quad \text{and} \quad \mathrm{DAR}(E_a) \gg \mathrm{DAR}(E_s), \quad \text{with } \mathrm{OER}(E_a) > 0,
 \end{equation}
 and the DAR gap decomposes as
 \begin{equation}
     \underbrace{\mathrm{DAR}(E_a)}_{\text{unconditional}} \;=\; \underbrace{p_{\text{analogy}}(E_a)}_{\text{analogy frequency}} \;\times\; \underbrace{\mathrm{DAR}_{\text{cond}}(E_a)}_{\text{per-analogy danger}}.
+    \label{eq:dar_decomp}
 \end{equation}
-The hypothesis does not imply that simplification is inherently harmful or that LLMs should not be used as assistive technology; it predicts a failure mode that neutral-prompt evaluations do not detect. This decomposition is the conceptual core of the paper: frequency can be regulated by prompt design, whereas per-analogy danger requires content-aware checks, and the two are measured separately in Section~\ref{sec:dar_cond}.
+The hypothesis does not imply that simplification is inherently harmful or that LLMs should not be used as assistive technology; it predicts a failure mode that neutral-prompt evaluations do not detect. The decomposition is the conceptual core of the paper: frequency can be regulated by prompt design, whereas per-analogy danger requires content-aware checks.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Materials and Methods}
 \label{sec:method}
 
-This section describes the benchmark design, the models, the prompt conditions, the evaluation framework, the human annotation protocol, the pilot ablation, the readability metrics, and the statistical analysis plan. The design is a model-side audit rather than a user study: the prompts operationalise an interaction style, and the outcome measures are properties of the generated explanations, not of learners. All materials, prompts, codebooks, judge outputs, human annotations, and scripts are available in the repository (Data Availability).
+The design is a model-side audit rather than a user study: the prompts operationalise an interaction style, and the outcome measures are properties of the generated explanations, not of learners. All materials, prompts, codebooks, judge outputs, human annotations, and scripts are available in the repository (Data Availability).
 
-\subsection{Benchmark Design Overview}
+\subsection{Benchmark Design, Concepts, and Models}
 
-The benchmark crosses model (7 LLMs), CS subfield (5), and prompt condition (3). Each of the 35 concepts is posed to each of the 7 models under each of the 3 conditions, one response per cell:
-\begin{equation}
-N_{\text{total}} = C \times M \times K = 35 \times 7 \times 3 = 735 .
-\end{equation}
-All 735 responses were used in the readability analysis and scored by the secondary judge; 720 could be scored by the primary judge (15 responses from five concept-model groups were lost to unrecoverable parsing failures of the judge output). The same concept-model pair appears in all three conditions, so condition is a within-pair (repeated) factor; this is what allows OER to be defined as a within-pair contrast. The pipeline from concept ground truth to statistical analysis is shown in Figure~\ref{fig:pipeline}.
+The benchmark crosses model (7 LLMs), CS subfield (5), and prompt condition (3). Each of the 35 concepts is posed to each model under each condition, one response per cell: $N_{\text{total}} = 35 \times 7 \times 3 = 735$. The same concept-model pair appears in all three conditions, so condition is a within-pair factor, which allows OER to be defined as a within-pair contrast. All 735 responses were used in the readability analysis and scored by the secondary judge; 720 could be scored by the primary judge (15 responses from five concept-model groups, two each for deepseek-r1:8b and deepseek-r1:32b and one for mistral:7b, were lost to unrecoverable parsing failures of the judge output; 240 responses per condition remain; Table~\ref{tab:sample}). The pipeline from concept ground truth to statistical analysis is shown in Figure~\ref{fig:pipeline}.
 
 \begin{figure}[H]
 \centering
@@ -239,15 +218,11 @@ All 735 responses were used in the readability analysis and scored by the second
 \label{fig:pipeline}
 \end{figure}
 
-As the figure shows, every stage is logged and reproducible: generation is scripted, judging is schema-constrained, and statistics are implemented in versioned Python and R scripts. The five lost concept-model groups are the only deviation from the full $7 \times 35$ design, and they are documented in Table~\ref{tab:sample}.
+As Figure~\ref{fig:pipeline} shows, every stage is logged and reproducible: generation is scripted, judging is schema-constrained, and statistics are implemented in versioned Python and R scripts.
 
-\subsection{Concept Selection}
+Thirty-five core concepts were selected across Algorithms and Data Structures, Programming Languages and Paradigms, Database Systems, Computer Networks, and Operating Systems (7 each) from standard curricula \cite{acm2023cs2023} (Appendix~\ref{appendix:concepts}). Each was paired with a ground-truth definition and textbook reference, which anchors the judges and annotators; without it, the judge would rely on its own parametric knowledge, the very resource whose reliability is under test.
 
-Thirty-five core CS concepts were selected across Algorithms and Data Structures, Programming Languages and Paradigms, Database Systems, Computer Networks, and Operating Systems (7 each), drawn from standard undergraduate curricula \cite{acm2023cs2023}. Each concept was paired with a ground-truth definition and a textbook reference, which anchors the judges and annotators; without it, the judge would rely on its own parametric knowledge, the very resource whose reliability is under test. The list appears in Appendix~\ref{appendix:concepts}.
-
-\subsection{Model Selection}
-
-Seven open-weight LLMs were chosen for reproducibility and to cover several families and scales (Table~\ref{tab:models:selected}). All models were deployed locally via Ollama~\cite{ollama2023} on the Supek supercomputer~\cite{srce2023supek}, the most powerful HPC system in Croatia, operated by the University of Zagreb University Computing Centre (Srce) in partnership with CARNET and other institutions under the Croatian Scientific and Educational Cloud (HR-ZOO) project. Local deployment was chosen to eliminate API costs, ensure full reproducibility, and maintain complete control over the generation process.
+Seven open-weight LLMs were chosen for reproducibility and to cover several families and scales (Table~\ref{tab:models:selected}). All were deployed locally via Ollama~\cite{ollama2023} on the Supek supercomputer~\cite{srce2023supek} (University of Zagreb University Computing Centre, Srce), which eliminates API costs and gives full control over generation.
 
 \begin{table}[H]
 \caption{Selected open-weight LLMs. Ollama tags and parameter counts were verified with \texttt{ollama show}.}
@@ -269,11 +244,11 @@ deepseek-r1:32b & DeepSeek (distilled) & 32B (dense, reasoning) \\
 \end{tabular}
 \end{table}
 
-Models span 7B to 32B parameters and five families, and include three reasoning models; family and scale are therefore partly confounded. Ollama serves quantised weights by default, so we treat behaviour as that of the quantised builds used; exact tags and digests are in the repository. Inference used temperature $T = 0.7$, seed 42 (a retry used the seed incremented by the attempt number), no generation limit (\texttt{num\_predict} = $-1$), and a 16,384-token context window. The limit was removed so that visible answers of reasoning models could not be truncated by their reasoning trace, which was discarded before storage. All 735 generations terminated naturally and none was flagged as truncated.
+Models span 7B to 32B parameters and five families and include three reasoning models; family and scale are therefore partly confounded. Ollama serves quantised weights by default, so we treat behaviour as that of the quantised builds (tags and digests are in the repository). Inference used $T = 0.7$, seed 42 (a retry used the seed incremented by the attempt number), no generation limit, and a 16,384-token context window, so that visible answers of reasoning models could not be truncated by their reasoning trace, which was discarded. All 735 generations terminated naturally. A Python script substitutes each concept into the template and sends a single-turn request to the Ollama chat API (no system prompt, history, or few-shot examples; up to three attempts per request; an answer shorter than 20 characters counts as a failure); responses and metadata are stored in \texttt{corpus.csv}.
 
-\subsection{Prompt Engineering and Condition Design}
+\subsection{Prompt Conditions and Their Construct Validity}
 
-Three templates share one structure (an instruction, \texttt{Answer in English.}, and \texttt{Concept: [CONCEPT]}), so the instruction is the only variable. They operationalise two recurring accessibility recommendations: reducing decoding load (short sentences, plain vocabulary, no formal notation) and reducing sustained-attention demand (brevity, a single memorable hook). Condition A (standard) asks for an accurate and clear explanation for a first-year CS student. Condition B (simplified; reading difficulties) asks for simplified language, short sentences, and concrete analogies instead of code or formal definitions. Condition C (highly simplified; attention difficulties) asks for at most five sentences built around one single, vivid, memorable analogy. Verbatim prompts are in Appendix~\ref{appendix:prompts}. The constraint profiles of the three conditions are summarised in Table~\ref{tab:prompt:design}.
+Three templates share one structure (an instruction, \texttt{Answer in English.}, and \texttt{Concept: [CONCEPT]}), so the instruction is the only variable. They operationalise two recurring accessibility recommendations: reducing decoding load (short sentences, plain vocabulary, no formal notation) and reducing sustained-attention demand (brevity, a single memorable hook). Condition A (standard) asks for an accurate and clear explanation for a first-year CS student; B (simplified; reading difficulties) asks for simplified language, short sentences, and concrete analogies instead of code or formal definitions; C (highly simplified; attention difficulties) asks for at most five sentences built around one single, vivid, memorable analogy. Verbatim prompts are in Appendix~\ref{appendix:prompts}; the constraint profiles are summarised in Table~\ref{tab:prompt:design}.
 
 \begin{table}[H]
 \caption{Design of the three prompt conditions. $\checkmark$ = present, $\times$ = absent. The conditions are bundles: no single element is isolated.}
@@ -297,130 +272,64 @@ Audience label (attention difficulties) & $\times$ & $\times$ & $\checkmark$ \\
 \end{tabular}
 \end{table}
 
-\subsubsection{Construct Validity of the Conditions}
-
-The conditions are bundles of constraints, as Table~\ref{tab:prompt:design} makes explicit. B and C differ from A in audience label, register, length, and analogy requirements at once; only A contains the word ``accurately''; B instructs the model to avoid formal definitions, discouraging the precision whose absence we count as error; and B and C instruct the model to use analogies, which mechanically raises analogy frequency. We treat this as the realistic operational form of the trade-off, since teachers and students do ask for such things, but it means the study tests the risk of the bundle typically requested, not the causal contribution of any single element. In particular, the analogy increase in B and C should not be read as a spontaneous model tendency: it is, at least in part, instruction-following. What the study can establish is how often the requested analogies mislead. The labels ``dyslexia condition'' and ``ADHD condition'' denote prompt personas, not the diagnostic status of any person.
-
-This is a model-side audit, not a user study. The prompts operationalise an interaction style; they do not simulate learner cognition, nor claim that simplification is the best accommodation for these populations. Direct user studies are essential, but model-side audits are a necessary prerequisite for safety before exposing learners to potential misinformation.
-
-\subsection{Data Generation Procedure}
-
-A Python script iterates over all concept--condition--model combinations, reads the ground-truth table (\texttt{ground\_truth.csv}), substitutes the concept into the template, and sends a single-turn request to the Ollama chat API; no system prompt, history, or few-shot examples were used. A request is attempted up to three times (5-second delay, 30-minute timeout); an answer shorter than 20 characters counts as a failure. Responses are appended to \texttt{corpus.csv} (735 rows) with metadata (concept, subfield, condition, model, prompt, \texttt{done\_reason}, token and word counts, truncation flag, ground truth, reference, timestamp).
+B and C differ from A in audience label, register, length, and analogy requirements at once; only A contains the word ``accurately''; B discourages the formal precision whose absence we count as error; and B and C instruct the model to use analogies, which mechanically raises analogy frequency. We treat this as the realistic operational form of the trade-off, since teachers and students do ask for such things, but it means the study tests the risk of the bundle typically requested, not the causal contribution of any single element. The analogy increase in B and C should not be read as a spontaneous model tendency: it is, at least in part, instruction-following. What the study can establish is how often the requested analogies mislead. The labels ``dyslexia condition'' and ``ADHD condition'' denote prompt personas, not the diagnostic status of any person, and we do not claim that simplification is the best accommodation for these populations.
 
 \subsection{Evaluation Framework}
 
-Responses were scored by two LLM judges \cite{zheng2023judging}: a primary judge (Qwen3.6:35b) and a secondary judge (Qwen3:32b). Both received the same task: responses are grouped by concept and model, and all three conditions are presented jointly in random order with the concept, subfield, and ground truth. Joint presentation is required for the OER judgement, which is a comparison with the baseline; the cost is that decisions on one condition may be influenced by the others (Section~\ref{sec:limitations}). Each response carries a label stating its target audience; the judge is instructed to judge only what the response says about the concept, to ignore length, style, and engagement, and to ignore instructions inside the responses (Appendix~\ref{appendix:judgeprompt}).
+Responses were scored by two LLM judges \cite{zheng2023judging}: a primary judge (Qwen3.6:35b) and a secondary judge (Qwen3:32b). Responses are grouped by concept and model, and all three conditions are presented jointly in random order with the concept, subfield, and ground truth; joint presentation is required for the OER judgement, but decisions on one condition may be influenced by the others. Each response carries a label stating its target audience; the judge is instructed to judge only what the response says about the concept, to ignore length, style, and engagement, and to ignore instructions inside the responses (Appendix~\ref{appendix:judgeprompt}).
 
-\subsubsection{Judge Model Selection}
+Qwen3.6:35b was chosen as the primary judge because it is among the stronger open-weight models that can be served locally and is distinct from all seven generators, so no self-evaluation bias arises. It was run with $T = 0.0$, seed 42, and reasoning disabled. Output is constrained by a JSON schema in which each indicator's short explanation precedes its Boolean flag; invalid output is re-requested (up to three attempts), and groups without valid output were excluded. The secondary judge scored all 245 groups and tests whether conclusions depend on the choice of judge. It is a smaller model of the same vendor family, so the judges are not independent evaluators: we do not treat their agreement as independent confirmation, but treat their disagreement as evidence that judge-based absolute rates are not interchangeable. Unless stated otherwise, judge-based results refer to the primary judge.
 
-Qwen3.6:35b was chosen as the primary judge because it is among the stronger open-weight models that can be served locally, its license ensures reproducibility, and it is distinct from all seven generators, so no self-evaluation bias arises. It was run with $T = 0.0$, seed 42, no generation limit, a 16,384-token context, and reasoning disabled. Output is constrained by a JSON schema in which each indicator's short explanation precedes its Boolean flag; invalid output is rejected and re-requested (up to three attempts). Presentation order is randomised with a generator seeded from concept and model.
+Error taxonomy. Strategic Misconception (SM): Boolean; the explanation contains a subtle but conceptually significant error that sounds plausible but is fundamentally wrong (a misstated date is an error but not an SM; claiming that a deadlock is merely processes waiting a long time is). Dangerous Analogy (DA): Boolean; the explanation uses an analogy that is intuitive but misrepresents a key technical property; an analogy is not dangerous merely for being incomplete, but if it invites a false inference about the target. Oversimplification Error (OER): Boolean; the explanation contains an error that would not appear in a standard explanation, defined only for B and C. Accuracy score: Likert 1--5 (1 = fundamentally wrong, 5 = fully accurate); anchors differ slightly between the judge prompt and the human codebook, so absolute levels are not strictly interchangeable. Analogy presence (AP): Boolean, coded manually on the validation subsample only; a response contains an analogy if it uses an explicit comparison (like, as, think of, imagine), a metaphor, or an everyday comparison to a non-technical object or situation; formal definitions, purely technical comparisons, and examples without an external referent do not count.
 
-The secondary judge, Qwen3:32b, scored all 735 responses and tests whether conclusions depend on the choice of judge. It is a smaller model of the same vendor family, so the judges are not independent evaluators; we do not treat their agreement as independent confirmation, but do treat their disagreement as evidence that judge-based absolute rates are not interchangeable. Unless stated otherwise, judge-based results refer to the primary judge.
-
-\subsubsection{Error Taxonomy}
-
-\textbf{Strategic Misconception (SM).} Boolean: the explanation contains a subtle but conceptually significant error that sounds plausible but is fundamentally wrong. A misstated date is an error but not an SM; claiming that a deadlock is merely processes waiting a long time is.
-
-\textbf{Dangerous Analogy (DA).} Boolean: the explanation uses an analogy that is intuitive but misrepresents a key technical property. An analogy is not dangerous merely for being incomplete; it is dangerous if it invites a false inference about the target.
-
-\textbf{Oversimplification Error (OER).} Boolean: the explanation contains an error that would not appear in a standard explanation. By construction OER is defined only for B and C.
-
-\textbf{Accuracy Score.} Likert 1--5 (1 = fundamentally wrong, 5 = fully accurate), capturing graded degradation below the SM threshold. Anchors differ slightly between the judge prompt and the human codebook (Appendices~\ref{appendix:codebook} and~\ref{appendix:judgeprompt}), so absolute accuracy levels are not strictly interchangeable.
-
-The three Boolean indicators overlap by design but are not identical, and are analysed both separately and jointly.
-
-\textbf{Analogy presence (AP).} A separate Boolean coded manually on the 90-response validation subsample (not part of the judge evaluation). A response was coded as containing an analogy if it used an explicit comparison (\emph{like}, \emph{as}, \emph{think of}, \emph{imagine}), a metaphor, or an everyday comparison to a non-technical object or situation; formal definitions, purely technical comparisons, and examples without an external referent were not counted.
-
-\textbf{DAR as an unconditional rate.} Judge-based DAR is computed over all responses in a condition. Because B and C request analogies while A does not, part of the increase reflects mere analogy presence. We therefore decompose
-\begin{equation}
-    \mathrm{DAR}(E) = p_{\text{analogy}}(E) \times \mathrm{DAR}_{\text{cond}}(E),
-    \label{eq:dar_decomp}
-\end{equation}
-estimated on the validation subsample; on the full corpus only the unconditional DAR is available. Condition-level rates are proportions of flagged responses among rated responses; OER is computed over B and C only.
-
-\subsubsection{Evaluation Procedure}
-
-The script (1) loads \texttt{corpus.csv} and groups rows by (\texttt{concept\_id}, \texttt{model}); (2) assembles the judge prompt with the reference and three responses; (3) randomises order and records position (\texttt{position\_show}); (4) calls the Ollama chat API with the JSON schema; (5) validates that all indicators for all three responses are present, otherwise re-requests (at most three attempts); and (6) flattens the output into three rows appended to \texttt{evaluations.csv}. Groups without valid output were logged and excluded: for the primary judge, five concept-model groups (15 responses; two each for deepseek-r1:8b and deepseek-r1:32b, one for mistral:7b; Table~\ref{tab:sample}). The secondary judge produced valid output for all 245 groups.
+Judge-based DAR is computed over all responses in a condition. Because B and C request analogies while A does not, part of the increase reflects mere analogy presence, so Equation~\ref{eq:dar_decomp} is estimated on the validation subsample; on the full corpus only unconditional DAR is available. OER is computed over B and C only.
 
 \subsection{Human Evaluation Protocol}
 \label{sec:human:eval}
 
-A stratified random subsample of 30 concept-model groups (90 responses) was independently annotated by two professors with domain expertise in the relevant subfields. Stratification was by subfield (six groups each) and by generating model (four or five groups each); the subsample covers all five subfields and all seven models. Neither annotator is an author, neither was informed of the hypotheses or aggregate rates, and both were compensated. They worked independently and discussed items only at the adjudication meeting. They were blinded to condition label, generating model, and judge output, seeing only the response text, a random item ID, and the reference definition. The codebook (Appendix~\ref{appendix:codebook}) asked them to judge technical content only, to treat omissions as errors only when they made the explanation misleading, and not to use AI tools. Blinding is imperfect: C responses are visibly short and built around one analogy, so experts could plausibly infer the condition.
+A stratified random subsample of 30 concept-model groups (90 responses) was independently annotated by two professors with domain expertise. Stratification was by subfield (six groups each) and by generating model (four or five groups each). Neither annotator is an author, neither was informed of the hypotheses or aggregate rates, and both were compensated. They were blinded to condition label, generating model, and judge output (seeing only the response text, a random item ID, and the reference definition), worked independently, and did not use AI tools (Appendix~\ref{appendix:codebook}). Blinding is imperfect: C responses are visibly short and built around one analogy.
 
-Inter-annotator agreement was assessed with Cohen's $\kappa$ \cite{cohen1960coefficient} (quadratic-weighted for accuracy), interpreted following \citet{landis1977measurement}. Items with disagreement on SM, DA, or OER (68 ratings: 18 SM, 36 DA, 14 OER) were resolved in an adjudication meeting in which the annotators discussed each item and agreed on a final label; written justifications were not recorded. Agreed items kept their label. The consensus labels serve as the human reference standard. The accuracy score was not adjudicated; where a single human accuracy reference is needed we use annotator h1 and also report the two-annotator mean. Table~\ref{tab:reviewer:rates} reports the annotators' raw rates separately.
+Agreement was assessed with Cohen's $\kappa$ \cite{cohen1960coefficient} (quadratic-weighted for accuracy), interpreted following \citet{landis1977measurement}. Items with disagreement on SM, DA, or OER (68 ratings: 18 SM, 36 DA, 14 OER) were resolved in an adjudication meeting in which the annotators discussed each item and agreed on a final label (written justifications were not recorded); the consensus labels serve as the human reference standard. The accuracy score was not adjudicated; we use annotator h1 as the single human accuracy reference and also report the two-annotator mean.
 
-\textbf{Analogy presence coding.} The first author coded AP for all 90 responses with the condition label masked, reviewed against the judge output with discrepancies resolved by re-reading. To assess reliability, a second coder (a colleague without CS background and unaware of the hypotheses) independently coded a random 20-response subsample (7 A, 7 B, 6 C; masked, randomised). Agreement was $\kappa = 0.58$ (raw 85\%), moderate. All three discordant items were responses the first author coded as containing an analogy and the second coder did not, suggesting a systematic difference in the analogy boundary rather than random error; this is expected, since a coder without CS background may not recognise some technical comparisons as figurative. The second coder's labels were used only for reliability. We treat AP as an author-coded manipulation check rather than an independently validated annotation (Section~\ref{sec:limitations}).
+Analogy presence coding. The first author coded AP for all 90 responses with the condition label masked, reviewed against the judge output with discrepancies resolved by re-reading. A second coder (a colleague without CS background, unaware of the hypotheses) independently coded a random 20-response subsample (7 A, 7 B, 6 C; masked): $\kappa = 0.58$ (raw 85\%), moderate. All three discordant items were responses the first author coded as containing an analogy and the second coder did not, suggesting a systematic difference in the analogy boundary (a coder without CS background may not recognise some technical comparisons as figurative). We treat AP as an author-coded manipulation check rather than an independently validated annotation.
 
-\textbf{Ethics statement.} The two annotators were professional colleagues who participated as domain experts rather than as research participants, provided informed consent, and were compensated for their time; no personal or sensitive data were collected, and no institutional review board approval was required for this model-side audit under the applicable national regulations. All generated texts are stored without author identifiers, and the released corpus contains no information about the annotators beyond their anonymised role labels (h1, h2).
+Ethics statement. The annotators were professional colleagues who participated as domain experts rather than as research participants, provided informed consent, and were compensated; no personal or sensitive data were collected, and no institutional review board approval was required for this model-side audit under the applicable national regulations. The released corpus contains no information about the annotators beyond anonymised role labels (h1, h2).
 
 \subsection{Pilot Ablation: Simplification Without an Analogy Request}
 \label{sec:method:pilot}
 
-To obtain a first indication of whether analogies arise only because the simplified prompts request them, we added a pilot condition D after the main analysis. Condition D asks for an accurate, simplified explanation for a student with reading difficulties, with short sentences, and explicitly instructs the model not to use analogies (Appendix~\ref{appendix:prompts}). It was run once for each of the 35 concepts on a single model, mistral:7b, giving 35 responses. Because access to the HPC cluster was limited, the pilot was run on a local workstation via Ollama, with the same sampling parameters as the main corpus ($T = 0.7$, seed 42, 16,384-token context). No response appeared truncated on inspection.
+To obtain a first indication of whether analogies arise only because the simplified prompts request them, we added a pilot condition D after the main analysis: an accurate, simplified explanation for a student with reading difficulties, with short sentences, that explicitly instructs the model not to use analogies (Appendix~\ref{appendix:prompts}). It was run once for each of the 35 concepts on mistral:7b (35 responses), on a local workstation because HPC access was limited, with the same sampling parameters as the main corpus. The pilot is deliberately minimal: one model, one generation per concept, no LLM judge, and only analogy presence coded (by reading each response, since a keyword screen over-detects). Coding was done by the first author, was not masked (all responses came from D), and was not repeated. We report a strict count and an inclusive count that adds borderline cases, with Wilson 95\% intervals, and compare them descriptively with the human-coded rates of A, B, and C, which come from a different sample; no formal test is applied.
 
-The pilot is deliberately minimal: one model, one generation per concept, no LLM judge, and only analogy presence was coded (SM, DA, and OER were not rated). Analogy presence followed the definition given above. A preliminary keyword screen (e.g., \emph{like a}, \emph{imagine}, \emph{think of}) flagged 31 of 35 responses, but it over-detects (for instance, \emph{similar to} in purely technical comparisons), so presence was determined by reading each response. Coding was done by the first author, was not masked to condition (all responses came from D), and was not repeated by a second coder. Because a few responses contain brief comparisons whose status is ambiguous, we report a strict count and an inclusive count that adds these borderline cases. Proportions are given with Wilson 95\% intervals and are compared descriptively with the human-coded rates of A, B, and C from the validation subsample, which come from a different sample (30 responses per condition, all seven models); no formal test is applied.
+\subsection{Readability and Statistical Analysis}
+\label{sec:method:stat}
 
-\subsection{Readability Metrics}
-
-As a manipulation check, readability was computed with \texttt{textstat}: Flesch Reading Ease (FRE) \cite{flesch1948new}, Flesch-Kincaid Grade Level (FKGL), average sentence length (ASL), and word count:
-\begin{align}
+As a manipulation check, readability was computed with \texttt{textstat}: Flesch Reading Ease (FRE) \cite{flesch1948new}, Flesch-Kincaid Grade Level (FKGL), average sentence length (ASL), and word count. \begin{align}
 \mathrm{FRE} &= 206.835 - 1.015\,\frac{\text{words}}{\text{sentences}} - 84.6\,\frac{\text{syllables}}{\text{words}},\\
 \mathrm{FKGL} &= 0.39\,\frac{\text{words}}{\text{sentences}} + 11.8\,\frac{\text{syllables}}{\text{words}} - 15.59.
 \end{align}
-These measure surface form, not comprehensibility, and technical terms can distort syllable counts; readability is therefore a manipulation check, not an outcome.
+These measure surface form, not comprehensibility, and technical terms can distort syllable counts; readability is therefore a manipulation check, not an outcome. Analyses used Python 3 (SciPy, statsmodels, textstat) and R (lme4); $\alpha = 0.05$ with adjustments where indicated, and proportions are reported with Wilson 95\% intervals.
 
-\subsection{Statistical Analysis Plan}
-\label{sec:method:stat}
+Omnibus and paired analyses. SM, DA, and accuracy were tested with one-way ANOVA (equivalent to a linear probability model for binary outcomes) and, for binary outcomes, chi-square tests and Cochran's Q \cite{cochran1950comparison} with the concept-model pair as blocking unit; Shapiro-Wilk \cite{shapiro1965analysis} and Levene tests \cite{levene1960robust} checked readability assumptions. Because the three conditions of a pair are not independent, we added exact pairwise McNemar tests \cite{mcnemar1947note} (Holm-corrected), a logistic GEE with exchangeable working correlation within pairs, and, for accuracy, the Friedman test with Holm-corrected Wilcoxon tests and Spearman correlations. Where ANOVA and these analyses disagree, we interpret the more conservative.
 
-Analyses used Python 3 (SciPy, statsmodels, textstat) and, for mixed models, R (lme4); scripts are in the repository. The threshold is $\alpha = 0.05$ with adjustments where indicated; proportions are reported with Wilson 95\% intervals.
-
-\subsubsection{Omnibus Tests}
-
-SM, DA, and accuracy were tested with one-way ANOVA across conditions (equivalent to a linear probability model for binary outcomes), complemented for binary outcomes by chi-square tests and Cochran's Q \cite{cochran1950comparison} with the concept-model pair as blocking unit. For readability metrics, Shapiro-Wilk \cite{shapiro1965analysis} and Levene tests \cite{levene1960robust} assessed normality and variance homogeneity.
-
-\subsubsection{Paired and Clustered Analyses for Binary Outcomes}
-
-Because the three conditions of a concept-model pair are not independent, we complemented ANOVA with exact pairwise McNemar tests \cite{mcnemar1947note} (Holm-corrected); a logistic GEE with exchangeable working correlation within pairs (odds ratios with Wald 95\% CIs); and for accuracy the Friedman test with Holm-corrected Wilcoxon signed-rank tests and Spearman correlations with the binary indicators. Where ANOVA and these analyses disagree, we report both and interpret the more conservative.
-
-\subsubsection{Mixed-Effects Sensitivity Analysis}
-\label{sec:method:glmm}
-
-Concepts and models are crossed rather than nested, so a GLMM with random intercepts for both is in principle more appropriate than GEE, which does not separate concept and model variance. We fitted, for the primary judge on the full corpus,
+Mixed-effects sensitivity analysis. Concepts and models are crossed, so a GLMM with random intercepts for both is more appropriate than GEE. For the primary judge on the full corpus,
 \begin{equation}
   \text{logit}\,Y_{cmk} = \alpha + \beta_k + u_c + u_m, \qquad Y \in \{\mathrm{SM}, \mathrm{DA}, \mathrm{OER}\},
 \end{equation}
-where $\beta_k$ is the fixed effect of condition (reference A for SM and DA; B for OER, which is undefined in A), $u_c \sim \mathcal{N}(0, \sigma_c^2)$, and $u_m \sim \mathcal{N}(0, \sigma_m^2)$. Models were fitted with lme4 (1.1-35), \texttt{bobyqa}, logit link, Laplace approximation, with Wald 95\% CIs. The GLMM was not refitted for the secondary judge.
+where $\beta_k$ is the fixed effect of condition (reference A for SM and DA; B for OER), $u_c \sim \mathcal{N}(0, \sigma_c^2)$, and $u_m \sim \mathcal{N}(0, \sigma_m^2)$ (lme4 1.1-35, \texttt{bobyqa}, Laplace approximation, Wald 95\% CIs). It was not refitted for the secondary judge.
 
-\subsubsection{Secondary Judge and Inter-Judge Agreement}
+Secondary judge, human consensus, and conditional DAR. The omnibus, McNemar, and GEE analyses were repeated for the secondary judge on all 735 responses; inter-judge agreement on the 720 jointly scored responses is reported as Cohen's $\kappa$ (quadratic-weighted $\kappa$ and Spearman's $\rho$ for accuracy). On the 30 validation groups we compute condition rates, Cochran's $Q$, and Holm-corrected McNemar tests for SM and DA (a post hoc analysis with limited precision), and for OER rates only. Conditional DAR is the ratio of dangerous analogies to analogies, using consensus DA labels as primary estimate; it is undefined in A. Each judge is validated against the consensus with $\kappa$, precision, recall, and prevalence.
 
-Omnibus, McNemar, and GEE analyses for SM, DA, and OER, and Friedman/Wilcoxon analyses for accuracy, were repeated for the secondary judge on all 735 responses. Inter-judge agreement on the 720 jointly scored responses is reported as Cohen's $\kappa$ and raw agreement (Boolean) and quadratic-weighted $\kappa$ and Spearman's $\rho$ (accuracy).
-
-\subsubsection{Human-Consensus Analysis by Condition}
-
-On the 30 validation groups we compute, for SM and DA, condition rates with Wilson intervals, Cochran's $Q$, and exact pairwise McNemar tests with Holm correction. For OER (B and C only) we report rates with Wilson intervals; given only 5 and 4 flags, no C vs.\ B test is attempted. This analysis was not in the original plan and is post hoc; with 30 groups per condition it has limited precision.
-
-\subsubsection{Conditional DAR Analysis}
-
-The decomposition in Equation~\ref{eq:dar_decomp} is estimated on the validation subsample: $p_{\text{analogy}}(k)$ is the proportion of responses in condition $k$ with AP $= 1$, and conditional DAR is the ratio of dangerous analogies to analogies, using consensus DA labels as primary estimate and the judges' labels for comparison. Because condition A contained no analogies, conditional DAR is undefined there (reported as n/a).
-
-\subsubsection{Secondary Analyses}
-
-A two-way ANOVA (Type II) with model and condition tests the model $\times$ condition interaction. One-way ANOVAs within each condition examine subfield differences, with false discovery rate controlled by the Benjamini-Hochberg procedure \cite{benjamini1995controlling}. Each judge is validated against the consensus with Cohen's $\kappa$, precision, recall, and prevalence (quadratic-weighted $\kappa$ for accuracy). Position effects are examined by comparing rates across presentation positions, a position-adjusted GEE, and restricted analyses.
-
-\subsubsection{Effect Sizes and Reproducibility}
-
-Effect sizes (Cohen's $d$, $\eta^2$, Kendall's $W$, Cram\'{e}r's $V$) \cite{cohen1988statistical, lakens2013calculating} are interpreted alongside confidence intervals. The corpus, prompts, codebook, judge outputs, human annotations, analogy codes, and scripts are available in the repository (Data Availability); the Ollama version, model digests, and sampling parameters are logged with the corpus.
+Secondary analyses and effect sizes. A Type II two-way ANOVA tests the model $\times$ condition interaction; one-way ANOVAs within each condition examine subfield differences (Benjamini-Hochberg correction \cite{benjamini1995controlling}); position effects are examined by comparing rates across presentation positions and a position-adjusted GEE. Effect sizes (Cohen's $d$, $\eta^2$, Kendall's $W$, Cram\'{e}r's $V$) \cite{cohen1988statistical, lakens2013calculating} are interpreted alongside confidence intervals.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
 \label{sec:results}
 
-Readability analyses use all 735 responses. Unless stated otherwise, judge-based analyses use the 720 responses scored by the primary judge (240 per condition); the secondary judge (all 735) is a sensitivity analysis. A stratified subsample of 30 concept-model groups (90 responses) was annotated by two experts and adjudicated, and analogy presence was coded for the same 90 responses. Where the judges and the human consensus diverge, we report both and treat the consensus as the reference standard.
+Readability analyses use all 735 responses. Unless stated otherwise, judge-based analyses use the 720 responses scored by the primary judge (240 per condition); the secondary judge (all 735) is a sensitivity analysis. Where judges and the human consensus diverge, we report both and treat the consensus as the reference standard. Rates, omnibus tests, pairwise contrasts, and regression estimates for the primary judge are given in Tables~\ref{tab:sm}, \ref{tab:da}, \ref{tab:oer}, and \ref{tab:accuracy}.
 
 \subsection{Sample and Readability}
 
-Table~\ref{tab:sample} reports responses judged by the primary judge per model and condition; the slight imbalance arises from the five lost groups. Because the losses are concentrated in two DeepSeek-R1 models and in mistral:7b, they affect all three conditions nearly equally and do not systematically favour one condition.
-
+Table~\ref{tab:sample} reports responses judged by the primary judge per model and condition; the slight imbalance arises from the five lost groups. Because the losses are concentrated in two DeepSeek-R1 models and in mistral:7b, they affect all three conditions equally and do not systematically favour one condition.
 \begin{table}[H]
 \caption{Number of responses judged by the primary judge per model and condition. The secondary judge scored all 245 responses per condition (105 per model).}
 \label{tab:sample}
@@ -443,7 +352,7 @@ Total & 240 & 240 & 240 & 720 \\
 \end{tabular}
 \end{table}
 
-Table~\ref{tab:readability} shows that the prompts changed the text as intended. FRE rose from A ($M = 47.2$) to B ($M = 73.8$), with C intermediate ($M = 59.9$); C is compressed into five sentences, forcing longer sentences and denser vocabulary. FKGL followed the inverse pattern, and word counts dropped monotonically from A (632) to B (366) to C (114). All omnibus tests are highly significant ($p < 0.001$; $\eta^2$ from 0.274 to 0.541). Normality and variance-homogeneity assumptions were violated, as expected for such distributions, but with this sample size ANOVA is robust. B and C are not two points on a single simplification continuum.
+Table~\ref{tab:readability} shows that the prompts changed the text as intended. FRE rose from A to B, with C intermediate because five sentences force longer sentences and denser vocabulary; word counts dropped monotonically (632, 366, 114). All omnibus tests are highly significant (FRE $F(2, 732) = 303.95$, FKGL 228.01, ASL 138.02, words 430.75; all $p < 0.001$; $\eta^2$ from 0.274 to 0.541). Normality and variance homogeneity were violated, as expected, but ANOVA is robust at this sample size. B, not C, is the easiest condition by FRE, so B and C are not two points on a single simplification continuum.
 
 \begin{table}[H]
 \caption{Readability metrics by condition (mean (SD)) and omnibus ANOVA. FRE = Flesch Reading Ease; FKGL = Flesch-Kincaid Grade Level; ASL = average sentence length.}
@@ -452,7 +361,7 @@ Table~\ref{tab:readability} shows that the prompts changed the text as intended.
 \small
 \begin{tabular}{lrrrrr}
 \toprule
-\multicolumn{6}{l}{\textit{Panel A: Metrics by condition}} \\
+\multicolumn{6}{l}{Panel A: Metrics by condition} \\
 \midrule
 Condition & $n$ & FRE & FKGL & ASL & Words \\
 \midrule
@@ -460,7 +369,7 @@ A (standard) & 245 & 47.2 (13.6) & 10.7 (2.4) & 16.2 (3.8) & 632 (289) \\
 B (simplified) & 245 & 73.8 (10.4) & 6.6 (2.0) & 14.5 (3.4) & 366 (174) \\
 C (highly simplified) & 245 & 59.9 (11.7) & 10.0 (2.4) & 20.4 (4.8) & 114 (33) \\
 \midrule
-\multicolumn{6}{l}{\textit{Panel B: Omnibus tests}} \\
+\multicolumn{6}{l}{Panel B: Omnibus tests} \\
 \midrule
 Metric & $F$ & df & $p$ & $\eta^2$ & \\
 \midrule
@@ -472,17 +381,27 @@ Words & 430.75 & 2, 732 & $<0.001$ & 0.541 & \\
 \end{tabular}
 \end{table}
 
-The readability manipulation check therefore confirms that A, B, and C are distinct in surface form, while showing that B, not C, is the easiest condition by FRE. The C condition trades readability for brevity and a single memorable hook, which is exactly the design choice that the analogy literature warns against.
-
 \subsection{Strategic Misconception Rate (SMR)}
 
-Table~\ref{tab:sm} reports SMR for the primary judge: 30 of 240 in A ($12.5\%$, 95\% CI $[8.9, 17.3]$), 41 in B ($17.1\%$, $[12.8, 22.4]$), and 33 in C ($13.8\%$, $[10.0, 18.7]$). The differences are not significant: ANOVA $F(2, 717) = 1.09$, $p = 0.337$, $\eta^2 = 0.003$; chi-square $\chi^2(2) = 2.18$, $p = 0.336$; Cochran's $Q(2) = 2.37$, $p = 0.306$; Holm-corrected McNemar contrasts all non-significant. The GEE gives OR $= 1.44$ (95\% CI $[0.88, 2.36]$, $p = 0.146$) for B vs.\ A and 1.12 ($[0.66, 1.88]$, $p = 0.680$) for C vs.\ A.
+For the primary judge, SMR was $12.5\%$ in A, $17.1\%$ in B, and $13.8\%$ in C (Table~\ref{tab:sm}). The differences are not significant: ANOVA $F(2, 717) = 1.09$, $p = 0.337$, $\eta^2 = 0.003$; chi-square $p = 0.336$; Cochran's $Q(2) = 2.37$, $p = 0.306$; all Holm-corrected McNemar contrasts non-significant; GEE and GLMM odds ratios are close and non-significant (Table~\ref{tab:sm}). On the primary-judge data H1 is therefore not supported. This must be read with Section~\ref{sec:judgeval}: the primary judge flagged $12.5\%$ of standard responses where the human consensus flagged none of 30, and it does not reproduce the consensus's monotonic increase ($0\%$, $16.7\%$, $26.7\%$). Model identity predicts its SMR much more strongly than condition (model $F(6, 699) = 5.76$, $p < 0.001$; GLMM $\sigma_c = 0.65$, $\sigma_m = 0.95$), as Figure~\ref{fig:smr_by_model} shows: within-model variation across conditions is small and inconsistent in sign relative to between-model variation.
 
-On the primary-judge data H1 is therefore not supported. This null result must be read with Section~\ref{sec:judgeval}: the primary judge flagged $12.5\%$ of standard responses as strategic misconceptions where the human consensus flagged none of 30, and the consensus shows a monotonic increase ($0\%$, $16.7\%$, $26.7\%$) that the primary judge does not reproduce. Model identity predicts the primary judge's SMR much more strongly than condition (Table~\ref{tab:models}, Panel B; model $F(6, 699) = 5.76$, $p < 0.001$).
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{figures/fig_smr_by_model.png}
+\caption{Strategic misconception rate (SMR) by model and condition (primary judge), with Wilson 95\% confidence intervals. Models are ordered by mean SMR across conditions.}
+\label{fig:smr_by_model}
+\end{figure}
 
-\textbf{Mixed-effects sensitivity analysis.} The GLMM gives OR $= 1.50$ (95\% CI $[0.89, 2.52]$, $p = 0.129$) for B vs.\ A and 1.13 ($[0.66, 1.94]$, $p = 0.663$) for C vs.\ A, close to the GEE estimates and non-significant. Random-effect SDs are $\sigma_c = 0.65$ (concept) and $\sigma_m = 0.95$ (model): between-model variation dominates (Figure~\ref{fig:smr_by_model}).
+The per-model deltas in Figure~\ref{fig:model_delta_smr} are small relative to the confidence intervals and inconsistent in sign: neither the direction nor the magnitude of the A-to-C difference is stable across models.
 
-\textbf{Secondary judge.} It flagged fewer SMs overall but a different condition pattern (Table~\ref{tab:secondary}): 6 of 245 in A ($2.4\%$, $[1.1, 5.2]$), 15 in B ($6.1\%$, $[3.7, 9.9]$), and 16 in C ($6.5\%$, $[4.1, 10.3]$). Cochran's $Q = 6.74$ ($p = 0.034$) and GEE odds ratios of 2.60 ($[1.14, 5.94]$, $p = 0.024$) and 2.78 ($[1.16, 6.70]$, $p = 0.022$) indicate a small increase, but Holm-corrected McNemar contrasts (both $p = 0.093$) and the chi-square test ($p = 0.075$) did not reach significance, and B and C do not differ.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{figures/fig_model_delta_smr.png}
+\caption{SMR by model for conditions A and C (primary judge). The value below each model name is $\Delta = \mathrm{SMR}_C - \mathrm{SMR}_A$ in percentage points. Error bars are Wilson 95\% confidence intervals.}
+\label{fig:model_delta_smr}
+\end{figure}
+
+The secondary judge flagged fewer SMs overall but a different pattern (Table~\ref{tab:secondary}): $2.4\%$, $6.1\%$, and $6.5\%$ in A, B, and C. Cochran's $Q = 6.74$ ($p = 0.034$) and GEE odds ratios of 2.60 ($[1.14, 5.94]$) and 2.78 ($[1.16, 6.70]$) indicate a small increase, but Holm-corrected McNemar contrasts (both $p = 0.093$) and the chi-square test ($p = 0.075$) did not reach significance, and B and C do not differ.
 
 \begin{table}[H]
 \caption{Strategic misconception rate (SMR), primary judge: rates with Wilson 95\% CI (Panel A), omnibus tests (Panel B), pairwise McNemar contrasts with Holm correction (Panel C), and regression odds ratios (Panel D). GEE is the primary model; GLMM is the crossed random-effects sensitivity analysis.}
@@ -491,7 +410,7 @@ On the primary-judge data H1 is therefore not supported. This null result must b
 \small
 \begin{tabular}{lrrr}
 \toprule
-\multicolumn{4}{l}{\textit{Panel A: SMR by condition}} \\
+\multicolumn{4}{l}{Panel A: SMR by condition} \\
 \midrule
 Condition & Count & $n$ & Rate (\%) [95\% CI] \\
 \midrule
@@ -499,7 +418,7 @@ A (standard) & 30 & 240 & 12.5 [8.9, 17.3] \\
 B (simplified) & 41 & 240 & 17.1 [12.8, 22.4] \\
 C (highly simplified) & 33 & 240 & 13.8 [10.0, 18.7] \\
 \midrule
-\multicolumn{4}{l}{\textit{Panel B: Omnibus tests}} \\
+\multicolumn{4}{l}{Panel B: Omnibus tests} \\
 \midrule
 Test & Statistic & df & $p$ \\
 \midrule
@@ -507,7 +426,7 @@ One-way ANOVA & $F = 1.09$ & 2, 717 & 0.337 \\
 Chi-square & $\chi^2 = 2.18$ & 2 & 0.336 \\
 Cochran's $Q$ & $Q = 2.37$ & 2 & 0.306 \\
 \midrule
-\multicolumn{4}{l}{\textit{Panel C: Pairwise McNemar (Holm)}} \\
+\multicolumn{4}{l}{Panel C: Pairwise McNemar (Holm)} \\
 \midrule
 Contrast & $b$ & $c$ & Holm $p$ \\
 \midrule
@@ -515,7 +434,7 @@ B vs A & 34 & 23 & 0.555 \\
 C vs A & 28 & 25 & 0.784 \\
 C vs B & 23 & 31 & 0.682 \\
 \midrule
-\multicolumn{4}{l}{\textit{Panel D: Regression odds ratios}} \\
+\multicolumn{4}{l}{Panel D: Regression odds ratios} \\
 \midrule
 Model & Contrast & OR (95\% CI) & $p$ \\
 \midrule
@@ -527,33 +446,9 @@ GLMM (crossed) & C vs A & 1.13 (0.66--1.94) & 0.663 \\
 \end{tabular}
 \end{table}
 
-Figure~\ref{fig:smr_by_model} visualises the same null result at the model level: within-model variation across conditions is small relative to between-model variation, consistent with the GLMM random-effect decomposition. The primary judge's SMR is therefore driven mainly by which model produced the response, not by which prompt it received.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\linewidth]{figures/fig_smr_by_model.png}
-\caption{Strategic misconception rate (SMR) by model and condition (primary judge), with Wilson 95\% confidence intervals. Models are ordered by mean SMR across conditions. Between-model variation is substantially larger than within-model variation across conditions.}
-\label{fig:smr_by_model}
-\end{figure}
-
-The per-model deltas in Figure~\ref{fig:model_delta_smr} are small relative to the confidence intervals and inconsistent in sign, the visual counterpart of the non-significant condition effect for the primary judge. Neither the direction nor the magnitude of the A-to-C difference is stable across models.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\linewidth]{figures/fig_model_delta_smr.png}
-\caption{SMR by model for conditions A and C (primary judge). The value below each model name is $\Delta = \mathrm{SMR}_C - \mathrm{SMR}_A$ in percentage points. Error bars are Wilson 95\% confidence intervals.}
-\label{fig:model_delta_smr}
-\end{figure}
-
-Taken together, Table~\ref{tab:sm} and Figures~\ref{fig:smr_by_model}--\ref{fig:model_delta_smr} indicate that the primary judge's SMR is not a reliable indicator of a condition effect, which motivates the human consensus analysis in Section~\ref{sec:judgeval}.
-
 \subsection{Dangerous Analogy Rate (DAR)}
 
-Table~\ref{tab:da} shows that, for the primary judge, A produced 2 dangerous analogies in 240 responses ($0.8\%$, 95\% CI $[0.2, 3.0]$), B produced 49 ($20.4\%$, $[15.8, 26.0]$), and C produced 59 ($24.6\%$, $[19.6, 30.4]$). Omnibus tests confirm a large effect: ANOVA $F(2, 717) = 32.38$, $p < 0.001$, $\eta^2 = 0.083$; chi-square $\chi^2(2) = 59.64$, $p < 0.001$, $V = 0.288$; Cochran's $Q(2) = 58.51$, $p < 0.001$. B vs.\ A ($b = 48$, $c = 1$) and C vs.\ A ($b = 58$, $c = 1$) are significant (Holm $p < 0.001$); C vs.\ B is not ($b = 46$, $c = 36$, $p = 0.320$). GEE odds ratios are $30.53$ (95\% CI $[7.48, 124.54]$) for B vs.\ A and $38.79$ ($[9.50, 158.37]$) for C vs.\ A. The very wide intervals reflect the near-zero baseline.
-
-\textbf{Mixed-effects sensitivity analysis.} The GLMM gives larger odds ratios: $36.03$ ($[8.81, 147.36]$) for B vs.\ A and $47.34$ ($[11.60, 193.14]$) for C vs.\ A (both $p < 0.001$), with $\sigma_c = 0.58$ and $\sigma_m = 0.81$. The effect is robust to the repeated-measures specification; the GEE, if anything, understates it.
-
-\textbf{Secondary judge.} It reproduces the effect and also separates B and C (Table~\ref{tab:secondary}): 4 of 245 in A ($1.6\%$, $[0.6, 4.1]$), 76 in B ($31.0\%$, $[25.6, 37.1]$), and 135 in C ($55.1\%$, $[48.8, 61.2]$). GEE odds ratios are 27.09 ($[9.68, 75.81]$) for B vs.\ A, 73.94 ($[26.59, 205.65]$) for C vs.\ A, and 2.73 ($[1.95, 3.83]$) for C vs.\ B (McNemar $b = 84$, $c = 25$, Holm $p < 0.001$).
+For the primary judge, DAR was $0.8\%$ in A (2 of 240), $20.4\%$ in B, and $24.6\%$ in C (Table~\ref{tab:da}). Omnibus tests confirm a large effect: ANOVA $F(2, 717) = 32.38$, $p < 0.001$, $\eta^2 = 0.083$; chi-square $\chi^2(2) = 59.64$, $V = 0.288$; Cochran's $Q(2) = 58.51$. B vs.\ A ($b = 48$, $c = 1$) and C vs.\ A ($b = 58$, $c = 1$) are significant (Holm $p < 0.001$); C vs.\ B is not ($b = 46$, $c = 36$, $p = 0.320$). The odds ratios are very large with wide intervals reflecting the near-zero baseline (Table~\ref{tab:da}); the GLMM ($\sigma_c = 0.58$, $\sigma_m = 0.81$) gives larger estimates than the GEE, so the effect is robust to the repeated-measures specification.
 
 \begin{table}[H]
 \caption{Dangerous analogy rate (DAR), primary judge: rates with Wilson 95\% CI (Panel A), omnibus tests (Panel B), pairwise McNemar contrasts with Holm correction (Panel C), and regression odds ratios (Panel D).}
@@ -562,7 +457,7 @@ Table~\ref{tab:da} shows that, for the primary judge, A produced 2 dangerous ana
 \small
 \begin{tabular}{lrrr}
 \toprule
-\multicolumn{4}{l}{\textit{Panel A: DAR by condition}} \\
+\multicolumn{4}{l}{Panel A: DAR by condition} \\
 \midrule
 Condition & Count & $n$ & Rate (\%) [95\% CI] \\
 \midrule
@@ -570,7 +465,7 @@ A (standard) & 2 & 240 & 0.8 [0.2, 3.0] \\
 B (simplified) & 49 & 240 & 20.4 [15.8, 26.0] \\
 C (highly simplified) & 59 & 240 & 24.6 [19.6, 30.4] \\
 \midrule
-\multicolumn{4}{l}{\textit{Panel B: Omnibus tests}} \\
+\multicolumn{4}{l}{Panel B: Omnibus tests} \\
 \midrule
 Test & Statistic & df & $p$ \\
 \midrule
@@ -578,7 +473,7 @@ One-way ANOVA & $F = 32.38$ & 2, 717 & $<0.001$ \\
 Chi-square & $\chi^2 = 59.64$ & 2 & $<0.001$ \\
 Cochran's $Q$ & $Q = 58.51$ & 2 & $<0.001$ \\
 \midrule
-\multicolumn{4}{l}{\textit{Panel C: Pairwise McNemar (Holm)}} \\
+\multicolumn{4}{l}{Panel C: Pairwise McNemar (Holm)} \\
 \midrule
 Contrast & $b$ & $c$ & Holm $p$ \\
 \midrule
@@ -586,7 +481,7 @@ B vs A & 48 & 1 & $<0.001$ \\
 C vs A & 58 & 1 & $<0.001$ \\
 C vs B & 46 & 36 & 0.320 \\
 \midrule
-\multicolumn{4}{l}{\textit{Panel D: Regression odds ratios}} \\
+\multicolumn{4}{l}{Panel D: Regression odds ratios} \\
 \midrule
 Model & Contrast & OR (95\% CI) & $p$ \\
 \midrule
@@ -598,44 +493,51 @@ GLMM (crossed) & C vs A & 47.34 (11.60--193.14) & $<0.001$ \\
 \end{tabular}
 \end{table}
 
-Table~\ref{tab:secondary} summarises the secondary judge's rates and tests on all 735 responses. The secondary judge reproduces the direction and, for DAR, also the B--C ordering, but its SM and OER indicators behave very differently from the human consensus (Section~\ref{sec:judgeval}), which is why its DAR output is used as a sensitivity check while its OER output is not treated as an error rate.
+The secondary judge reproduces the effect and also separates B and C (Tables~\ref{tab:secondary} and~\ref{tab:secondary:tests}): $1.6\%$, $31.0\%$, and $55.1\%$, with GEE odds ratios of 27.09 ($[9.68, 75.81]$) for B vs.\ A, 73.94 ($[26.59, 205.65]$) for C vs.\ A, and 2.73 ($[1.95, 3.83]$) for C vs.\ B (McNemar $b = 84$, $c = 25$, Holm $p < 0.001$). H2 is supported for A $<$ B and A $<$ C under both judges. DAR(C) is numerically above DAR(B) under all raters, but the difference is significant only for the secondary judge. That both simplified conditions show a large increase is consistent with the explicit analogy request, present in both prompts, being the main driver.
 
 \begin{table}[H]
-\caption{Secondary judge (Qwen3:32b, all 735 responses, 245 per condition): rates with Wilson 95\% CI (Panel A) and condition tests (Panel B). OER is undefined in A by construction; flagged baseline responses are shown in parentheses for completeness.}
+\caption{Secondary judge (Qwen3:32b, 245 responses per condition): rates (\%) with Wilson 95\% CI and counts in parentheses. OER is undefined in A by construction; the flagged baseline responses are shown in parentheses for completeness.}
 \label{tab:secondary}
 \centering
-\small
+\footnotesize
+\resizebox{\linewidth}{!}{%
 \begin{tabular}{lrrr}
 \toprule
-\multicolumn{4}{l}{\textit{Panel A: Rate (\%) [95\% CI], count in parentheses}} \\
-\midrule
 Indicator & A (standard) & B (simplified) & C (highly simplified) \\
 \midrule
 SM & 2.4 [1.1, 5.2] (6) & 6.1 [3.7, 9.9] (15) & 6.5 [4.1, 10.3] (16) \\
 DA & 1.6 [0.6, 4.1] (4) & 31.0 [25.6, 37.1] (76) & 55.1 [48.8, 61.2] (135) \\
 OER & (7.3 [4.7, 11.3] (18)) & 77.6 [71.9, 82.3] (190) & 84.1 [78.9, 88.2] (206) \\
-Accuracy, mean (SD) & 4.90 (0.36) & 3.94 (1.01) & 3.47 (1.12) \\
-\midrule
-\multicolumn{4}{l}{\textit{Panel B: Tests}} \\
-\midrule
-Indicator & Test & Result & \\
-\midrule
-SM & Cochran's $Q$ / chi-square & 6.74 / 5.30 & \\
-SM & McNemar, Holm (B vs A; C vs A; C vs B) & $b/c = 12/3$; $14/4$; $11/4$ & \\
-SM & GEE OR, B vs A; C vs A & 2.60 (1.14--5.94); 2.78 (1.16--6.70) & \\
-DA & Cochran's $Q$ / chi-square & 160.41 / 169.43 & \\
-DA & McNemar, Holm (B vs A; C vs A; C vs B) & $b/c = 75/3$; $133/2$; $84/25$ & \\
-DA & GEE OR, B vs A; C vs A; C vs B & 27.09 (9.68--75.81); 73.94 (26.59--205.65); 2.73 (1.95--3.83) & \\
-OER & McNemar (C vs B) & $b/c = 20/4$ & \\
-OER & GEE OR, C vs B & 1.53 (1.19--1.96) & \\
-Accuracy & Friedman; Wilcoxon (Holm) & $\chi^2 = 325.84$; all contrasts significant & \\
+Accuracy, M (SD) & 4.90 (0.36) & 3.94 (1.01) & 3.47 (1.12) \\
 \bottomrule
-\end{tabular}
+\end{tabular}}
 \end{table}
 
-H2 is supported for A $<$ B and A $<$ C under both judges. DAR(C) is numerically above DAR(B) under all raters, but the C--B difference is significant only for the secondary judge. That both simplified conditions show a large increase is consistent with the explicit analogy request, present in both prompts, being the main driver.
+The condition tests behind these rates are listed in Table~\ref{tab:secondary:tests}: the secondary judge's SM contrasts are only borderline, its DA contrasts separate all three conditions, and its OER contrast between B and C is significant in a direction that, as shown below, does not reflect a real difference in errors.
 
-Figure~\ref{fig:rates_by_condition} shows the three indicators side by side. The contrast is clear: DAR and OER separate the conditions sharply, whereas SMR (primary judge) does not, previewing the rater-dependence discussed in Section~\ref{sec:judgeval}.
+\begin{table}[H]
+\caption{Secondary judge: condition tests (all 735 responses).}
+\label{tab:secondary:tests}
+\centering
+\small
+\begin{tabularx}{\linewidth}{llX}
+\toprule
+Indicator & Test & Result \\
+\midrule
+SM & Cochran's $Q$ / chi-square & 6.74 / 5.30 \\
+SM & McNemar, Holm (B vs A; C vs A; C vs B) & $b/c = 12/3$; $14/4$; $11/4$ \\
+SM & GEE OR, B vs A; C vs A & 2.60 (1.14--5.94); 2.78 (1.16--6.70) \\
+DA & Cochran's $Q$ / chi-square & 160.41 / 169.43 \\
+DA & McNemar, Holm (B vs A; C vs A; C vs B) & $b/c = 75/3$; $133/2$; $84/25$ \\
+DA & GEE OR, B vs A; C vs A; C vs B & 27.09 (9.68--75.81); 73.94 (26.59--205.65); 2.73 (1.95--3.83) \\
+OER & McNemar (C vs B) & $b/c = 20/4$ \\
+OER & GEE OR, C vs B & 1.53 (1.19--1.96) \\
+Accuracy & Friedman; Wilcoxon (Holm) & $\chi^2 = 325.84$; all contrasts significant \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Figure~\ref{fig:rates_by_condition} shows the three indicators side by side: DAR and OER separate the conditions sharply, whereas SMR (primary judge) does not, previewing the rater-dependence discussed in Section~\ref{sec:judgeval}.
 
 \begin{figure}[H]
 \centering
@@ -647,10 +549,10 @@ Figure~\ref{fig:rates_by_condition} shows the three indicators side by side. The
 \subsection{Conditional Dangerous Analogy Rate}
 \label{sec:dar_cond}
 
-To separate analogy frequency from per-analogy danger, we used the manual analogy-presence codes on the 90-response validation subsample (Table~\ref{tab:dar:conditional}).
+To separate analogy frequency from per-analogy danger, we used the manual analogy-presence codes on the 90-response validation subsample (Table~\ref{tab:dar:conditional}). All 30 standard responses were technical descriptions without an external referent, and every simplified response (30 of 30 in B and in C) contained an analogy, as the prompts request. Because frequency is saturated, conditional DAR equals unconditional DAR: $30.0\%$ in B and $36.7\%$ in C by consensus, a non-significant difference. Conditional rates depend on the rater (primary judge $13.3\%$ and $16.7\%$, secondary judge $23.3\%$ and $43.3\%$, annotators' raw ratings wider still; Table~\ref{tab:reviewer:rates}), but all raters agree on the ordering: zero in A, a substantial rate in B, a numerically higher rate in C.
 
 \begin{table}[H]
-\caption{Conditional dangerous analogy rate on the validation subsample ($n = 30$ per condition), human consensus labels. Conditional DAR is computed over responses containing an analogy and is undefined in A, which contained none.}
+\caption{Conditional dangerous analogy rate on the validation subsample ($n = 30$ per condition), human consensus labels. Conditional DAR is undefined in A, which contained no analogies.}
 \label{tab:dar:conditional}
 \centering
 \small
@@ -665,24 +567,19 @@ C (highly simplified) & 100.0\% & 30 & 36.7\% & 36.7\% \\
 \end{tabular}
 \end{table}
 
-First, all 30 standard responses were technical descriptions without an external referent. Second, every simplified response (30 of 30 in B and in C) contained an analogy, as the prompts request. Third, because frequency is saturated, conditional DAR equals unconditional DAR on this subsample: $30.0\%$ in B and $36.7\%$ in C by consensus, a non-significant difference (Section~\ref{sec:judgeval}).
-
-Conditional rates depend on the rater: the primary judge flags $13.3\%$ and $16.7\%$, the secondary judge $23.3\%$ and $43.3\%$, and the annotators' raw ratings span a wider range (Table~\ref{tab:reviewer:rates}). All raters agree on the ordering: zero in A, a substantial rate in B, and a numerically higher rate in C.
-
-Because the baseline contains no analogies, the increase of unconditional DAR from A to B and C is mechanically produced by analogy frequency ($0\%$ to $100\%$); no change in analogy quality is needed to explain it, and the quality of baseline analogies cannot be observed. But exposure is not harmless: conditional on an analogy being present, roughly three in ten (B) to almost four in ten (C) were dangerous by consensus. The supported form of the trade-off is therefore: accessibility-style prompts reliably convert an explanation into an analogy-based one, and a substantial fraction of the analogies produced mislead about a key property. Frequency creates the exposure, per-analogy danger determines the harm of each exposure, and the present design can quantify the second only for B and C.
+Because the baseline contains no analogies, the increase of unconditional DAR from A to B and C is mechanically produced by analogy frequency ($0\%$ to $100\%$); no change in analogy quality is needed to explain it, and the quality of baseline analogies cannot be observed. But exposure is not harmless: conditional on an analogy being present, roughly three in ten (B) to almost four in ten (C) were dangerous. The supported form of the trade-off is therefore that accessibility-style prompts reliably convert an explanation into an analogy-based one, and a substantial fraction of the analogies mislead about a key property.
 
 \subsection{Pilot Ablation: Analogies Under an Explicit Prohibition}
 \label{sec:pilot}
 
-Of the 35 responses to the pilot prompt D (mistral:7b), 20 contained a clear analogy (57.1\%, 95\% CI $[40.8, 72.0]$), and 23 (65.7\%, $[49.7, 78.7]$) when three borderline cases are included; 12 contained none (Table~\ref{tab:pilot}). The explicit prohibition therefore did not remove analogies. Typical examples were a hash table as a box of toys, garbage collection as a clean-up crew, threads as factory workers, a CPU scheduler as a traffic cop, and semaphores as traffic lights, which is the pattern named as a dangerous example in our codebook. Responses without an analogy were mostly short technical descriptions. Danger was not rated in the pilot.
-
-For reference, the human-coded validation subsample contained no analogy in the standard condition (0 of 30) and one in every simplified response (30 of 30 in B and in C). The pilot rate is numerically between these values, but the comparison is descriptive only, because the reference rates come from a different sample (all seven models) and the pilot has no same-model standard baseline. The pilot suggests that, for this model, the audience-and-simplification framing pushes the response towards analogies even without an analogy request, so that the main DAR increase is unlikely to be purely a consequence of instruction-following. The evidence is weak: one small model that may follow negative instructions poorly, one generation per concept, an unmasked single coder, and a prompt that retains the audience label, so the contribution of the persona and of simplification itself cannot be separated.
+Of the 35 responses to prompt D (mistral:7b), 20 contained a clear analogy (57.1\%, 95\% CI $[40.8, 72.0]$), and 23 (65.7\%, $[49.7, 78.7]$) when three borderline cases are included; 12 contained none (Table~\ref{tab:pilot}). The explicit prohibition therefore did not remove analogies. Typical examples were a hash table as a box of toys, garbage collection as a clean-up crew, threads as factory workers, a CPU scheduler as a traffic cop, and semaphores as traffic lights, the pattern named as dangerous in our codebook. Danger was not rated. The pilot rate lies numerically between the validation values for A (0 of 30) and B/C (30 of 30), but the comparison is descriptive only, since the reference rates come from a different sample (all seven models) and the pilot has no same-model baseline. It suggests that, for this model, the audience-and-simplification framing pushes the response towards analogies even without an analogy request, so the main DAR increase is unlikely to be purely instruction-following. The evidence is weak (one small model that may follow negative instructions poorly, one generation per concept, an unmasked single coder, and a prompt that retains the audience label), and a full ablation across models and conditions is the most important extension of this work.
 
 \begin{table}[H]
-\caption{Analogy presence in the pilot ablation (condition D, mistral:7b, one response per concept) and, for reference, in the human-coded validation subsample (A, B, C; 30 responses per condition, all seven models). The reference rows come from a different sample, and the comparison is descriptive only. Wilson 95\% CIs are shown.}
+\caption{Analogy presence in the pilot ablation (condition D, mistral:7b, one response per concept) and, for reference, in the human-coded validation subsample (30 responses per condition, all seven models). The comparison is descriptive only. Wilson 95\% CIs are shown.}
 \label{tab:pilot}
 \centering
-\small
+\footnotesize
+\resizebox{\linewidth}{!}{%
 \begin{tabular}{llrrr}
 \toprule
 Condition & Sample & $n$ & With analogy & Rate (\%) [95\% CI] \\
@@ -694,22 +591,12 @@ A (standard), reference & validation subsample & 30 & 0 & 0.0 [0.0, 11.4] \\
 B (simplified), reference & validation subsample & 30 & 30 & 100.0 [88.6, 100.0] \\
 C (highly simplified), reference & validation subsample & 30 & 30 & 100.0 [88.6, 100.0] \\
 \bottomrule
-\end{tabular}
+\end{tabular}}
 \end{table}
-
-The pilot therefore serves as a first indication, not as evidence, and is treated as such in the Discussion. A full ablation across all models and conditions is the most important extension of this work.
 
 \subsection{Oversimplification Error Rate (OER)}
 
-By construction OER cannot occur in A; the single response flagged there by the primary judge is treated as noise. For the primary judge (Table~\ref{tab:oer}), OER was 16 of 240 in B ($6.7\%$, 95\% CI $[4.1, 10.6]$) and 10 in C ($4.2\%$, $[2.3, 7.5]$). Both intervals exclude zero, but the expected increase from B to C does not appear.
-
-We also derived OER from the SM indicators: the proportion of simplified responses with SM $= 1$ whose standard response for the same pair has SM $= 0$. This gives 34 of 240 in B ($14.2\%$, $[10.3, 19.1]$) and 28 in C ($11.7\%$, $[8.2, 16.3]$). This must be read with care: because generation was stochastic ($T = 0.7$) and the judge is imperfect, the opposite transition (SM $= 1$ in A, $0$ in the simplified response) also occurs, in 23 pairs for B and 25 for C (Table~\ref{tab:sm}, Panel C, column $c$). The net excess of simplified-only misconceptions is only 11 pairs for B and 3 for C, so the derived rates partly reflect sampling noise.
-
-The human consensus, rated directly against the standard response, flagged 5 of 30 in B ($16.7\%$, $[7.3, 33.6]$) and 4 of 30 in C ($13.3\%$, $[5.3, 29.7]$), close to the derived measure and two to three times the primary judge's rate. The secondary judge flagged an OER in $77.6\%$ of B and $84.1\%$ of C responses, and in $7.3\%$ of standard responses where the indicator is undefined (Table~\ref{tab:secondary}). These rates are about five times the consensus and show the criterion of an error absent from the baseline was not applied; the secondary judge's OER output is not interpretable as an error rate, and its significant C vs.\ B contrast is not taken as evidence for H4.
-
-\textbf{Mixed-effects sensitivity analysis.} The GLMM for OER (B and C, B as reference) gives OR $= 0.60$ for C vs.\ B ($[0.27, 1.37]$, $p = 0.225$), with $\sigma_c = 0.62$ and $\sigma_m = 0.32$: OER varies more by concept than by model. This is consistent with the exploratory concept-level pattern in Appendix~\ref{appendix:concepts}.
-
-OER by model ranges from $2.9\%$ (gemma4:31b, gpt-oss:20b, ministral-3:14b) to $10.3\%$ (mistral:7b), with no clear relation to size: phi4:14b ($10.0\%$) is close to mistral:7b.
+For the primary judge, OER was $6.7\%$ in B (16 of 240) and $4.2\%$ in C (10 of 240); both intervals exclude zero, but the expected increase from B to C does not appear (Table~\ref{tab:oer}). We also derived OER from the SM indicators (simplified responses with SM $= 1$ whose standard response has SM $= 0$): 34 of 240 in B ($14.2\%$, $[10.3, 19.1]$) and 28 in C ($11.7\%$, $[8.2, 16.3]$). Because generation was stochastic ($T = 0.7$) and the judge is imperfect, the opposite transition also occurs (23 pairs for B, 25 for C), so the net excess of simplified-only misconceptions is only 11 pairs for B and 3 for C and the derived rates partly reflect sampling noise. The human consensus, rated directly against the standard response, flagged 5 of 30 in B ($16.7\%$, $[7.3, 33.6]$) and 4 of 30 in C ($13.3\%$, $[5.3, 29.7]$), close to the derived measure and two to three times the primary judge's rate. The secondary judge flagged $77.6\%$ of B and $84.1\%$ of C responses (and $7.3\%$ of standard responses, where OER is undefined), about five times the consensus, which shows that the criterion of an error absent from the baseline was not applied; its OER output is not interpretable as an error rate, and its significant C vs.\ B contrast is not taken as evidence for H4. The GLMM gives OR $= 0.60$ for C vs.\ B (Table~\ref{tab:oer}) with $\sigma_c = 0.62 > \sigma_m = 0.32$: OER varies more by concept than by model. By model, OER ranges from $2.9\%$ (gemma4:31b, gpt-oss:20b, ministral-3:14b) to $10.3\%$ (mistral:7b), with no clear relation to size (phi4:14b: $10.0\%$). OER is thus measurable but non-monotonic: existence is supported, monotonicity is not.
 
 \begin{table}[H]
 \caption{Oversimplification error rate (OER) by condition. Judge-based rates use the primary judge's OER flag; derived rates use the proportion of simplified responses with SM $= 1$ whose standard response has SM $= 0$. GLMM OR is for C vs.\ B.}
@@ -718,7 +605,7 @@ OER by model ranges from $2.9\%$ (gemma4:31b, gpt-oss:20b, ministral-3:14b) to $
 \small
 \begin{tabular}{lrrr}
 \toprule
-\multicolumn{4}{l}{\textit{Panel A: Judge-based OER (primary judge)}} \\
+\multicolumn{4}{l}{Panel A: Judge-based OER (primary judge)} \\
 \midrule
 Condition & Count & $n$ & Rate (\%) [95\% CI] \\
 \midrule
@@ -726,14 +613,14 @@ A (standard) & 1 & 240 & 0.4 [0.1, 2.3] \\
 B (simplified) & 16 & 240 & 6.7 [4.1, 10.6] \\
 C (highly simplified) & 10 & 240 & 4.2 [2.3, 7.5] \\
 \midrule
-\multicolumn{4}{l}{\textit{Panel B: Derived OER (SM in B/C but not A)}} \\
+\multicolumn{4}{l}{Panel B: Derived OER (SM in B/C but not A)} \\
 \midrule
 Condition & Count & $n$ & Rate (\%) [95\% CI] \\
 \midrule
 B (simplified) & 34 & 240 & 14.2 [10.3, 19.1] \\
 C (highly simplified) & 28 & 240 & 11.7 [8.2, 16.3] \\
 \midrule
-\multicolumn{4}{l}{\textit{Panel C: Regression odds ratio for C vs.\ B}} \\
+\multicolumn{4}{l}{Panel C: Regression odds ratio for C vs.\ B} \\
 \midrule
 Model & OR & 95\% CI & $p$ \\
 \midrule
@@ -743,11 +630,18 @@ GLMM (crossed) & 0.60 & [0.27, 1.37] & 0.225 \\
 \end{tabular}
 \end{table}
 
-Table~\ref{tab:oer} therefore shows a measurable but non-monotonic OER: existence is supported, monotonicity is not. The derived measure and the consensus agree on magnitude, which strengthens confidence in the existence claim, but neither supports the C $>$ B prediction.
-
 \subsection{Accuracy Scores}
 
-Primary-judge mean accuracy (Table~\ref{tab:accuracy}) was highest in A ($M = 4.67$), lower in B ($4.15$), and similar in C ($4.18$); the share of perfect scores fell from $86.7\%$ to $60.0\%$ and $57.5\%$. ANOVA gives $F(2, 717) = 17.65$, $p < 0.001$, $\eta^2 = 0.047$; Friedman $\chi^2(2) = 50.45$, $p < 0.001$, $W = 0.105$. B vs.\ A and C vs.\ A are significant (Holm $p < 0.001$, $d = -0.49$ each), C vs.\ B is not ($p = 0.806$). The secondary judge shows a larger drop and an additional decline from B to C (means 4.90, 3.94, 3.47; Table~\ref{tab:secondary}), and the annotators' means also fall from A to C (Table~\ref{tab:reviewer:rates}). Accuracy correlates negatively with the primary judge's indicators: SM $\rho = -0.70$, DA $\rho = -0.67$, OER $\rho = -0.33$ (all $p < 0.001$); the weaker OER correlation is expected because OER is rare and defined only for B and C.
+Primary-judge mean accuracy was highest in A ($4.67$) and lower in B ($4.15$) and C ($4.18$); the share of perfect scores fell from $86.7\%$ to $60.0\%$ and $57.5\%$ (Table~\ref{tab:accuracy}). ANOVA gives $F(2, 717) = 17.65$, $p < 0.001$, $\eta^2 = 0.047$; Friedman $\chi^2(2) = 50.45$, $p < 0.001$, $W = 0.105$. B vs.\ A and C vs.\ A are significant (Holm $p < 0.001$, $d = -0.49$ each), C vs.\ B is not ($p = 0.806$). The secondary judge shows a larger drop and an additional decline from B to C (Table~\ref{tab:secondary}), and the annotators' means also fall from A to C (Table~\ref{tab:reviewer:rates}). Accuracy correlates negatively with the primary judge's indicators (SM $\rho = -0.70$, DA $\rho = -0.67$, OER $\rho = -0.33$; all $p < 0.001$). Accuracy is best read as a graded measure of degradation that moves in the same direction as DAR and SMR, supporting the interpretation that simplified responses are technically weaker even when easier to read (Figure~\ref{fig:accuracy_by_condition}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\linewidth]{figures/fig_accuracy_by_condition.png}
+\caption{Mean accuracy scores (1--5) by condition (primary judge), with 95\% confidence intervals. The vertical axis starts at 2. The dashed line marks the overall mean.}
+\label{fig:accuracy_by_condition}
+\end{figure}
+
+The pairwise contrasts, omnibus tests, and correlations behind these statements are reported in Table~\ref{tab:accuracy}. The accuracy drop from A to B and C is consistent across raters, but the B--C difference is not, which mirrors the DAR and OER results.
 
 \begin{table}[H]
 \caption{Accuracy scores (1--5), primary judge: means by condition (Panel A), omnibus tests (Panel B), paired Wilcoxon contrasts with Holm correction (Panel C), and Spearman correlations with the binary indicators (Panel D).}
@@ -756,7 +650,7 @@ Primary-judge mean accuracy (Table~\ref{tab:accuracy}) was highest in A ($M = 4.
 \small
 \begin{tabular}{lrrr}
 \toprule
-\multicolumn{4}{l}{\textit{Panel A: Accuracy by condition}} \\
+\multicolumn{4}{l}{Panel A: Accuracy by condition} \\
 \midrule
 Condition & $n$ & Mean (SD) & Score 5 \\
 \midrule
@@ -764,14 +658,14 @@ A (standard) & 240 & 4.67 (0.89) & 208 (86.7\%) \\
 B (simplified) & 240 & 4.15 (1.19) & 144 (60.0\%) \\
 C (highly simplified) & 240 & 4.18 (1.12) & 138 (57.5\%) \\
 \midrule
-\multicolumn{4}{l}{\textit{Panel B: Omnibus tests}} \\
+\multicolumn{4}{l}{Panel B: Omnibus tests} \\
 \midrule
 Test & Statistic & df & $p$ \\
 \midrule
 One-way ANOVA & $F = 17.65$ & 2, 717 & $<0.001$ \\
 Friedman & $\chi^2 = 50.45$ & 2 & $<0.001$ \\
 \midrule
-\multicolumn{4}{l}{\textit{Panel C: Pairwise Wilcoxon (Holm)}} \\
+\multicolumn{4}{l}{Panel C: Pairwise Wilcoxon (Holm)} \\
 \midrule
 Contrast & $W$ & Holm $p$ & Cohen's $d$ \\
 \midrule
@@ -779,7 +673,7 @@ B vs A & 1329.0 & $<0.001$ & $-0.49$ \\
 C vs A & 1739.0 & $<0.001$ & $-0.49$ \\
 C vs B & 3192.0 & 0.806 & $0.02$ \\
 \midrule
-\multicolumn{4}{l}{\textit{Panel D: Spearman correlations with error indicators}} \\
+\multicolumn{4}{l}{Panel D: Spearman correlations with error indicators} \\
 \midrule
 Indicator & $\rho$ & $p$ & \\
 \midrule
@@ -790,20 +684,19 @@ OER & $-0.33$ & $<0.001$ & \\
 \end{tabular}
 \end{table}
 
-Figure~\ref{fig:accuracy_by_condition} shows the same pattern graphically. The accuracy drop from A to B and C is consistent across raters, but the B--C difference is not, which mirrors the DAR and OER results.
+\subsection{Subfield and Model Comparison}
+\label{sec:models}
+
+Descriptively, Databases shows the largest SMR increase in B ($16.7\%$ to $29.2\%$), Programming Languages and Paradigms rises from a very low baseline ($2.0\%$ to $12.2\%$), and Databases and Operating Systems show the largest DAR increases (up to $33.3\%$ and $37.5\%$ in C). After Benjamini-Hochberg correction no within-condition ANOVA across subfields is significant (closest: DAR in C, $F = 3.23$, raw $p = 0.013$, BH $p = 0.159$). Subfield therefore has no robust moderating effect, although with seven concepts per subfield even a real moderate effect would often fail to reach significance; no single subfield drives the overall effect. Table~\ref{tab:subfield} gives SMR, DAR, OER, and accuracy by subfield and condition, and Figure~\ref{fig:subfield_heatmap} shows the SMR pattern.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\linewidth]{figures/fig_accuracy_by_condition.png}
-\caption{Mean accuracy scores (1--5) by condition (primary judge), with 95\% confidence intervals. The vertical axis starts at 2. The dashed line marks the overall mean.}
-\label{fig:accuracy_by_condition}
+\includegraphics[width=\linewidth]{figures/fig_subfield_heatmap.png}
+\caption{Strategic misconception rate (SMR, \%) by CS subfield and condition (primary judge). Cell values are rounded to whole percentages; darker cells indicate higher SMR.}
+\label{fig:subfield_heatmap}
 \end{figure}
 
-Accuracy is therefore best read as a graded measure of degradation that is consistent with, but not identical to, the Boolean indicators. Its main value in this paper is convergent: it moves in the same direction as DAR and SMR, which supports the interpretation that simplified responses are technically weaker even when they are easier to read.
-
-\subsection{Subfield Analysis}
-
-Table~\ref{tab:subfield} gives the primary judge's SMR, DAR, OER, and accuracy by subfield and condition (Panel A) and one-way ANOVAs across subfields within each condition (Panel B). Descriptively, Databases shows the largest SMR increase in B ($16.7\%$ to $29.2\%$), Programming Languages and Paradigms rises from a very low baseline ($2.0\%$ to $12.2\%$), and Databases and Operating Systems show the largest DAR increases. After Benjamini-Hochberg correction no ANOVA is significant; the closest is DAR in C ($F = 3.23$, raw $p = 0.013$, BH $p = 0.159$). Subfield therefore has no robust moderating effect in this sample, although some subfields may merit follow-up.
+The descriptive pattern in Table~\ref{tab:subfield} shows that the DAR increase is present in every subfield, whereas the SMR pattern is heterogeneous (Computer Networks even decreases from A to C); Panel B confirms that no between-subfield difference survives correction.
 
 \begin{table}[H]
 \caption{Error rates and accuracy by CS subfield and condition (primary judge; Panel A), and one-way ANOVAs of each outcome across subfields within each condition (Panel B). OER is undefined in A.}
@@ -813,7 +706,7 @@ Table~\ref{tab:subfield} gives the primary judge's SMR, DAR, OER, and accuracy b
 \setlength{\tabcolsep}{4pt}
 \begin{tabular}{llrrrr}
 \toprule
-\multicolumn{6}{l}{\textit{Panel A: Descriptive statistics}} \\
+\multicolumn{6}{l}{Panel A: Descriptive statistics} \\
 \midrule
 Subfield & Condition & SMR (\%) & DAR (\%) & OER (\%) & Accuracy \\
 \midrule
@@ -833,7 +726,7 @@ Operating Systems & A & 12.5 & 2.1 & -- & 4.67 \\
 Operating Systems & B & 12.5 & 14.6 & 4.2 & 4.33 \\
 Operating Systems & C & 12.5 & 37.5 & 6.2 & 3.94 \\
 \midrule
-\multicolumn{6}{l}{\textit{Panel B: ANOVAs across subfields within condition}} \\
+\multicolumn{6}{l}{Panel B: ANOVAs across subfields within condition} \\
 \midrule
 Outcome & Condition & $F$ & $p$ & BH $p$ & \\
 \midrule
@@ -852,22 +745,15 @@ Accuracy & C & 0.88 & 0.478 & 0.604 & \\
 \end{tabular}
 \end{table}
 
-The subfield pattern is exploratory and should not be over-interpreted: with 7 concepts per subfield, even a real moderate effect would often fail to reach significance after correction. What the table does show is that no single subfield is driving the overall effect, which supports the general interpretation of DAR as a broad phenomenon rather than an artefact of a few concepts.
-
-\subsection{Model Comparison}
-\label{sec:models}
-
-Table~\ref{tab:models} reports primary-judge error rates and accuracy by model, pooled over conditions. Gemma4:31b stands out (SMR $0.0\%$, DAR $1.9\%$, accuracy 4.90), whereas mistral:7b has SMR $26.5\%$, DAR $30.4\%$, and accuracy 3.57. In the two-way ANOVA the model main effect is significant for SM ($F(6, 699) = 5.76$, $p < 0.001$) and accuracy ($F(6, 699) = 4.90$, $p < 0.001$), whereas the condition main effect and the interaction are not. We found no evidence that the simplification effect differs between models, although with 33--35 responses per model and condition power to detect an interaction is low. In this corpus, model identity matters at least as much as prompt condition for the primary judge's SM and accuracy; the GLMM agrees that between-model SD exceeds between-concept SD for SM and DA, whereas for OER the pattern is reversed. Because model family and scale are confounded, we do not attribute these differences to either. The secondary judge ranks models similarly: mistral:7b has the highest pooled SMR ($21.0\%$) and DAR ($47.6\%$), and gpt-oss:20b the lowest DAR ($16.2\%$) and, with ministral-3:14b, an SMR of $0.0\%$.
+Table~\ref{tab:models} reports primary-judge rates by model, pooled over conditions. Gemma4:31b stands out (SMR $0.0\%$, DAR $1.9\%$, accuracy 4.90), whereas mistral:7b has SMR $26.5\%$, DAR $30.4\%$, and accuracy 3.57.
 
 \begin{table}[H]
-\caption{Error rates and accuracy by model, pooled over conditions (primary judge; Panel A), and two-way ANOVA (Type II) for SM and accuracy (Panel B).}
+\caption{Error rates and accuracy by model, pooled over conditions (primary judge).}
 \label{tab:models}
 \centering
 \small
 \begin{tabular}{lrrrr}
 \toprule
-\multicolumn{5}{l}{\textit{Panel A: Error rates and accuracy by model}} \\
-\midrule
 Model & SMR (\%) & DAR (\%) & OER (\%) & Accuracy \\
 \midrule
 mistral:7b & 26.5 & 30.4 & 10.3 & 3.57 \\
@@ -877,9 +763,19 @@ phi4:14b & 14.3 & 16.2 & 10.0 & 4.31 \\
 gpt-oss:20b & 11.4 & 9.5 & 2.9 & 4.59 \\
 gemma4:31b & 0.0 & 1.9 & 2.9 & 4.90 \\
 deepseek-r1:32b & 13.1 & 17.2 & 4.5 & 4.33 \\
-\midrule
-\multicolumn{5}{l}{\textit{Panel B: Two-way ANOVA (Type II)}} \\
-\midrule
+\bottomrule
+\end{tabular}
+\end{table}
+
+In the two-way ANOVA (Table~\ref{tab:models:anova}) the model main effect is significant for SM ($F(6, 699) = 5.76$) and accuracy ($F(6, 699) = 4.90$; both $p < 0.001$), whereas the condition main effect and the model $\times$ condition interaction are not (interaction $p = 0.879$ and $0.695$), although with 33--35 responses per model and condition power for an interaction is low. Model identity matters at least as much as prompt condition for SM and accuracy, whereas the DAR effect is large enough to dominate model variation; since family and scale are confounded, we do not attribute the differences to either. The secondary judge ranks models similarly (mistral:7b highest pooled SMR $21.0\%$ and DAR $47.6\%$; gpt-oss:20b lowest DAR, $16.2\%$).
+
+\begin{table}[H]
+\caption{Two-way ANOVA (Type II) for SM and accuracy by model and condition (primary judge).}
+\label{tab:models:anova}
+\centering
+\small
+\begin{tabular}{llrrr}
+\toprule
 Outcome & Term & $F$ & df & $p$ \\
 \midrule
 SM & C(model) & 5.76 & 6 & $<0.001$ \\
@@ -892,14 +788,10 @@ Accuracy & C(model):C(condition) & 0.76 & 12 & 0.695 \\
 \end{tabular}
 \end{table}
 
-The model comparison reinforces the main methodological point: the choice of model is at least as consequential as the choice of prompt for the primary judge's SM and accuracy, whereas the DAR effect is large enough to dominate model variation. This asymmetry is what makes DAR the most robust finding of the paper.
-
 \subsection{Human Evaluation and Judge Validation}
 \label{sec:judgeval}
 
-\textbf{Inter-annotator agreement.} Before adjudication, agreement was modest: $\kappa = 0.283$ for SM (raw $80.0\%$), $0.110$ for DA ($60.0\%$), and $0.317$ for OER ($76.7\%$), i.e., slight to fair \cite{landis1977measurement}; quadratic-weighted $\kappa$ for accuracy was 0.522 (moderate; Spearman $\rho = 0.627$). All 68 disagreements on SM, DA, and OER occurred in B and C; for standard responses the annotators agreed on every rating. The disagreements reflect different thresholds rather than noise: for DA, all 36 were items h1 flagged and h2 did not (h1 flagged $56.7\%$ of B and $76.7\%$ of C, h2 only $6.7\%$ in both); for SM, 11 of 18 were h1-only and 7 h2-only; for OER, 5 of 14 were h1-only and 9 h2-only (Table~\ref{tab:reviewer:rates}). Both annotators agree on the direction of the condition effect: neither flagged any SM or DA in A, and both flagged more in B and C. Adjudication resolved 26 of the 68 items as an error or dangerous analogy (7 of 18 SM, 16 of 36 DA, 3 of 14 OER) and 42 as no flag, so the consensus is more conservative than h1 on DA and SM and lies between the two annotators on DA.
-
-Table~\ref{tab:reviewer:rates} summarises the annotators' raw rates. The large gap between h1 and h2 on DA is the main source of uncertainty in the consensus, and it is why the consensus analysis is interpreted directionally rather than as a precise prevalence estimate.
+Inter-annotator agreement. Before adjudication, agreement was modest: $\kappa = 0.283$ for SM (raw $80.0\%$), $0.110$ for DA ($60.0\%$), and $0.317$ for OER ($76.7\%$), i.e., slight to fair \cite{landis1977measurement}; quadratic-weighted $\kappa$ for accuracy was 0.522 (Spearman $\rho = 0.627$). All 68 disagreements occurred in B and C; for standard responses the annotators agreed on every rating. The disagreements reflect different thresholds rather than noise: for DA, all 36 were items h1 flagged and h2 did not (h1 flagged $56.7\%$ of B and $76.7\%$ of C, h2 only $6.7\%$ in both; Table~\ref{tab:reviewer:rates}). Both annotators agree on the direction of the condition effect. Adjudication resolved 26 of the 68 items as a flag (7 of 18 SM, 16 of 36 DA, 3 of 14 OER) and 42 as no flag. The large h1--h2 gap on DA is the main source of uncertainty in the consensus, which is why we interpret it directionally rather than as a precise prevalence estimate.
 
 \begin{table}[H]
 \caption{Annotator rates by condition on the validation subsample, before adjudication (30 responses per condition; OER rated for B and C only).}
@@ -920,43 +812,35 @@ h2 & C (highly simplified) & 23.3 & 6.7 & 23.3 & 3.47 \\
 \end{tabular}
 \end{table}
 
-\textbf{Condition effect in the human consensus.} In the consensus (Table~\ref{tab:reviewer:consensus}), no standard response was flagged for SM, DA, or OER (0 of 30 each). SM rose to 5 of 30 in B ($16.7\%$, $[7.3, 33.6]$) and 8 of 30 in C ($26.7\%$, $[14.2, 44.4]$); DA rose to 9 of 30 ($30.0\%$, $[16.7, 47.9]$) and 11 of 30 ($36.7\%$, $[21.9, 54.5]$). Cochran's $Q$ was significant for both (SM: $Q = 8.91$, $p = 0.012$; DA: $Q = 12.88$, $p = 0.002$). For SM, C vs.\ A was significant after Holm correction (8 vs.\ 0 discordant pairs, $p = 0.023$) and B vs.\ A was not ($p = 0.125$); for DA both contrasts were significant (Holm $p = 0.008$ and $0.003$). C and B did not differ (SM: $b = 6$, $c = 3$, $p = 0.508$; DA: $b = 7$, $c = 5$, $p = 0.774$). The human standard thus supports H1 (monotonic gradient, but only C vs.\ A significant) and H2 (A $<$ B, A $<$ C, no resolved B--C difference), on 30 groups per condition and with a post hoc analysis.
+Condition effect in the human consensus. In the consensus (Table~\ref{tab:reviewer:consensus}), no standard response was flagged for SM, DA, or OER. SM rose to 5 of 30 in B ($16.7\%$, $[7.3, 33.6]$) and 8 of 30 in C ($26.7\%$, $[14.2, 44.4]$); DA rose to 9 of 30 ($30.0\%$, $[16.7, 47.9]$) and 11 of 30 ($36.7\%$, $[21.9, 54.5]$). Cochran's $Q$ was significant for both (SM: $Q = 8.91$, $p = 0.012$; DA: $Q = 12.88$, $p = 0.002$). For SM, C vs.\ A was significant after Holm correction ($p = 0.023$) and B vs.\ A was not ($p = 0.125$); for DA both contrasts were significant (Holm $p = 0.008$ and $0.003$). C and B did not differ (SM $p = 0.508$; DA $p = 0.774$). The human standard thus supports H1 (monotonic gradient, but only C vs.\ A significant) and H2 (A $<$ B, A $<$ C, no resolved B--C difference), on 30 groups per condition and with a post hoc analysis.
 
 \begin{table}[H]
 \caption{Number of the 30 validation responses per condition flagged by the human consensus and by each judge (J1 = primary, Qwen3.6:35b; J2 = secondary, Qwen3:32b). OER is rated for B and C only. Consensus percentages: SM 0.0, 16.7, 26.7; DA 0.0, 30.0, 36.7; OER 16.7 (B), 13.3 (C).}
 \label{tab:reviewer:consensus}
 \centering
-\small
-\begin{tabular}{lcccccc}
+\footnotesize
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lccccccccc}
 \toprule
-\multirow{2}{*}{Condition} & \multicolumn{3}{c}{SM} & \multicolumn{3}{c}{DA} \\
-\cmidrule(lr){2-4}\cmidrule(lr){5-7}
- & Consensus & J1 & J2 & Consensus & J1 & J2 \\
+\multirow{2}{*}{Condition} & \multicolumn{3}{c}{SM} & \multicolumn{3}{c}{DA} & \multicolumn{3}{c}{OER} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}
+ & Cons. & J1 & J2 & Cons. & J1 & J2 & Cons. & J1 & J2 \\
 \midrule
-A (standard) & 0 & 2 & 0 & 0 & 0 & 0 \\
-B (simplified) & 5 & 2 & 1 & 9 & 4 & 7 \\
-C (highly simplified) & 8 & 1 & 0 & 11 & 5 & 13 \\
-\midrule
- & \multicolumn{3}{c}{OER} & & & \\
-\cmidrule(lr){2-4}
- & Consensus & J1 & J2 & & & \\
-\midrule
-A (standard) & -- & -- & -- & & & \\
-B (simplified) & 5 & 2 & 24 & & & \\
-C (highly simplified) & 4 & 1 & 24 & & & \\
+A (standard) & 0 & 2 & 0 & 0 & 0 & 0 & -- & -- & -- \\
+B (simplified) & 5 & 2 & 1 & 9 & 4 & 7 & 5 & 2 & 24 \\
+C (highly simplified) & 8 & 1 & 0 & 11 & 5 & 13 & 4 & 1 & 24 \\
 \bottomrule
-\end{tabular}
+\end{tabular}}
 \end{table}
 
-\textbf{Judge validation.} Table~\ref{tab:judge:validation} reports agreement of each judge with the consensus. The primary judge agrees poorly: $\kappa = 0.034$ (SM), $0.160$ (DA), $0.099$ (OER); precision 0.200, 0.444, 0.333; recall 0.077, 0.200, 0.111 (1 of 13 consensus SM, 4 of 20 DA, 1 of 9 OER). Because it flagged only a handful of responses, these estimates are themselves imprecise. Of its five SM flags, four were not confirmed, including both in A. Consensus prevalence was $14.4\%$ for SM against $5.6\%$ for the judge; for DA $22.2\%$ against $10.0\%$; for OER $15.0\%$ against $5.0\%$. Mean accuracy was 3.39 for h1 (the reference; 3.67 for the two-annotator mean) and 4.58 for the primary judge.
-
-The secondary judge fails differently. For SM it flagged a single response (confirmed), giving recall 0.077 and prevalence 1.1\%. For DA it reproduces the consensus prevalence exactly ($22.2\%$), but precision and recall are only 0.350 each, so it agrees on how many analogies are dangerous but only partly on which. For OER it flagged $80.0\%$ of simplified responses against a consensus prevalence of $15.0\%$ (recall 0.889, precision 0.167, $\kappa = 0.038$). Its accuracy scores are closer to the human level (mean 4.24; weighted $\kappa = 0.364$ against h1) than the primary judge's (4.58; $\kappa = 0.240$).
+Judge validation. Table~\ref{tab:judge:validation} reports agreement of each judge with the consensus. The primary judge agrees poorly: $\kappa = 0.034$ (SM), $0.160$ (DA), $0.099$ (OER); recall 0.077, 0.200, 0.111 (1 of 13 consensus SM, 4 of 20 DA, 1 of 9 OER). Of its five SM flags, four were not confirmed, including both in A. Consensus prevalence was $14.4\%$ for SM against $5.6\%$ for the judge, and $22.2\%$ against $10.0\%$ for DA. Mean accuracy was 3.39 for h1 (3.67 for the two-annotator mean) and 4.58 for the primary judge. The secondary judge fails differently: for SM it flagged a single response (confirmed; recall 0.077); for DA it reproduces the consensus prevalence exactly ($22.2\%$) but with precision and recall of only 0.350, so it agrees on how many analogies are dangerous but only partly on which; for OER it flagged $80.0\%$ of simplified responses against a consensus prevalence of $15.0\%$ (recall 0.889, precision 0.167). Its accuracy scores are closer to the human level than the primary judge's (4.24 vs.\ 4.58).
 
 \begin{table}[H]
 \caption{Agreement of the two LLM judges with the human consensus on the 90-response validation subsample (J1 = primary, J2 = secondary). Prev. = prevalence of flags (SM, DA over 90 responses; OER over the 60 simplified responses); for accuracy, quadratic-weighted $\kappa$ is against annotator h1 and prevalence is the mean score.}
 \label{tab:judge:validation}
 \centering
-\small
+\footnotesize
+\resizebox{\linewidth}{!}{%
 \begin{tabular}{lccccccccc}
 \toprule
 \multirow{2}{*}{Indicator} & \multirow{2}{*}{Ref. prev.} & \multicolumn{4}{c}{J1} & \multicolumn{4}{c}{J2} \\
@@ -968,156 +852,137 @@ DA & 0.222 & 0.160 & 0.444 & 0.200 & 0.100 & 0.164 & 0.350 & 0.350 & 0.222 \\
 OER & 0.150 & 0.099 & 0.333 & 0.111 & 0.050 & 0.038 & 0.167 & 0.889 & 0.800 \\
 Accuracy & 3.39 & 0.240 & -- & -- & 4.58 & 0.364 & -- & -- & 4.24 \\
 \bottomrule
-\end{tabular}
+\end{tabular}}
 \end{table}
 
-\textbf{Inter-judge agreement.} On the 720 jointly scored responses, $\kappa = 0.306$ for SM (raw $87.5\%$), $0.350$ for DA ($77.1\%$), and $0.039$ for OER ($46.7\%$); weighted $\kappa$ for accuracy was 0.417 (Spearman $\rho = 0.437$). The judges agree with each other better than with the humans on SM and DA, but only fairly, and not at all on OER.
-
-\textbf{Dependence on condition.} The disagreement depends on condition (Table~\ref{tab:reviewer:consensus}). On SM the consensus rises 0, 5, 8 across A, B, C, whereas J1 flags 2, 2, 1 and J2 0, 1, 0; neither reproduces the gradient, and J1's flags in A are unconfirmed. On DA, the consensus (0, 9, 11) and J2 (0, 7, 13) share shape and magnitude, while J1 (0, 4, 5) shares the shape at about half the magnitude. On OER, the consensus is nearly equal in B and C (5, 4), J1 flags almost none (2, 1), and J2 nearly all (24, 24). The primary judge's rates, and in particular its null SMR result, should therefore be read as under-calibrated indicators of relative risk rather than prevalence estimates, and the secondary judge's OER output should not be used.
+Inter-judge agreement and dependence on condition. On the 720 jointly scored responses, $\kappa = 0.306$ for SM (raw $87.5\%$), $0.350$ for DA ($77.1\%$), and $0.039$ for OER ($46.7\%$); weighted $\kappa$ for accuracy was 0.417. The judges agree with each other better than with the humans on SM and DA, but only fairly, and not at all on OER. The disagreement depends on condition (Table~\ref{tab:reviewer:consensus}): on SM, the consensus rises 0, 5, 8 across A, B, C, whereas J1 flags 2, 2, 1 and J2 0, 1, 0, so neither reproduces the gradient; on DA, the consensus (0, 9, 11) and J2 (0, 7, 13) share shape and magnitude while J1 (0, 4, 5) shares the shape at about half the magnitude; on OER, the consensus is nearly equal in B and C, J1 flags almost none, and J2 nearly all. The primary judge's rates, and in particular its null SMR result, should therefore be read as under-calibrated indicators of relative risk rather than prevalence estimates, and the secondary judge's OER output should not be used.
 
 \subsection{Position Effects in the Judge}
 
-Because the primary judge saw all three conditions jointly in random order, we examined order effects. Its SMR rose from $9.6\%$ at position 1 to $21.2\%$ at position 3; DAR ($10.8\%$, $15.8\%$, $19.2\%$) and OER ($0.6\%$, $4.7\%$, $11.2\%$) also rose, and accuracy fell (4.50, 4.38, 4.13). Position was only mildly unbalanced across conditions (A first 70 times, B 84, C 86), so the effect adds noise rather than systematically favouring one condition. For OER the dependence is especially visible: simplified responses judged after the baseline had $10.0\%$ OER against $1.2\%$ when the baseline came later.
-
-After adjusting the GEE for position, the DAR effect remains large (B vs.\ A OR $= 30.97$ $[7.65, 125.48]$; C vs.\ A OR $= 39.81$ $[9.82, 161.37]$; both $p < 0.001$) and SMR contrasts remain non-significant (OR $= 1.47$ $[0.89, 2.42]$, $p = 0.134$; OR $= 1.13$ $[0.66, 1.94]$, $p = 0.643$). Restricting to responses shown first, SMR was not higher in simplified conditions ($15.7\%$, $7.1\%$, $7.0\%$) while DAR remained elevated ($1.4\%$, $13.1\%$, $16.3\%$). The DAR finding is thus robust to the order effect, whereas SMR and especially OER judgments are order-dependent and less reliable. The secondary judge's DAR also rose with position ($11.8\%$, $34.7\%$, $41.2\%$); its analyses were not position-adjusted.
+Because the primary judge saw all three conditions jointly in random order, we examined order effects. Its SMR rose from $9.6\%$ at position 1 to $21.2\%$ at position 3, DAR from $10.8\%$ to $19.2\%$, and OER from $0.6\%$ to $11.2\%$, while accuracy fell (4.50 to 4.13). Position was only mildly unbalanced across conditions (A first 70 times, B 84, C 86), so the effect adds noise rather than favouring one condition. After position adjustment the DAR effect remains large (B vs.\ A OR $= 30.97$, C vs.\ A OR $= 39.81$; both $p < 0.001$) and SMR contrasts remain non-significant ($p = 0.134$ and $0.643$). Restricted to responses shown first, SMR was not higher in simplified conditions ($15.7\%$, $7.1\%$, $7.0\%$) while DAR remained elevated ($1.4\%$, $13.1\%$, $16.3\%$). The DAR finding is thus robust to order effects, whereas SMR and especially OER judgments are order-dependent. The secondary judge's DAR also rose with position ($11.8\%$, $34.7\%$, $41.2\%$) and was not position-adjusted.
 
 \subsection{Summary of Findings}
 
-The summary below integrates the results across raters and robustness checks.
-
 \begin{itemize}
-    \item \textbf{RQ1 (SMR).} Rater-dependent. The primary judge detects no significant increase ($12.5\%, 17.1\%, 13.8\%$; GLMM OR $= 1.50$, $1.13$), but it flags $12.5\%$ of standard responses that the consensus flags at $0\%$ and has $8\%$ recall. The consensus shows a monotonic increase ($0\%, 16.7\%, 26.7\%$; $Q$ $p = 0.012$; C vs.\ A Holm $p = 0.023$), and the secondary judge a smaller borderline one ($2.4\%, 6.1\%, 6.5\%$). H1 is supported by the human consensus, weakly by the secondary judge, and not by the primary judge.
-    \item \textbf{RQ2 (DAR).} Supported under every rater for A $<$ B and A $<$ C: $0.8\%$ to $20.4\%$ and $24.6\%$ (primary; GEE ORs about 31 and 39, GLMM 36 and 47), $1.6\%$ to $31.0\%$ and $55.1\%$ (secondary), $0\%$ to $30.0\%$ and $36.7\%$ (consensus). C $\geq$ B holds numerically for all raters but is significant only for the secondary judge.
-    \item \textbf{RQ3 (frequency vs.\ quality).} In the validation subsample the standard condition contained no analogies and every simplified response one, so the DAR increase is produced by analogy frequency (H3a supported) and the baseline per-analogy rate cannot be observed. Conditional DAR is substantial, $30.0\%$ in B and $36.7\%$ in C by consensus (H3b supported in the sense of being non-negligible; it cannot be compared with A and does not differ significantly between B and C).
-    \item \textbf{RQ4 (OER).} Measurable ($6.7\%, 4.2\%$ primary; $16.7\%, 13.3\%$ consensus; $14.2\%, 11.7\%$ derived) but not increasing from B to C (GLMM OR $= 0.60$). The secondary judge's OER output is not interpretable. H4 is partially supported: existence yes, monotonicity no.
-    \item \textbf{RQ5 (moderators).} Model is a strong source of variation; the secondary judge reproduces the ranking. Subfield effects do not survive correction; the model $\times$ condition interaction is not significant.
+    \item RQ1 (SMR). Rater-dependent. The primary judge detects no increase ($12.5\%, 17.1\%, 13.8\%$) but has $8\%$ recall and flags $12.5\%$ of standard responses that the consensus flags at $0\%$; the consensus shows a monotonic increase ($0\%, 16.7\%, 26.7\%$; C vs.\ A Holm $p = 0.023$) and the secondary judge a smaller borderline one. H1 is supported by the human consensus, weakly by the secondary judge, and not by the primary judge.
+    \item RQ2 (DAR). Supported under every rater for A $<$ B and A $<$ C (consensus $0\%$ to $30.0\%$ and $36.7\%$; primary $0.8\%$ to $20.4\%$ and $24.6\%$; secondary $1.6\%$ to $31.0\%$ and $55.1\%$). C $\geq$ B holds numerically for all raters but is significant only for the secondary judge.
+    \item RQ3 (frequency vs.\ quality). The DAR increase is produced by analogy frequency (H3a supported); the baseline per-analogy rate cannot be observed. Conditional DAR is substantial ($30.0\%$ in B, $36.7\%$ in C; H3b supported only in the sense of being non-negligible).
+    \item RQ4 (OER). Measurable but not increasing from B to C (GLMM OR $= 0.60$); H4 is partially supported.
+    \item RQ5 (moderators). Model is a strong source of variation; subfield effects do not survive correction; the model $\times$ condition interaction is not significant.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion}
 \label{sec:discussion}
 
-The discussion interprets the results against the accessibility trade-off hypothesis, explains why the rater-dependence is itself a methodological finding, and outlines a mechanistic reading of why vulnerable learners may be at risk. It also addresses oversimplification errors and implications for evaluation and mitigation. Throughout, we separate what the data show from what remains hypothesis.
-
 \subsection{Testing the Accessibility Trade-off}
 
-The verdict is nuanced, largely because it depends on who does the rating. The strongest and most consistent finding is that dangerous analogies are more frequent under accessibility-style prompts, under all three raters and all robustness checks. Strategic misconceptions rise by human consensus and weakly by the secondary judge but not by the primary judge, so H1 is supported by the best available standard but not by the cheapest instrument. Oversimplification errors are measurable but do not grow with intensity (H4 partially supported). The frequency/quality decomposition shows that the DAR increase is mechanically produced by the appearance of analogies, and that roughly three in ten are dangerous by the human standard.
+The verdict is nuanced, largely because it depends on who does the rating. The strongest and most consistent finding is that dangerous analogies are more frequent under accessibility-style prompts, under all three raters and all robustness checks. Strategic misconceptions rise by human consensus and weakly by the secondary judge but not by the primary judge, so H1 is supported by the best available standard but not by the cheapest instrument. Oversimplification errors are measurable but do not grow with intensity.
 
-It is important what this does and does not show. Because B and C explicitly request analogies and A does not, we cannot say that models spontaneously reach for analogies when simplifying, nor separate the effect of simplification from that of the analogy request, the missing accuracy cue, or the audience label (Section~\ref{sec:method}). What the data show is that the bundle of constraints typical of accessibility-oriented requests reliably yields analogy-based explanations, that a substantial fraction mislead about a key property, and that explanations also more often contain a plausible but wrong claim by the human standard. The pilot ablation (Section~\ref{sec:pilot}) gives a first, limited indication on this point: with an explicit prohibition of analogies, mistral:7b still produced one in 20 of 35 responses (57.1\%), a rate numerically below the 100\% observed under B and C but far above the 0\% observed under A. This suggests that the audience-and-simplification framing itself, and not only the analogy request, pushes this model towards analogies. The evidence is weak (one small model, one generation per concept, no same-model baseline, an unmasked single coder), and separating the contribution of each prompt element still requires a full ablation (Section~\ref{sec:limitations}).
+Because B and C explicitly request analogies and A does not, we cannot say that models spontaneously reach for analogies when simplifying, nor separate the effect of simplification from that of the analogy request, the missing accuracy cue, or the audience label. The data show that the bundle of constraints typical of accessibility-oriented requests reliably yields analogy-based explanations, that roughly three in ten mislead about a key property, and that explanations more often contain a plausible but wrong claim by the human standard. The pilot ablation gives a first, limited indication that the audience-and-simplification framing itself, and not only the analogy request, pushes mistral:7b towards analogies: with an explicit prohibition it still produced them in 57.1\% of responses, below the 100\% under B and C but far above the 0\% under A. Separating the contribution of each prompt element requires the full ablation in Table~\ref{tab:ablation:plan}.
 
-The pattern is consistent with the analogy literature: good analogies transfer relational structure, not surface attributes \cite{gentner1983structure}, whereas the analogies observed tend to transfer surface attributes (a semaphore signals go/stop) and drop relational structure (atomicity, counting). \citet{stone2024analogies} documented this for GPT-4 under standard prompting; our results indicate that accessibility-style prompts make it routine.
+The pattern is consistent with the analogy literature: good analogies transfer relational structure \cite{gentner1983structure}, whereas the analogies observed tend to transfer surface attributes (a semaphore signals go/stop) and drop relational structure (atomicity, counting). \citet{stone2024analogies} documented this for GPT-4 under standard prompting; our results indicate that accessibility-style prompts make it routine. That C does not exceed B significantly (primary judge and consensus) admits several readings: the five-sentence limit may leave little room to develop an analogy into a misconception; the primary judge's low recall makes its estimates noisy; or 30 groups per condition cannot resolve a seven-point difference. The secondary judge separates B and C for DAR ($31.0\%$ vs.\ $55.1\%$), but agrees with the consensus on which analogies are dangerous only at $\kappa = 0.16$, so a B--C gradient is plausible but unresolved.
 
-That C does not exceed B significantly (primary judge and consensus) admits several readings: the five-sentence limit may leave little room to develop an analogy into a misconception; the primary judge's low recall makes its estimates noisy; or the human sample (30 groups per condition) cannot resolve a seven-point difference. The secondary judge separates B and C for DAR ($31.0\%$ vs.\ $55.1\%$), the only evidence for a dose-response relationship, but it agrees with the consensus on which analogies are dangerous only at $\kappa = 0.16$. A B--C gradient is therefore plausible but unresolved.
+\subsection{The Limits of LLM-as-Judge}
 
-\subsection{The Methodological Contribution: The Limits of LLM-as-Judge}
-
-The primary judge agreed with the consensus at $\kappa = 0.03$ (SM) and $0.16$ (DA), with recall of $8\%$ and $20\%$; the secondary judge matched DA prevalence but with precision and recall of 0.35 and produced unusable OER output; the annotators themselves initially disagreed on DA ($\kappa = 0.11$), showing the construct is subjective and needs adjudication. The choice of judge changed the conclusion for H1. Evaluations that rely on a single LLM judge without a human-labelled calibration set can both miss effects (primary judge, SMR) and fabricate them (secondary judge, OER). We recommend hybrid designs in which the LLM is a scalable pre-screener and experts validate a stratified subsample, with transparency about the limitations of both. Note that the two judges are from the same family; a multi-family ensemble might behave differently.
+The primary judge agreed with the consensus at $\kappa = 0.03$ (SM) and $0.16$ (DA), with recall of $8\%$ and $20\%$; the secondary judge matched DA prevalence but with precision and recall of 0.35 and produced unusable OER output; the annotators themselves initially disagreed on DA ($\kappa = 0.11$), showing that the construct is subjective and needs adjudication. The choice of judge changed the conclusion for H1: evaluations that rely on a single LLM judge without a human-labelled calibration set can both miss effects (primary judge, SMR) and fabricate them (secondary judge, OER). We recommend hybrid designs in which the LLM is a scalable pre-screener and experts validate a stratified subsample. The two judges are from the same family; a multi-family ensemble might behave differently.
 
 \subsection{Why Vulnerable Learners May Be at Risk}
 
-The following is a theoretical framework for reading the results; our experiment does not measure learner cognition. First, asymmetry of verification: a simplified explanation removes cues a reader would use to notice omissions, and novices lack schemas to flag gaps \cite{kalyuga2003expertise}. Second, load: if decoding or attention regulation absorbs working-memory resources \cite{baddeley1974working, laberge1974toward, sweller1998cognitive}, checking claims against prior knowledge competes with comprehension. Third, fluent statements gain a truth premium \cite{reber1999effects, alter2009uniting} and short self-contained accounts produce untested feelings of understanding \cite{rozenblit2002misunderstood}. Fourth, a vivid analogy is memorable by design, so a flawed one is memorably flawed, and a single analogy without a stated limit is the textbook recipe for analogy-induced misconception \cite{spiro1989multiple, glynn1991explaining}. Finally, private deployment removes external checks.
-
-The vulnerability is situational, produced jointly by learner load and material properties, and the same reasoning predicts risk for any novice under time pressure or fatigue. It is not a claim that learners with dyslexia or ADHD are less capable of critical thought, nor that simplification should be abandoned; only a study with learners can establish how strongly each factor contributes.
+The following is a theoretical framework; our experiment does not measure learner cognition. First, a simplified explanation removes cues a reader would use to notice omissions, and novices lack schemas to flag gaps \cite{kalyuga2003expertise}. Second, if decoding or attention regulation absorbs working-memory resources \cite{baddeley1974working, laberge1974toward, sweller1998cognitive}, checking claims against prior knowledge competes with comprehension. Third, fluent statements gain a truth premium \cite{reber1999effects, alter2009uniting} and short self-contained accounts produce untested feelings of understanding \cite{rozenblit2002misunderstood}. Fourth, a vivid analogy is memorable by design, so a flawed one is memorably flawed, and a single analogy without a stated limit is the textbook recipe for analogy-induced misconception \cite{spiro1989multiple, glynn1991explaining}. Finally, private deployment removes external checks. The vulnerability is situational and the same reasoning predicts risk for any novice under time pressure or fatigue; it is not a claim that learners with dyslexia or ADHD are less capable of critical thought, nor that simplification should be abandoned.
 
 \subsection{Oversimplification Errors}
 
-The primary-judge OER rates ($6.7\%$, $4.2\%$), consensus rates ($16.7\%$, $13.3\%$), and derived rates ($14.2\%$, $11.7\%$) indicate that a measurable share of simplified responses contain an error absent from the same model's standard response, though part of the derived measure reflects sampling noise. The GLMM result (OR $= 0.60$, non-significant) and near-equal consensus rates indicate that OER does not grow with intensity, with the caveat that only 5 and 4 consensus flags are available. The largest SMR increases (primary judge) occurred for semaphores ($+35.7$ pp), normalization and the CAP theorem ($+28.6$ each), dynamic programming vs.\ greedy and transaction isolation ($+25.0$ each), and ACID and the TLS handshake ($+21.4$ each): concepts defined by necessary conditions, invariants, or boundary cases, the properties analogy-based simplification tends to drop. This is post hoc, rests on at most seven pairs per concept, and relies on the primary judge's low-sensitivity SM indicator. It is, however, consistent with the OER random-effects decomposition ($\sigma_c = 0.62 > \sigma_m = 0.32$).
-
-We distinguish five illustrative OER subtypes that were not coded systematically: (i) omission of a necessary condition; (ii) promotion of an analogy from illustration to definition; (iii) over-generalisation of a special case; (iv) conflation with a neighbouring concept; and (v) replacement of a mechanism by an outcome (Appendix~\ref{appendix:analogies}). Because CS knowledge is hierarchical \cite{benari2001constructivism} and wrong models resist later instruction \cite{chi1994things, posner1982accommodation}, errors at foundational concepts such as semaphores, normalization, or the CAP theorem may be especially costly.
-
-\subsection{Ablation Plan and Implications for Evaluation and Mitigation}
-
-First, accuracy on a neutral prompt is an insufficient safety criterion for an educational assistant; models should be evaluated under the audience and instruction they will actually receive \cite{lin2022truthfulqa}. Second, standard quality metrics (readability, fluency) can mask semantic degradation \cite{devaraj2022evaluating, trienes2024infolossqa}: B is the most readable condition yet shows a markedly higher DAR under every rater. Third, the safety-relevant quantity is both per-response error rate and analogy density. Fourth, single-judge evaluation without human calibration is unreliable.
-
-Mitigation can act at the prompt, model, or interface level. At the prompt level, instructions can require boundary conditions and an explicit statement of where each analogy fails \cite{glynn1991explaining}, multiple complementary analogies \cite{spiro1989multiple}, or alternation of analogies with technical statements; generate-then-verify pipelines can compare a simplified explanation with a ground-truth checklist. At the model level, between-model variation was large in this corpus, so model choice may matter, but since family and scale are confounded and no intervention was tested, we do not claim that switching models is an effective remedy. None of these mitigations was evaluated here; they are hypotheses that follow from the observed pattern.
-
-Table~\ref{tab:ablation:plan} makes the planned ablation explicit. It is intended both as a roadmap for follow-up work and as a clarification of which claims the present design can and cannot support.
-
+The OER rates (primary $6.7\%$, $4.2\%$; consensus $16.7\%$, $13.3\%$; derived $14.2\%$, $11.7\%$) indicate that a measurable share of simplified responses contain an error absent from the same model's standard response, though part of the derived measure is sampling noise; near-equal consensus rates (5 and 4 flags) indicate that OER does not grow with intensity. The largest SMR increases (primary judge; a post hoc pattern resting on at most seven pairs per concept) occurred for semaphores ($+35.7$ pp), normalization and the CAP theorem ($+28.6$ each), dynamic programming vs.\ greedy and transaction isolation ($+25.0$ each), and ACID and the TLS handshake ($+21.4$ each): concepts defined by necessary conditions, invariants, or boundary cases (atomicity and counting, functional dependencies, the impossibility trade-off, optimal substructure, permitted anomalies, forward secrecy), the properties analogy-based simplification tends to drop. This is consistent with the OER random-effects decomposition ($\sigma_c = 0.62 > \sigma_m = 0.32$), but exploratory, and it rests on the primary judge's low-sensitivity SM indicator. We distinguish five illustrative OER subtypes that were not coded systematically: omission of a necessary condition; promotion of an analogy from illustration to definition; over-generalisation of a special case; conflation with a neighbouring concept; and replacement of a mechanism by an outcome (Appendix~\ref{appendix:analogies}). Because CS knowledge is hierarchical \cite{benari2001constructivism} and wrong models resist later instruction \cite{chi1994things, posner1982accommodation}, errors at foundational concepts may be especially costly. The concepts with the largest SMR increase are listed in Table~\ref{tab:concepts:top10}.
 \begin{table}[H]
-\caption{Planned ablation conditions for follow-up work. Each condition isolates one element of the prompt bundle in Table~\ref{tab:prompt:design}; none was run in the present study except D, which is a single-model pilot (Section~\ref{sec:pilot}).}
-\label{tab:ablation:plan}
+\caption{Concepts with the largest mean increase in SMR (primary judge) from A to mean(B, C). Each value rests on at most seven concept-model pairs and is exploratory.}
+\label{tab:concepts:top10}
 \centering
 \small
-\begin{tabular}{llp{6cm}}
+\begin{tabular}{llr}
 \toprule
-ID & Isolates & Prediction \\
+ID & Concept & $\Delta$ SMR (pp) \\
 \midrule
-A & standard baseline & reference; no analogy requested, no analogy expected \\
-A+analogy & analogy request without simplification & tests whether the analogy request alone raises DAR \\
-B$-$analogy & simplification without analogy request & tests whether simplification alone raises DAR \\
-B$-$audience & simplification without audience label & tests whether the persona label matters \\
-B$-$accuracy & simplification without accuracy cue & tests whether the missing accuracy cue matters \\
-C$-$limit & single analogy without five-sentence limit & tests whether brevity drives the effect \\
-D & simplification with explicit prohibition & single-model pilot in this paper; needs full replication \\
+OS\_07 & Semaphores and synchronization & +35.7 \\
+DB\_02 & Normalization (1NF, 2NF, 3NF) and its limits & +28.6 \\
+DB\_06 & CAP theorem (Consistency, Availability, Partition tolerance) & +28.6 \\
+ALG\_03 & Dynamic Programming vs Greedy Approach & +25.0 \\
+DB\_05 & Transactions: Different isolation levels & +25.0 \\
+DB\_01 & ACID properties (Isolation vs Consistency) & +21.4 \\
+NET\_07 & TLS handshake (RSA vs Diffie-Hellman) & +21.4 \\
+PLP\_05 & Exceptions: Checked vs Unchecked & +14.3 \\
+PLP\_02 & Interfaces vs Abstract Classes & +14.3 \\
+PLP\_07 & Concurrency: Threads vs Asynchronous programming & +7.1 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-The plan in Table~\ref{tab:ablation:plan} is deliberately compact: it adds six conditions to the existing three, which is feasible with the same infrastructure, and it directly addresses the main construct-validity limitation of the present study. Until such an ablation is run, the correct reading of our results is that the bundle as a whole increases dangerous analogies, and that the analogy request is the most plausible single driver.
+
+\subsection{Implications for Evaluation and Mitigation, and Ablation Plan}
+
+First, accuracy on a neutral prompt is an insufficient safety criterion for an educational assistant; models should be evaluated under the audience and instruction they will actually receive \cite{lin2022truthfulqa}. Second, standard quality metrics (readability, fluency) can mask semantic degradation \cite{devaraj2022evaluating, trienes2024infolossqa}: B is the most readable condition yet shows a markedly higher DAR under every rater. Third, the safety-relevant quantity is both per-response error rate and analogy density. Fourth, single-judge evaluation without human calibration is unreliable.
+
+Mitigation can act at the prompt, model, or interface level. At the prompt level, instructions can require boundary conditions and an explicit statement of where each analogy fails \cite{glynn1991explaining}, multiple complementary analogies \cite{spiro1989multiple}, or alternation of analogies with technical statements; generate-then-verify pipelines can compare a simplified explanation with a ground-truth checklist. Between-model variation was large, but since family and scale are confounded we do not claim that switching models is an effective remedy. None of these mitigations was evaluated here. Table~\ref{tab:ablation:plan} makes the planned ablation explicit; until it is run, the correct reading of our results is that the bundle as a whole increases dangerous analogies, and that the analogy request is the most plausible single driver.
+
+\begin{table}[H]
+\caption{Planned ablation conditions. Each isolates one element of the prompt bundle in Table~\ref{tab:prompt:design}; none was run in the present study except D, a single-model pilot (Section~\ref{sec:pilot}).}
+\label{tab:ablation:plan}
+\centering
+\small
+\begin{tabularx}{\linewidth}{lXX}
+\toprule
+ID & Isolates & Prediction \\
+\midrule
+A & Standard baseline & Reference; no analogy requested, none expected \\
+A+analogy & Analogy request without simplification & Tests whether the analogy request alone raises DAR \\
+B$-$analogy & Simplification without analogy request & Tests whether simplification alone raises DAR \\
+B$-$audience & Simplification without audience label & Tests whether the persona label matters \\
+B$-$accuracy & Simplification without accuracy cue & Tests whether the missing accuracy cue matters \\
+C$-$limit & Single analogy without five-sentence limit & Tests whether brevity drives the effect \\
+D & Simplification with explicit prohibition & Single-model pilot here; needs full replication \\
+\bottomrule
+\end{tabularx}
+\end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Interface Design Hypotheses}
 \label{sec:design}
 
-This section is conceptual and separate from the empirical results: the proposals below were not tested with learners, and we present them as hypotheses motivated by the findings and by established work on accessible design. They draw on Universal Design for Learning and ability-based design \cite{rose2002teaching, wobbrock2011ability}, on pre-attentive visual features \cite{treisman1980feature}, and on uncertainty communication research \cite{hullman2019pursuit}. Their aim is to avoid relying solely on text-based disclaimers, which are additional text to decode for learners with reading difficulties.
+This section is conceptual and separate from the empirical results: the proposals were not tested with learners. They draw on Universal Design for Learning and ability-based design \cite{rose2002teaching, wobbrock2011ability}, pre-attentive visual features \cite{treisman1980feature}, and uncertainty communication research \cite{hullman2019pursuit}, and aim to avoid relying solely on text-based disclaimers, which are additional text to decode for learners with reading difficulties.
 
-\textbf{Hypothesis 1: analogy status tagging.} The most directly motivated proposal follows from the finding that accessibility-style prompts yield an analogy in essentially every response and that about one in three is dangerous by the human standard. Interfaces could tag analogies explicitly (e.g., a badge reading ``Analogy''), offer a toggle to a technical version, highlight the analogy's span, and provide on demand a one-line statement of the main property the analogy does not share with the target \cite{glynn1991explaining}, optionally with a second, complementary analogy \cite{spiro1989multiple}. This operationalises the teaching-with-analogies recommendation to state where an analogy breaks. Span marking could be obtained through structured model output; the reliability of such self-tagging is an empirical question.
+Hypothesis 1: analogy status tagging. Since accessibility-style prompts yield an analogy in essentially every response and about one in three is dangerous by the human standard, interfaces could tag analogies explicitly (e.g., an ``Analogy'' badge), offer a toggle to a technical version, highlight the analogy's span, and provide on demand a one-line statement of the main property the analogy does not share with the target \cite{glynn1991explaining}, optionally with a second, complementary analogy \cite{spiro1989multiple}. The reliability of model self-tagging is an empirical question.
 
-\textbf{Hypothesis 2: visual uncertainty signalling.} Low-confidence responses could carry a persistent, standardised icon with progressive disclosure of a plain-language explanation, processed pre-attentively \cite{treisman1980feature}. Colour must not be the sole channel; every cue needs a programmatic text alternative for screen-reader and text-to-speech users \cite{w3c2023wcag}. A signal is only as trustworthy as its estimator: verbalised confidence is poorly calibrated, and our judge validation shows the risk. An evaluator with low recall would flag few of the responses an expert would flag, creating false safety, and one with high recall but low precision (the secondary judge on OER) would flag nearly everything and teach users to ignore the signal.
+Hypothesis 2: visual uncertainty signalling. Low-confidence responses could carry a persistent, standardised icon with progressive disclosure of a plain-language explanation \cite{treisman1980feature}. Colour must not be the sole channel, and every cue needs a programmatic text alternative \cite{w3c2023wcag}. A signal is only as trustworthy as its estimator: an evaluator with low recall would flag few of the responses an expert would flag, creating false safety, and one with high recall but low precision (the secondary judge on OER) would flag nearly everything and teach users to ignore the signal.
 
-\textbf{Hypothesis 3: low-load, customisable presentation.} Signals should be few, consistent, and learnable, since added indicators add load \cite{sweller1998cognitive}; passive, glanceable cues are preferable to cognitive forcing functions that reduce over-reliance but increase effort and are less liked \cite{bucinca2021trust}. Animation, if used, should be optional and off under reduced-motion preferences, and users should be able to select themes (e.g., high contrast) without losing signalling \cite{rose2002teaching, wobbrock2011ability}.
+Hypothesis 3: low-load, customisable presentation. Signals should be few, consistent, and learnable \cite{sweller1998cognitive}; passive, glanceable cues are preferable to cognitive forcing functions that reduce over-reliance but increase effort and are less liked \cite{bucinca2021trust}. Animation, if used, should be optional and off under reduced-motion preferences, and users should be able to select themes without losing signalling \cite{rose2002teaching, wobbrock2011ability}.
 
-Evaluating these hypotheses requires a study with learners with and without dyslexia and ADHD, comparing interfaces with and without the signals on acceptance of a deliberately flawed explanation, later unassisted performance (following \cite{bastani2025generative}), perceived workload, and usability. Such a study would complement, not replace, the model-side audit presented here.
+Evaluating these hypotheses requires a study with learners with and without dyslexia and ADHD, comparing interfaces with and without the signals on acceptance of a deliberately flawed explanation, later unassisted performance \cite{bastani2025generative}, perceived workload, and usability.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Limitations}
 \label{sec:limitations}
 
-The limitations are organised by their likely impact on the main claims. The first three are the most consequential: the absence of learner data, the bundled prompt design, and the reliability of the LLM judges. The remaining limitations concern the corpus, the human reference standard, and the statistical specification.
+The first three limitations are the most consequential.
 
-\subsection{No Learner Data}
+No learner data. Evaluation was by two LLM judges and two experts on a subsample, not by students. We do not measure whether strategic misconceptions produce learning deficits. The dyslexia and ADHD conditions are prompt personas that cannot represent the heterogeneity of real learners, and the prompts encode the assumption that these learners benefit from simplification and analogy, itself a design choice.
 
-Evaluation was by two LLM judges and two experts on a subsample, not by students. We do not measure whether strategic misconceptions produce learning deficits, nor whether plausibility predicts belief change. The dyslexia and ADHD conditions are prompt personas that cannot represent the heterogeneity of real learners, and the prompts encode the assumption that these learners benefit from simplification and analogy, itself a design choice rather than an established requirement.
+Prompt design and construct validity. Conditions are bundles of constraints (the accuracy cue appears only in A; B discourages formal definitions; B and C request analogies). Results describe behaviour under realistic accessibility-style requests, not the causal effect of any single element, and the central DAR increase is largely a consequence of the analogy request. The pilot D partly addresses this, but only for one model, one generation per concept, without a same-model baseline or a variant omitting the audience label, and without misconception ratings. Each cell contains a single generation, so within-cell sampling variability is not estimated, and attributing an error present in a simplified but absent in the standard response to simplification ignores random variation at $T = 0.7$.
 
-\subsection{Domain, Language, and Models}
+LLM-judge validity. Neither judge substitutes for the human standard. The primary judge's absolute rates are probably underestimates for simplified conditions and possibly overestimates for SM in A. The judges share a model family and are not independent. Joint presentation introduces order effects (the primary judge flags roughly twice as many errors at position 3 as at position 1); position adjustment does not change DAR or SMR contrasts, but SMR and OER comparisons remain order-dependent, and the secondary judge was not position-adjusted. Fifteen responses (four of the five groups involving DeepSeek-R1 generators) were lost for the primary judge; we have not established whether the cause lies in the response text or the judge.
 
-The benchmark covers CS and English only. The seven models (none above 32B parameters, quantised via Ollama) represent a fraction of available LLMs, and the pattern may differ for proprietary frontier models or full-precision deployments. Open weights were chosen to ensure full reproducibility.
+Reliability of the human standard. Pre-adjudication agreement was slight to fair ($\kappa = 0.283$, $0.110$, $0.317$) and annotators applied clearly different DA thresholds. Consensus labels come from a meeting of the same two annotators, without recorded justifications, so discussion dynamics may have influenced them; the conclusions therefore rest on direction and ordering rather than exact magnitudes. The consensus analysis was post hoc, based on 30 groups per condition, and borderline for SM (C vs.\ A Holm $p = 0.023$); annotators could plausibly infer condition from response form.
 
-\subsection{Prompt Design and Construct Validity}
+Frequency versus quality. Analogy frequency saturates in the validation subsample, so conditional DAR is estimable only for B and C, with wide intervals ($[16.7, 47.9]$ and $[21.9, 54.5]$), and we cannot say whether per-analogy danger in simplified responses exceeds that in standard explanations. Analogy presence was coded by one author (second-coder $\kappa = 0.58$ on 20 responses, with unidirectional disagreements), so conditional rates are exploratory.
 
-Conditions are bundles of constraints; the accuracy cue appears only in A; B discourages formal definitions; B and C request analogies. Results therefore describe behaviour under realistic accessibility-style requests, not the causal effect of any single element. The central DAR increase is largely a consequence of the analogy request and should be interpreted accordingly. A pilot condition D (Section~\ref{sec:pilot}) partly addresses the analogy request, but only for one model, with one generation per concept, without a same-model standard baseline, without a variant that omits the audience label, and without ratings of misconceptions. The full ablation in Table~\ref{tab:ablation:plan} remains the most important extension. Each cell also contains a single generation, so within-cell sampling variability is not estimated.
-
-\subsection{Frequency Versus Quality}
-
-Analogy frequency saturates in the validation subsample, so conditional DAR is estimable only for B and C, with wide intervals ($[16.7, 47.9]$ and $[21.9, 54.5]$). We cannot say whether per-analogy danger in simplified responses exceeds that in standard explanations. Analogy presence was coded by one author with the label masked (second-coder $\kappa = 0.58$ on 20 responses, with unidirectional disagreements), so conditional rates inherit that operationalisation; we treat them as exploratory. A full-corpus analysis with several independent coders and a baseline that also requests an analogy would separate the channels fully.
-
-\subsection{Causal Interpretation of OER}
-
-Attributing an error present in a simplified but absent in the standard response to simplification ignores random variation at $T = 0.7$; the frequency of the opposite transition shows this is not minor. Replication at $T = 0.0$ or with several samples per cell would help but reduce ecological validity.
-
-\subsection{LLM-Judge Validity}
-
-Neither judge substitutes for the human standard (Table~\ref{tab:judge:validation}). The primary judge's absolute rates are probably underestimates for simplified conditions and possibly overestimates for SM in A. The judges share a model family and are not independent. Joint presentation of the three conditions introduces order effects (primary judge flags roughly twice as many errors at position 3 as at position 1); position adjustment does not change DAR or SMR contrasts, but SMR and OER comparisons remain order-dependent, and the secondary judge was not position-adjusted.
-
-\subsection{Reliability of the Human Standard}
-
-Pre-adjudication agreement was slight to fair for Boolean indicators ($\kappa = 0.283$, $0.110$, $0.317$) and annotators applied clearly different DA thresholds (h1 $56.7\%$ and $76.7\%$, h2 $6.7\%$ in B and C). Consensus labels come from a meeting of the same two annotators, without recorded justifications and without blinding to each other's ratings, so discussion dynamics may have influenced them. Both annotators agree on direction, so our conclusions rest on direction and ordering rather than exact magnitudes; in particular the consensus DA rates of $30.0\%$ and $36.7\%$ depend on the adjudication outcome. The consensus condition analysis was post hoc, based on 30 groups per condition, and borderline for SM (C vs.\ A Holm $p = 0.023$). Annotators could plausibly infer condition from response form. The accuracy comparison uses h1 as reference (two-annotator mean 3.67 vs.\ 3.39).
-
-\subsection{Parsing Failures and Statistical Specification}
-
-Fifteen responses from five groups (four involving DeepSeek-R1 generators) were lost for the primary judge; we have not established whether the cause lies in the response text or the judge. The secondary judge parsed all groups. The GEE does not separate concept and model variance; the GLMM does and agrees qualitatively (GLMM DAR estimates are larger, so GEE if anything understates the effect). The GLMM uses the Laplace approximation and normal random intercepts and was not fitted for the secondary judge.
+Domain, language, models, and statistics. The benchmark covers CS and English only; the seven models (none above 32B parameters, quantised) represent a fraction of available LLMs, and the pattern may differ for proprietary frontier models or full-precision deployments. The GEE does not separate concept and model variance; the GLMM does and agrees qualitatively (its DAR estimates are larger, so the GEE if anything understates the effect), but uses the Laplace approximation and was not fitted for the secondary judge.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions}
 \label{sec:conclusion}
 
-We introduced AccessTrap-CS, a corpus of 735 responses from seven open-weight LLMs to 35 CS concepts under standard, simplified, and highly simplified prompts, with an error taxonomy (strategic misconceptions, dangerous analogies, oversimplification errors), two LLM judges, and validation against a 90-response expert-annotated subsample with adjudicated consensus labels. The main empirical claims rest on the human consensus, with the judges treated as scalable indicators whose calibration is itself a result.
+We introduced AccessTrap-CS, a corpus of 735 responses from seven open-weight LLMs to 35 CS concepts under standard, simplified, and highly simplified prompts, with an error taxonomy, two LLM judges, and validation against a 90-response expert-annotated subsample with adjudicated consensus labels. Accessibility-style prompts markedly increased dangerous analogies under every rater (human consensus $0\%$ to $30.0\%$ and $36.7\%$), and the effect survived order adjustment, restriction to first-shown responses, and a crossed random-effects model. Every simplified response in the validation subsample contained an analogy, as requested, and $30$--$37\%$ of these were dangerous by consensus. By human consensus strategic misconceptions also rose ($0.0\%$, $16.7\%$, $26.7\%$), whereas the primary judge detected no increase, which we attribute to its low recall and false positives in the standard condition. Oversimplification errors exist but do not grow with intensity, and model identity is as large a source of variation as prompt condition.
 
-Accessibility-style prompts markedly increased dangerous analogies under every rater (human consensus $0\%$ to $30.0\%$ and $36.7\%$; primary judge $0.8\%$ to $20.4\%$ and $24.6\%$; secondary judge $1.6\%$ to $31.0\%$ and $55.1\%$), and the effect survived order adjustment, restriction to first-shown responses, and a crossed random-effects model. In the validation subsample every simplified response contained an analogy, as requested, and $30$--$37\%$ of these were dangerous by consensus. By human consensus strategic misconceptions also rose ($0.0\%$, $16.7\%$, $26.7\%$; C vs.\ A significant after correction), whereas the primary judge detected no increase, which we attribute to its low recall and false positives in the standard condition. Oversimplification errors exist but do not grow with intensity, and model identity is as large a source of variation as prompt condition.
-
-These findings come with essential caveats. Because the prompts bundle constraints and explicitly request analogies, the study demonstrates the risk of requesting analogy-based simplification, not a causal effect of simplification itself. The human reference is based on 30 groups per condition and two annotators with only slight to fair pre-adjudication agreement. Both LLM judges agreed poorly with the consensus ($\kappa \leq 0.16$ for SM and DA), and the choice of judge changed the conclusion for H1. Of all results, the DAR increase withstands every check we ran. A small single-model pilot suggests that analogies are not solely a matter of instruction-following: a simplified prompt that forbade analogies still elicited them in 20 of 35 responses (57.1\%), although this needs confirmation across models.
-
-Practically, analogy tagging with stated limits and hybrid human--LLM evaluation are the most immediately actionable implications; the interface proposals in Section~\ref{sec:design} remain hypotheses. Future work should add the ablation conditions of Table~\ref{tab:ablation:plan}, multiple samples per cell, and independent coders for analogy presence on the full corpus; extend to other domains and languages; improve judge calibration through multi-family ensembles; and test the proposed interface ideas with learners using learning-outcome measures.
+These findings come with essential caveats. Because the prompts bundle constraints and explicitly request analogies, the study demonstrates the risk of requesting analogy-based simplification, not a causal effect of simplification itself. The human reference is based on 30 groups per condition and two annotators with slight to fair pre-adjudication agreement, and both LLM judges agreed poorly with the consensus ($\kappa \leq 0.16$ for SM and DA). A small single-model pilot suggests that analogies are not solely instruction-following (20 of 35 responses, 57.1\%, despite a prohibition), which needs confirmation across models. Practically, analogy tagging with stated limits and hybrid human--LLM evaluation are the most immediately actionable implications. Future work should add the ablation conditions of Table~\ref{tab:ablation:plan}, multiple samples per cell, and independent coders for analogy presence on the full corpus; extend to other domains and languages; use multi-family judge ensembles; and test the proposed interface ideas with learners using learning-outcome measures.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{6pt} 
@@ -1154,13 +1019,13 @@ Practically, analogy tagging with stated limits and hybrid human--LLM evaluation
 Conceptualization, M.M., S.B.Š., and I.L.;
 methodology, M.M., S.B.Š. and D.E.;
 software, M.M.;
-validation, I.L., S.B.Š. and D.E.;
+validation, V.M., I.L., S.B.Š. and D.E.;
 formal analysis, M.M.;
 investigation, M.M.;
 resources, M.M., I.L. and D.E.;
 data curation, M.M.;
 writing---original draft preparation, M.M.;
-writing---review and editing, S.B.Š., I.L. and D.E.;
+writing---review and editing, V.M., S.B.Š., I.L. and D.E.;
 visualization, M.M.;
 supervision, S.B.Š. and I.L.;
 project administration, S.B.Š., I.L. and D.E.;
@@ -1209,99 +1074,17 @@ FKGL  & Flesch-Kincaid Grade Level \\
 \appendixstart
 \appendix
 
-\section[\appendixname~\thesection]{CS Concepts and Subfields}
+\section[\appendixname~\thesection]{CS Concepts}
 \label{appendix:concepts}
 
-Table~\ref{tab:concepts:all} lists the 35 concepts, grouped by subfield. Table~\ref{tab:concepts:top10} lists the concepts with the largest mean increase in SMR (primary judge) from A to the average of B and C.
-
-\begin{table}[H]
-\caption{The 35 CS concepts in AccessTrap-CS, grouped by subfield.}
-\label{tab:concepts:all}
-\footnotesize
-\renewcommand{\arraystretch}{1.05}
-\begin{tabularx}{\textwidth}{@{}lX@{}}
-\toprule
-ID & Concept \\
-\midrule
-\multicolumn{2}{@{}l}{\textit{Algorithms \& Data Structures}} \\
-ALG\_01 & QuickSort (average vs worst-case complexity) \\
-ALG\_02 & Dijkstra's algorithm (negative edge weights limitation) \\
-ALG\_03 & Dynamic Programming vs Greedy Approach \\
-ALG\_04 & Hash tables (collisions and load factor) \\
-ALG\_05 & Binary search tree balancing (AVL vs Red-Black) \\
-ALG\_06 & Breadth-First Search (BFS) and Depth-First Search (DFS) --- memory consumption \\
-ALG\_07 & Space Complexity and trade-offs \\
-\midrule
-\multicolumn{2}{@{}l}{\textit{Computer Networks}} \\
-NET\_01 & TCP three-way handshake (SYN, SYN-ACK, ACK) \\
-NET\_02 & OSI model vs TCP/IP model (differences in layers) \\
-NET\_03 & DNS resolution (Recursive vs Iterative) \\
-NET\_04 & IP addressing and subnets (CIDR mask) \\
-NET\_05 & HTTP methods: Idempotency of GET, PUT, DELETE versus POST \\
-NET\_06 & Routing: Distance Vector (RIP) vs Link State (OSPF) \\
-NET\_07 & TLS handshake (RSA vs Diffie-Hellman key exchange) \\
-\midrule
-\multicolumn{2}{@{}l}{\textit{Databases}} \\
-DB\_01 & ACID properties (especially Isolation vs Consistency) \\
-DB\_02 & Normalization (1NF, 2NF, 3NF) and its limits \\
-DB\_03 & SQL JOIN: INNER vs OUTER (LEFT/RIGHT/FULL) \\
-DB\_04 & Indexes: When a B-tree index does not speed up a query \\
-DB\_05 & Transactions: Different isolation levels (Read Committed vs Serializable) \\
-DB\_06 & CAP theorem (Consistency, Availability, Partition tolerance) \\
-DB\_07 & Denormalization: When and why to use it \\
-\midrule
-\multicolumn{2}{@{}l}{\textit{Operating Systems}} \\
-OS\_01 & Processes vs threads \\
-OS\_02 & Context switching \\
-OS\_03 & CPU scheduling algorithms \\
-OS\_04 & Deadlock conditions \\
-OS\_05 & Virtual memory and paging \\
-OS\_06 & Paging vs Segmentation \\
-OS\_07 & Semaphores and synchronization \\
-\midrule
-\multicolumn{2}{@{}l}{\textit{Programming Languages \& Paradigms}} \\
-PLP\_01 & Inheritance and Liskov Substitution Principle (LSP) \\
-PLP\_02 & Interfaces vs Abstract Classes \\
-PLP\_03 & Closures and lexical scope \\
-PLP\_04 & Static vs Dynamic typing (Type safety) \\
-PLP\_05 & Exceptions: Checked vs Unchecked \\
-PLP\_06 & Garbage Collection (Mark-and-Sweep vs Reference counting) \\
-PLP\_07 & Concurrency: Threads vs Asynchronous programming (Async/Await) \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-\begin{table}[H]
-\caption{Concepts with the largest mean increase in SMR (primary judge) from A to mean(B, C). Each value rests on at most seven concept-model pairs and is exploratory.}
-\label{tab:concepts:top10}
-\centering
-\small
-\begin{tabular}{llr}
-\toprule
-ID & Concept & $\Delta$ SMR (pp) \\
-\midrule
-OS\_07 & Semaphores and synchronization & +35.7 \\
-DB\_02 & Normalization (1NF, 2NF, 3NF) and its limits & +28.6 \\
-DB\_06 & CAP theorem (Consistency, Availability, Partition tolerance) & +28.6 \\
-ALG\_03 & Dynamic Programming vs Greedy Approach & +25.0 \\
-DB\_05 & Transactions: Different isolation levels & +25.0 \\
-DB\_01 & ACID properties (Isolation vs Consistency) & +21.4 \\
-NET\_07 & TLS handshake (RSA vs Diffie-Hellman) & +21.4 \\
-PLP\_05 & Exceptions: Checked vs Unchecked & +14.3 \\
-PLP\_02 & Interfaces vs Abstract Classes & +14.3 \\
-PLP\_07 & Concurrency: Threads vs Asynchronous programming & +7.1 \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-The pattern in Table~\ref{tab:concepts:top10} is post hoc. The concepts with the largest SMR increase are those whose definitions hinge on necessary conditions, invariants, or boundary cases: semaphores (atomicity, counting), normalization (functional dependencies and their limits), CAP theorem (the impossibility trade-off), dynamic programming vs.\ greedy (optimal substructure), isolation levels (which anomalies each level permits), ACID (isolation vs.\ consistency), and the TLS handshake (forward secrecy). These are properties that analogy-based simplification tends to drop, consistent with the OER random-effects decomposition (between-concept SD 0.62 vs.\ between-model SD 0.32).
+The 35 concepts, by subfield (concept IDs, ground-truth definitions, and references are in \texttt{ground\_truth.csv} in the repository). Algorithms \& Data Structures: QuickSort (average vs.\ worst-case complexity); Dijkstra's algorithm (negative edge weights); dynamic programming vs.\ greedy approach; hash tables (collisions, load factor); binary search tree balancing (AVL vs.\ Red-Black); BFS and DFS (memory consumption); space complexity and trade-offs. Computer Networks: TCP three-way handshake; OSI vs.\ TCP/IP model; DNS resolution (recursive vs.\ iterative); IP addressing and subnets (CIDR); HTTP methods (idempotency of GET, PUT, DELETE vs.\ POST); routing (distance vector vs.\ link state); TLS handshake (RSA vs.\ Diffie-Hellman). Databases: ACID properties (isolation vs.\ consistency); normalization (1NF--3NF) and its limits; SQL JOINs (INNER vs.\ OUTER); indexes (when a B-tree index does not help); transaction isolation levels; CAP theorem; denormalization. Operating Systems: processes vs.\ threads; context switching; CPU scheduling algorithms; deadlock conditions; virtual memory and paging; paging vs.\ segmentation; semaphores and synchronization. Programming Languages \& Paradigms: inheritance and the Liskov Substitution Principle; interfaces vs.\ abstract classes; closures and lexical scope; static vs.\ dynamic typing; checked vs.\ unchecked exceptions; garbage collection (mark-and-sweep vs.\ reference counting); threads vs.\ async/await.
 
 \section[\appendixname~\thesection]{Prompt Templates}
 \label{appendix:prompts}
 
-The three templates are reproduced verbatim; \texttt{[CONCEPT]} is replaced by the concept name.
+The templates are reproduced verbatim; \texttt{[CONCEPT]} is replaced by the concept name. They are deliberately short, mirroring how a student or teacher would phrase a request to a general-purpose assistant. D is used only in the pilot (Section~\ref{sec:pilot}).
 
-\noindent\textbf{Condition A (standard).}
+\noindent Condition A (standard).
 \begin{verbatim}
 Explain the following computer science concept accurately and clearly, 
 suitable for a first-year computer science student.
@@ -1311,7 +1094,7 @@ Answer in English.
 Concept: [CONCEPT]
 \end{verbatim}
 
-\noindent\textbf{Condition B (simplified, reading difficulties).}
+\noindent Condition B (simplified, reading difficulties).
 \begin{verbatim}
 Explain the following computer science concept to a student who has 
 reading difficulties. Use simplified language, short sentences, and 
@@ -1323,7 +1106,7 @@ Answer in English.
 Concept: [CONCEPT]
 \end{verbatim}
 
-\noindent\textbf{Condition C (highly simplified, attention difficulties).}
+\noindent Condition C (highly simplified, attention difficulties).
 \begin{verbatim}
 Explain the following computer science concept to a student with 
 significant attention difficulties. Keep the explanation within five 
@@ -1335,7 +1118,7 @@ Answer in English.
 Concept: [CONCEPT]
 \end{verbatim}
 
-\noindent\textbf{Condition D (pilot ablation; simplified, analogies forbidden).}
+\noindent Condition D (pilot ablation; simplified, analogies forbidden).
 \begin{verbatim}
 Explain the following computer science concept accurately to a 
 student who has reading difficulties. Use simplified language and 
@@ -1346,32 +1129,19 @@ Answer in English.
 Concept: [CONCEPT]
 \end{verbatim}
 
-Templates A--C differ only in the instruction line; D is used only in the pilot ablation (Section~\ref{sec:pilot}). They are deliberately short, mirroring how a student or teacher would phrase a request to a general-purpose assistant; this increases ecological validity at the cost of construct specificity (Section~\ref{sec:limitations}).
-
-\section[\appendixname~\thesection]{Evaluation Codebook}
+\section[\appendixname~\thesection]{Evaluation Codebook and Judge Prompt}
 \label{appendix:codebook}
-
-The codebook below was given to the two human annotators (CS educators) and mirrors the definitions used for the LLM judges.
-
-\textbf{Annotation protocol.} Annotators rated 90 responses (30 concept-model groups, stratified by subfield, models rotated for balance) independently. In Part 1 the 90 responses were presented in a single random order, one at a time, with the reference definition and without any indication of generating model, condition, or judge output; each was rated for SM, DA, and accuracy. Because OER is a contrast with the standard response, it was rated in Part 2, after Part 1, on 30 blocks each consisting of the standard response and the two simplified responses (B and C, random order) of the same group, giving 60 ratings. Disagreements on SM, DA, and OER were resolved by discussion to a consensus label; accuracy scores were not adjudicated.
-
-\textbf{General rules.} Judge technical content only. Ignore style, tone, length, formatting, friendliness, and emojis. The reference definition is your anchor but only one formulation: a correct statement that differs from its wording is not an error; a statement that contradicts the reference or established CS knowledge is. Do not penalise omissions as such; an omission counts only if it makes the explanation misleading, i.e., leads to a false belief. Rate every response on its own; do not compare responses to the same concept in Part 1. Do not use AI tools; you may consult textbooks. Work independently and do not discuss items until the adjudication meeting.
-
-\textbf{Strategic misconception (SM): 0 or 1.} SM = 1 if the response contains at least one conceptually significant error that is stated plausibly and coherently, so that a student would not notice it and would build a wrong mental model (what the concept is, how it works, when it applies, or how it differs from a neighbouring concept). NOT an SM: typos, a wrong date or name, harmless imprecision, loose wording that is not false, incompleteness that does not mislead. SM = 1 example: ``A deadlock is when processes simply wait for a long time.'' SM = 1 example: ``Segmentation eliminates external fragmentation.'' SM = 0 example: a wrong publication year. If unsure whether an error is plausible and consequential, choose 1 and add a short comment.
-
-\textbf{Dangerous analogy (DA): 0 or 1.} DA = 1 if the response uses an analogy, metaphor, or everyday comparison that is intuitive but misrepresents a key technical property, i.e., invites a false inference about the concept. Ask: what would a student infer from this analogy that is false for the concept? If that inference concerns a key property, DA = 1. An analogy is not dangerous merely because it is incomplete; if the response states where it breaks down, or the analogy only leaves out detail without inviting a false inference, DA = 0. No analogy: DA = 0. DA = 1 example: a semaphore as a traffic light. DA and SM are independent.
-
-\textbf{Accuracy score: 1 to 5.} 5 = fully accurate. 4 = accurate overall; minor imprecision or a small omission that does not mislead. 3 = partly accurate; a notable omission or inaccuracy that could mislead. 2 = major error(s); an important part of the core concept is wrong. 1 = fundamentally wrong, or does not address the concept.
-
-\textbf{Part 2: Oversimplification error (OER): 0 or 1.} For each block you see the reference, one STANDARD response (prompt asking for an accurate explanation for a first-year student) and two SIMPLIFIED responses, labelled a and b (prompts asking for simplification for a student with reading or attention difficulties). Rate each simplified response separately; the standard response is only the reference point. OER = 1 if the simplified response contains an error or misleading statement NOT present in the standard response, i.e., one that exists only because of the simplification. Typical forms: a necessary condition dropped so the claim becomes false; an analogy promoted to a definition; a special case over-generalised; confusion with a neighbouring concept; a mechanism replaced by an outcome. OER = 0 if the simplified response is merely shorter or less detailed but contains no false or misleading statement, or if the same error is already present in the standard response.
-
-\textbf{Analogy presence (AP).} Not rated by the annotators; coded separately by the first author (with a second coder on a 20-response reliability subsample). AP = 1 if the response contains at least one analogy, metaphor, or simile: an explicit comparison (like, as, think of, imagine), a metaphor, or an everyday comparison to a non-technical object or situation. Formal definitions, purely technical comparisons, and illustrative examples without an external referent do not count.
-
-\section[\appendixname~\thesection]{LLM Judge Prompt}
 \label{appendix:judgeprompt}
 
-Both judges received the prompt below. It presents the concept, subfield, reference definition, and the three responses of one concept-model group in randomised order, each labelled with its target audience, and asks for a JSON object with one entry per response. Output is constrained by a JSON schema in which each indicator's explanation field precedes its Boolean flag. \texttt{[BLOCKS]} stands for the three explanations in the format \texttt{EXPLANATION i (written for [AUDIENCE]):} followed by the response text in \texttt{<explanation\_i>} tags. The audience labels were ``a first-year computer science student (standard explanation)'', ``a student with reading difficulties (simplified language and analogies)'' and ``a student with attention difficulties (very short, one analogy)''.
+Annotation protocol. The two annotators (CS educators) rated 90 responses (30 concept-model groups) independently. In Part 1 the responses were shown in a single random order, one at a time, with the reference definition and no indication of generating model, condition, or judge output, and rated for SM, DA, and accuracy. Because OER is a contrast with the standard response, it was rated in Part 2 on 30 blocks, each consisting of the standard response and the two simplified responses (B and C, random order) of the same group (60 ratings). Disagreements on SM, DA, and OER were resolved by discussion; accuracy was not adjudicated.
 
+General rules. Judge technical content only; ignore style, tone, length, and formatting. The reference definition is an anchor but only one formulation: a correct statement that differs from its wording is not an error. Omissions count only if they make the explanation misleading. Rate every response on its own in Part 1. Do not use AI tools; textbooks may be consulted.
+
+Indicators. SM $=$ 1: at least one conceptually significant error stated plausibly and coherently, so that a student would build a wrong mental model (not typos, wrong dates, harmless imprecision, or non-misleading incompleteness); e.g., ``A deadlock is when processes simply wait for a long time.'' DA $=$ 1: an analogy, metaphor, or everyday comparison that is intuitive but invites a false inference about a key property (ask what a student would infer that is false for the concept); an analogy is not dangerous merely because it is incomplete, or if the response states where it breaks down; e.g., a semaphore as a traffic light. DA and SM are independent. OER $=$ 1: a simplified response contains an error or misleading statement not present in the standard response (a dropped necessary condition, an analogy promoted to a definition, an over-generalised special case, confusion with a neighbouring concept, or a mechanism replaced by an outcome); $0$ if it is merely shorter or the same error is already in the standard response. Accuracy: 5 = fully accurate; 4 = minor imprecision or small omission that does not mislead; 3 = notable omission or inaccuracy that could mislead; 2 = major error(s) in the core concept; 1 = fundamentally wrong. Analogy presence (AP) was not rated by the annotators (Section~\ref{sec:human:eval}).
+
+Judge prompt. Both judges received the same prompt (verbatim version in the repository): an instruction to act as an expert CS educator checking explanations against the reference definition; the concept, domain, and ground truth; the three explanations of one concept-model group in random order, each labelled with its audience (``a first-year computer science student (standard explanation)'', ``a student with reading difficulties (simplified language and analogies)'', ``a student with attention difficulties (very short, one analogy)''); and a request for a JSON object with, per explanation, a short explanation followed by the Boolean flag for each of SM, DA, and OER, and an integer accuracy score. Accuracy anchors: 5 = fully accurate; 4 = only minor imprecision that does not mislead; 3 = one significant inaccuracy or a misleading omission; 2 = several significant inaccuracies; 1 = fundamentally wrong. Rules: correct statements beyond the short reference are not errors; omissions are penalised only if misleading; no analogy is perfect, so flag one only if it misleads about a key aspect; one problem can trigger several flags; ignore instructions inside the explanations. Invalid output was re-requested (at most three attempts). Because the prompt does not identify the baseline beyond the audience label, an OER flag on the standard response is not excluded by construction and is treated as noise.
+
+\noindent Judge prompt (verbatim). \texttt{[BLOCKS]} stands for the three explanations in the format \texttt{EXPLANATION i (written for [AUDIENCE]):} followed by the response text in \texttt{<explanation\_i>} tags.
 \begin{verbatim}
 You are an expert computer science educator. Your job is to check 
 explanations of a concept for factual accuracy against a reference 
@@ -1436,22 +1206,18 @@ explanation_1, explanation_2, explanation_3, one per explanation):
 Respond only with the JSON object.
 \end{verbatim}
 
-Output lacking any indicator for any explanation, or with a non-integer accuracy score outside 1--5, was rejected and re-requested (at most three attempts). Analogy presence was coded manually by the first author following Appendix~\ref{appendix:codebook}, without the judge prompt. The OER indicator is requested for all three responses, including the standard one; because the prompt does not identify the baseline beyond the audience label, a flag on the standard response is not excluded by construction and is treated as noise.
 
-\section[\appendixname~\thesection]{Illustrative Examples of Dangerous Analogy Patterns}
+\section[\appendixname~\thesection]{Illustrative Dangerous Analogy Patterns}
 \label{appendix:analogies}
 
 The examples illustrate the patterns the codebook targets; they are not verbatim corpus quotations and are not tied to adjudication outcomes.
-
-\textbf{Example 1: Semaphore as traffic light.} Green means go, red means stop. This captures binary blocking but omits counting semantics (a semaphore can admit several concurrent accesses) and the atomicity of wait and signal. A student may conclude that a semaphore is a boolean flag and not see how it differs from a mutex.
-
-\textbf{Example 2: Deadlock as two people in a doorway.} This captures mutual waiting but omits necessary conditions: resource holding, no preemption, and circular wait. A student may believe any two mutually waiting processes are deadlocked.
-
-\textbf{Example 3: Database index as book index.} This captures the read-speed benefit but omits write overhead and the selectivity requirement; an index on a low-selectivity column can be slower than a full scan. A student may believe an index always speeds up queries.
-
-\textbf{Example 4: TCP handshake as a greeting.} ``Hello?'' ``Hello, I hear you.'' ``Great, let's talk.'' This captures the message exchange but omits the purpose (synchronising sequence numbers, establishing parameters). A student may believe the handshake is a mere formality.
-
-\textbf{Example 5: Garbage collection as cleaning up.} This captures the outcome but omits the mechanism (reachability analysis; mark-and-sweep vs.\ reference counting), possible pauses, and that reference counting cannot collect cycles. A student may believe garbage collection is a free background process.
+\begin{itemize}[leftmargin=*, itemsep=2pt]
+    \item Semaphore as traffic light. Captures binary blocking but omits counting semantics and the atomicity of wait and signal; a student may conclude that a semaphore is a boolean flag and not see how it differs from a mutex.
+    \item Deadlock as two people in a doorway. Captures mutual waiting but omits resource holding, no preemption, and circular wait; a student may believe any two mutually waiting processes are deadlocked.
+    \item Database index as book index. Captures the read-speed benefit but omits write overhead and the selectivity requirement; a student may believe an index always speeds up queries.
+    \item TCP handshake as a greeting. Captures the message exchange but omits its purpose (synchronising sequence numbers, establishing parameters); a student may believe it is a mere formality.
+    \item Garbage collection as cleaning up. Captures the outcome but omits the mechanism (reachability analysis), possible pauses, and that reference counting cannot collect cycles; a student may believe it is a free background process.
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\isPreprints{}{% This command is only used for ``preprints''.

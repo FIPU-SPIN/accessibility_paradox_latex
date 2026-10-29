@@ -300,6 +300,26 @@ Huang, L.; Yu, W.; Ma, W.; Zhong, W.; Feng, Z.;  et~al.
   43},~1--55.
 \newblock {\url{https://doi.org/10.1145/3703155}}.
 
+\bibitem[Liu et~al.(2023)Liu, Iter, Xu, Wang, Xu, and Zhu]{liu2023geval}
+Liu, Y.; Iter, D.; Xu, Y.; Wang, S.; Xu, R.; Zhu, C.
+\newblock G-Eval: NLG evaluation using GPT-4 with better human alignment.
+\newblock In Proceedings of the Proceedings of the 2023 Conference on Empirical
+  Methods in Natural Language Processing,  2023, pp. 2511--2522.
+\newblock {\url{https://doi.org/10.18653/v1/2023.emnlp-main.153}}.
+
+\bibitem[Wang et~al.(2023)Wang, Li, Chen, Cai, Zhu, et~al.]{wang2023large}
+Wang, P.; Li, L.; Chen, L.; Cai, Z.; Zhu, D.;  et~al.
+\newblock Large language models are not fair evaluators.
+\newblock {\em arXiv preprint arXiv:2305.17926} {\bf 2023}.
+\newblock {\url{https://doi.org/10.48550/arXiv.2305.17926}}.
+
+\bibitem[Panickssery et~al.(2024)Panickssery, Bowman, and
+  Feng]{panickssery2024llm}
+Panickssery, A.; Bowman, S.R.; Feng, S.
+\newblock LLM evaluators recognize and favor their own generations.
+\newblock {\em arXiv preprint arXiv:2404.13076} {\bf 2024}.
+\newblock {\url{https://doi.org/10.48550/arXiv.2404.13076}}.
+
 \bibitem[Flesch(1948)]{flesch1948new}
 Flesch, R.
 \newblock A new readability yardstick.
@@ -356,26 +376,6 @@ Glynn, S.M.
 \newblock Explaining science concepts: A teaching-with-analogies model. In {\em
   The Psychology of Learning Science}; Glynn, S.M.; Yeany, R.H.; Britton, B.K.,
   Eds.; Lawrence Erlbaum Associates,  1991; pp. 219--240.
-
-\bibitem[Liu et~al.(2023)Liu, Iter, Xu, Wang, Xu, and Zhu]{liu2023geval}
-Liu, Y.; Iter, D.; Xu, Y.; Wang, S.; Xu, R.; Zhu, C.
-\newblock G-Eval: NLG evaluation using GPT-4 with better human alignment.
-\newblock In Proceedings of the Proceedings of the 2023 Conference on Empirical
-  Methods in Natural Language Processing,  2023, pp. 2511--2522.
-\newblock {\url{https://doi.org/10.18653/v1/2023.emnlp-main.153}}.
-
-\bibitem[Wang et~al.(2023)Wang, Li, Chen, Cai, Zhu, et~al.]{wang2023large}
-Wang, P.; Li, L.; Chen, L.; Cai, Z.; Zhu, D.;  et~al.
-\newblock Large language models are not fair evaluators.
-\newblock {\em arXiv preprint arXiv:2305.17926} {\bf 2023}.
-\newblock {\url{https://doi.org/10.48550/arXiv.2305.17926}}.
-
-\bibitem[Panickssery et~al.(2024)Panickssery, Bowman, and
-  Feng]{panickssery2024llm}
-Panickssery, A.; Bowman, S.R.; Feng, S.
-\newblock LLM evaluators recognize and favor their own generations.
-\newblock {\em arXiv preprint arXiv:2404.13076} {\bf 2024}.
-\newblock {\url{https://doi.org/10.48550/arXiv.2404.13076}}.
 
 \bibitem[{ACM/IEEE-CS/AAAI Joint Task Force on Computing
   Curricula}(2023)]{acm2023cs2023}
