@@ -639,6 +639,7 @@ INPUT C:\Users\milic\AppData\Local\Programs\MiKTeX\fonts\vf\public\mathpazo\zplm
 INPUT C:\Users\milic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Users\milic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmr.tfm
 INPUT C:\Users\milic\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplr7t.vf
+INPUT C:\Users\milic\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplr7t.vf
 INPUT .\figures\fig_smr_by_model.png
 INPUT .\figures\fig_smr_by_model.png
 INPUT .\figures\fig_smr_by_model.png
@@ -657,7 +658,6 @@ INPUT C:\Users\milic\AppData\Local\Programs\MiKTeX\fonts\vf\public\mathpazo\zplm
 INPUT C:\Users\milic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmri.tfm
 INPUT C:\Users\milic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
 INPUT C:\Users\milic\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplri8r.tfm
-INPUT C:\Users\milic\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplr7t.vf
 INPUT C:\Users\milic\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplr7t.vf
 INPUT C:\Users\milic\AppData\Local\Programs\MiKTeX\fonts\vf\public\mathpazo\zplmr7t.vf
 INPUT C:\Users\milic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.2.9)  29 OCT 2026 09:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.2.9)  2 NOV 2026 09:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1654,16 +1654,16 @@ Package rerunfilecheck Info: File `template.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  45693 strings out of 467871
- 1015899 string characters out of 5418377
+ 1015893 string characters out of 5418377
  1613159 words of memory out of 5000000
  72979 multiletter control sequences out of 15000+600000
- 716251 words of font info for 576 fonts, out of 8000000 for 9000
+ 716315 words of font info for 576 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 123i,16n,121p,5471b,983s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 123i,13n,121p,5471b,983s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\milic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\milic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0900.pk> <C:\Users\milic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi375\ecss0800.pk><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/milic/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on template.pdf (33 pages, 1397430 bytes).
+Output written on template.pdf (33 pages, 1398116 bytes).
 PDF statistics:
- 925 PDF objects out of 1000 (max. 8388607)
+ 928 PDF objects out of 1000 (max. 8388607)
  174 named destinations out of 1000 (max. 500000)
  110952 words of extra memory for PDF output out of 128383 (max. 10000000)
 

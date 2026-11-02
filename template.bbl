@@ -18,8 +18,11 @@ Kortemeyer, G.
 \newblock {\url{https://doi.org/10.1103/PhysRevPhysEducRes.19.010132}}.
 
 \bibitem[Kasneci et~al.(2023)Kasneci, Se{\ss}ler, K{\"u}chemann, Bannert,
-  Dementieva, et~al.]{kasneci2023chatgpt}
+  Dementieva, Fischer, Gasser, Groh, G{\"u}nnemann, H{\"u}llermeier, Krusche,
+  Kutyniok, Michaeli, Nerdel, Pfeffer, Poquet, Sailer, Schmidt, Seidel,
+  Stadler, Weller, Kuhn, and Kasneci]{kasneci2023chatgpt}
 Kasneci, E.; Se{\ss}ler, K.; K{\"u}chemann, S.; Bannert, M.; Dementieva, D.;
+  Fischer, F.; Gasser, U.; Groh, G.; G{\"u}nnemann, S.; H{\"u}llermeier, E.;
   et~al.
 \newblock ChatGPT for good? On opportunities and challenges of large language
   models for education.
@@ -52,9 +55,10 @@ Finnie-Ansley, J.; Denny, P.; Becker, B.A.; Luxton-Reilly, A.; Prather, J.
   Education Conference,  2022, pp. 10--19.
 \newblock {\url{https://doi.org/10.1145/3511861.3511863}}.
 
-\bibitem[Prather et~al.(2023)Prather, Denny, Leinonen, Becker, Albluwi,
-  et~al.]{prather2023robots}
-Prather, J.; Denny, P.; Leinonen, J.; Becker, B.A.; Albluwi, I.;  et~al.
+\bibitem[Prather et~al.(2023)Prather, Denny, Leinonen, Becker, Albluwi, Craig,
+  Keuning, Kiesler, Kohn, Luxton-Reilly, et~al.]{prather2023robots}
+Prather, J.; Denny, P.; Leinonen, J.; Becker, B.A.; Albluwi, I.; Craig, M.;
+  Keuning, H.; Kiesler, N.; Kohn, T.; Luxton-Reilly, A.;  et~al.
 \newblock The robots are here: Navigating the generative AI revolution in
   computing education.
 \newblock In Proceedings of the Proceedings of the Working Group Reports on
@@ -62,12 +66,12 @@ Prather, J.; Denny, P.; Leinonen, J.; Becker, B.A.; Albluwi, I.;  et~al.
 \newblock {\url{https://doi.org/10.1145/3623762.3633499}}.
 
 \bibitem[Denny et~al.(2024)Denny, Prather, Becker, Finnie-Ansley, Hellas,
-  et~al.]{denny2024computing}
-Denny, P.; Prather, J.; Becker, B.A.; Finnie-Ansley, J.; Hellas, A.;  et~al.
+  Leinonen, Luxton-Reilly, Reeves, Santos, and Sarsa]{denny2024computing}
+Denny, P.; Prather, J.; Becker, B.A.; Finnie-Ansley, J.; Hellas, A.; Leinonen,
+  J.; Luxton-Reilly, A.; Reeves, B.N.; Santos, E.A.; Sarsa, S.
 \newblock Computing education in the era of generative AI.
-\newblock In Proceedings of the Proceedings of the 55th ACM Technical Symposium
-  on Computer Science Education,  2024.
-\newblock {\url{https://doi.org/10.1145/3626252}}.
+\newblock {\em Communications of the ACM} {\bf 2024}, {\em 67},~56--67.
+\newblock {\url{https://doi.org/10.1145/3624720}}.
 
 \bibitem[Pardos and Bhandari(2024)]{pardos2024chatgpt}
 Pardos, Z.A.; Bhandari, S.
@@ -93,34 +97,36 @@ Bastani, H.; Bastani, O.; Sungu, A.; Ge, H.; Kabakc{\i}, {\"O}.; Mariman, R.
   {\em 122},~e2422633122.
 \newblock {\url{https://doi.org/10.1073/pnas.2422633122}}.
 
-\bibitem[Ibrahim et~al.(2026)Ibrahim, Liu, Chen, and Wang]{ibrahim2026warmth}
-Ibrahim, H.; Liu, T.; Chen, A.; Wang, D.
-\newblock The warmth-accuracy trade-off: When making LLMs more empathetic
-  increases factual errors.
-\newblock In Proceedings of the Proceedings of the 2026 ACM Conference on
-  Fairness, Accountability, and Transparency,  2026.
-\newblock Forthcoming.
+\bibitem[Ibrahim et~al.(2026)Ibrahim, Hafner, and Rocher]{ibrahim2026warmth}
+Ibrahim, L.; Hafner, F.S.; Rocher, L.
+\newblock Training language models to be warm can reduce accuracy and increase
+  sycophancy.
+\newblock {\em Nature} {\bf 2026}.
+\newblock {\url{https://doi.org/10.1038/s41586-026-10410-0}}.
 
-\bibitem[Ouyang et~al.(2022)Ouyang, Wu, Jiang, Almeida, Wainwright,
-  et~al.]{ouyang2022training}
-Ouyang, L.; Wu, J.; Jiang, X.; Almeida, D.; Wainwright, C.;  et~al.
+\bibitem[Ouyang et~al.(2022)Ouyang, Wu, Jiang, Almeida, Wainwright, Mishkin,
+  Zhang, Agarwal, Slama, Ray, et~al.]{ouyang2022training}
+Ouyang, L.; Wu, J.; Jiang, X.; Almeida, D.; Wainwright, C.; Mishkin, P.; Zhang,
+  C.; Agarwal, S.; Slama, K.; Ray, A.;  et~al.
 \newblock Training language models to follow instructions with human feedback.
 \newblock In Proceedings of the Advances in Neural Information Processing
   Systems,  2022, Vol.~35, pp. 27730--27744.
 \newblock {\url{https://doi.org/10.48550/arXiv.2203.02155}}.
 
-\bibitem[Sharma et~al.(2024)Sharma, Tong, Korbak, Duvenaud, Askell,
-  et~al.]{sharma2024towards}
-Sharma, M.; Tong, M.; Korbak, T.; Duvenaud, D.; Askell, A.;  et~al.
+\bibitem[Sharma et~al.(2024)Sharma, Tong, Korbak, Duvenaud, Askell, Bowman,
+  Cheng, Durmus, Hatfield-Dodds, Johnston, et~al.]{sharma2024towards}
+Sharma, M.; Tong, M.; Korbak, T.; Duvenaud, D.; Askell, A.; Bowman, S.R.;
+  Cheng, N.; Durmus, E.; Hatfield-Dodds, Z.; Johnston, S.R.;  et~al.
 \newblock Towards understanding sycophancy in language models.
 \newblock In Proceedings of the Proceedings of the 12th International
   Conference on Learning Representations,  2024.
 \newblock {\url{https://doi.org/10.48550/arXiv.2310.13548}}.
 
 \bibitem[Perez et~al.(2023)Perez, Ringer, Luko{\v{s}}i{\=u}t{\.e}, Nguyen,
-  Chen, et~al.]{perez2023discovering}
+  Chen, Heiner, Petit, Hernandez, Nadeau, Lasenby,
+  et~al.]{perez2023discovering}
 Perez, E.; Ringer, S.; Luko{\v{s}}i{\=u}t{\.e}, K.; Nguyen, K.; Chen, E.;
-  et~al.
+  Heiner, S.; Petit, C.; Hernandez, N.; Nadeau, K.; Lasenby, J.;  et~al.
 \newblock Discovering language model behaviors with model-written evaluations.
 \newblock In Proceedings of the Findings of the Association for Computational
   Linguistics: ACL 2023,  2023, pp. 13387--13434.
@@ -188,17 +194,17 @@ Rozenblit, L.; Keil, F.
 \newblock {\em Cognitive Science} {\bf 2002}, {\em 26},~521--562.
 \newblock {\url{https://doi.org/10.1207/s15516709cog2605_1}}.
 
-\bibitem[Snowling et~al.(2019)Snowling, Hulme, and
+\bibitem[Snowling et~al.(2020)Snowling, Hulme, and
   Nation]{snowling2019dyslexia}
 Snowling, M.J.; Hulme, C.; Nation, K.
 \newblock Defining and understanding dyslexia: past, present and future.
-\newblock {\em Oxford Review of Education} {\bf 2019}, {\em 46},~501--513.
+\newblock {\em Oxford Review of Education} {\bf 2020}, {\em 46},~501--513.
 \newblock {\url{https://doi.org/10.1080/03054985.2020.1765756}}.
 
 \bibitem[Barkley(2015)]{barkley2015attention}
 Barkley, R.A.
 \newblock {\em Attention-Deficit Hyperactivity Disorder: A Handbook for
-  Diagnosis and Treatment}, 4th ed.; Guilford Publications,  2015.
+  Diagnosis and Treatment}, 4 ed.; Guilford Publications,  2015.
 
 \bibitem[Martinussen et~al.(2005)Martinussen, Hayden, Hogg-Johnson, and
   Tannock]{martinussen2005meta}
@@ -226,8 +232,8 @@ Ben-Ari, M.
 \bibitem[Gadiraju et~al.(2023)Gadiraju, Kane, Dev, Taylor, Wang, Denton, and
   Brewer]{gadiraju2023wouldnt}
 Gadiraju, V.; Kane, S.; Dev, S.; Taylor, A.; Wang, D.; Denton, E.; Brewer, R.
-\newblock "I wouldn't say offensive but...": Disability-centered perspectives
-  on large language models.
+\newblock ``{I} wouldn't say offensive but...'': Disability-centered
+  perspectives on large language models.
 \newblock In Proceedings of the Proceedings of the 2023 ACM Conference on
   Fairness, Accountability, and Transparency,  2023, pp. 205--216.
 \newblock {\url{https://doi.org/10.1145/3593013.3593989}}.
@@ -250,9 +256,10 @@ Trienes, J.; Joseph, S.; Schl{\"o}tterer, J.; Seifert, C.; Lo, K.; Xu, W.;
   Association for Computational Linguistics,  2024, pp. 4263--4294.
 \newblock {\url{https://doi.org/10.18653/v1/2024.acl-long.234}}.
 
-\bibitem[Zheng et~al.(2023)Zheng, Chiang, Sheng, Zhuang, Wu,
-  et~al.]{zheng2023judging}
-Zheng, L.; Chiang, W.L.; Sheng, Y.; Zhuang, S.; Wu, Z.;  et~al.
+\bibitem[Zheng et~al.(2023)Zheng, Chiang, Sheng, Zhuang, Wu, Zhuang, Lin, Li,
+  Li, Xing, Zhang, Gonzalez, and Stoica]{zheng2023judging}
+Zheng, L.; Chiang, W.L.; Sheng, Y.; Zhuang, S.; Wu, Z.; Zhuang, Y.; Lin, Z.;
+  Li, Z.; Li, D.; Xing, E.;  et~al.
 \newblock Judging LLM-as-a-judge with MT-Bench and Chatbot Arena.
 \newblock In Proceedings of the Advances in Neural Information Processing
   Systems,  2023, Vol.~36.
@@ -265,9 +272,11 @@ Lyon, G.R.; Shaywitz, S.E.; Shaywitz, B.A.
 \newblock {\url{https://doi.org/10.1007/s11881-003-0001-9}}.
 
 \bibitem[Faraone et~al.(2015)Faraone, Asherson, Banaschewski, Biederman,
-  Buitelaar, et~al.]{faraone2015adhd}
+  Buitelaar, Ramos-Quiroga, Rohde, Sonuga-Barke, Tannock, and
+  Franke]{faraone2015adhd}
 Faraone, S.V.; Asherson, P.; Banaschewski, T.; Biederman, J.; Buitelaar, J.K.;
-  et~al.
+  Ramos-Quiroga, J.A.; Rohde, L.A.; Sonuga-Barke, E.J.S.; Tannock, R.; Franke,
+  B.
 \newblock Attention-deficit/hyperactivity disorder.
 \newblock {\em Nature Reviews Disease Primers} {\bf 2015}, {\em 1},~15020.
 \newblock {\url{https://doi.org/10.1038/nrdp.2015.20}}.
@@ -286,14 +295,18 @@ Rello, L.; Baeza-Yates, R.
   SIGACCESS Conference on Computers and Accessibility,  2013, pp. 1--8.
 \newblock {\url{https://doi.org/10.1145/2513383.2513447}}.
 
-\bibitem[Ji et~al.(2023)Ji, Lee, Frieske, Yu, Su, et~al.]{ji2023survey}
-Ji, Z.; Lee, N.; Frieske, R.; Yu, T.; Su, D.;  et~al.
+\bibitem[Ji et~al.(2023)Ji, Lee, Frieske, Yu, Su, Xu, Ishii, Bang, Madotto, and
+  Fung]{ji2023survey}
+Ji, Z.; Lee, N.; Frieske, R.; Yu, T.; Su, D.; Xu, Y.; Ishii, E.; Bang, Y.J.;
+  Madotto, A.; Fung, P.
 \newblock Survey of hallucination in natural language generation.
 \newblock {\em ACM Computing Surveys} {\bf 2023}, {\em 55},~1--38.
 \newblock {\url{https://doi.org/10.1145/3571730}}.
 
-\bibitem[Huang et~al.(2025)Huang, Yu, Ma, Zhong, Feng, et~al.]{huang2025survey}
-Huang, L.; Yu, W.; Ma, W.; Zhong, W.; Feng, Z.;  et~al.
+\bibitem[Huang et~al.(2025)Huang, Yu, Ma, Zhong, Feng, Wang, Chen, Peng, Feng,
+  Qin, and Liu]{huang2025survey}
+Huang, L.; Yu, W.; Ma, W.; Zhong, W.; Feng, Z.; Wang, H.; Chen, Q.; Peng, W.;
+  Feng, X.; Qin, B.;  et~al.
 \newblock A survey on hallucination in large language models: Principles,
   taxonomy, challenges, and open questions.
 \newblock {\em ACM Transactions on Information Systems} {\bf 2025}, {\em
@@ -307,8 +320,10 @@ Liu, Y.; Iter, D.; Xu, Y.; Wang, S.; Xu, R.; Zhu, C.
   Methods in Natural Language Processing,  2023, pp. 2511--2522.
 \newblock {\url{https://doi.org/10.18653/v1/2023.emnlp-main.153}}.
 
-\bibitem[Wang et~al.(2023)Wang, Li, Chen, Cai, Zhu, et~al.]{wang2023large}
-Wang, P.; Li, L.; Chen, L.; Cai, Z.; Zhu, D.;  et~al.
+\bibitem[Wang et~al.(2023)Wang, Li, Chen, Cai, Zhu, Lin, Cao, Liu, Liu, and
+  Sui]{wang2023large}
+Wang, P.; Li, L.; Chen, L.; Cai, Z.; Zhu, D.; Lin, B.; Cao, Y.; Liu, Q.; Liu,
+  T.; Sui, Z.
 \newblock Large language models are not fair evaluators.
 \newblock {\em arXiv preprint arXiv:2305.17926} {\bf 2023}.
 \newblock {\url{https://doi.org/10.48550/arXiv.2305.17926}}.
@@ -380,20 +395,25 @@ Glynn, S.M.
 \bibitem[{ACM/IEEE-CS/AAAI Joint Task Force on Computing
   Curricula}(2023)]{acm2023cs2023}
 {ACM/IEEE-CS/AAAI Joint Task Force on Computing Curricula}.
-\newblock Computer Science Curricula 2023,  2023.
+\newblock Computer Science Curricula 2023.
+\newblock \url{https://csed.acm.org/cs2023/},  2023.
+\newblock Accessed: 2026-11-02.
 
 \bibitem[{Ollama}(2023)]{ollama2023}
 {Ollama}.
 \newblock Ollama: Run Large Language Models Locally.
 \newblock \url{https://ollama.com},  2023.
-\newblock Accessed: 2025.
+\newblock Accessed: 2026-11-02.
 
 \bibitem[{University of Zagreb University Computing Centre
   (Srce)}(2023)]{srce2023supek}
 {University of Zagreb University Computing Centre (Srce)}.
 \newblock Nova nacionalna e-infrastruktura {HR-ZOO} pu{\v{s}}tena u rad --
   predstavljeno najja{\v{c}}e hrvatsko superra{\v{c}}unalo ``{Supek}''.
-\newblock Srce, Zagreb,  2023.
+\newblock
+  \url{https://www.srce.unizg.hr/vijesti/nova-nacionalna-e-infrastruktura-hr-zoo-pustena-u-rad-predstavljeno-najjace-hrvatsko},
+   2023.
+\newblock Accessed: 2026-11-02.
 
 \bibitem[Cohen(1960)]{cohen1960coefficient}
 Cohen, J.
@@ -443,8 +463,8 @@ Benjamini, Y.; Hochberg, Y.
 
 \bibitem[Cohen(1988)]{cohen1988statistical}
 Cohen, J.
-\newblock {\em Statistical Power Analysis for the Behavioral Sciences}, 2nd
-  ed.; Lawrence Erlbaum Associates,  1988.
+\newblock {\em Statistical Power Analysis for the Behavioral Sciences}, 2 ed.;
+  Lawrence Erlbaum Associates,  1988.
 
 \bibitem[Lakens(2013)]{lakens2013calculating}
 Lakens, D.
@@ -469,7 +489,8 @@ LaBerge, D.; Samuels, S.J.
 \bibitem[Rose and Meyer(2002)]{rose2002teaching}
 Rose, D.H.; Meyer, A.
 \newblock Teaching every student in the digital age: Universal design for
-  learning; Association for Supervision and Curriculum Development,  2002.
+  learning. In {\em Teaching Every Student in the Digital Age: Universal Design
+  for Learning}; Association for Supervision and Curriculum Development,  2002.
 
 \bibitem[Wobbrock et~al.(2011)Wobbrock, Kane, Gajos, Harada, and
   Froehlich]{wobbrock2011ability}
@@ -492,7 +513,7 @@ Hullman, J.; Qiao, X.; Correll, M.; Kale, A.; Kay, M.
   evaluation.
 \newblock {\em IEEE Transactions on Visualization and Computer Graphics} {\bf
   2019}, {\em 25},~903--913.
-\newblock {\url{https://doi.org/10.1109/TVCG.2018.2864885}}.
+\newblock {\url{https://doi.org/10.1145/3209808}}.
 
 \bibitem[{W3C}(2023)]{w3c2023wcag}
 {W3C}.

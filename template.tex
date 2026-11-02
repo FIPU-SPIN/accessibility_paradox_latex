@@ -251,7 +251,7 @@ Models span 7B to 32B parameters and five families and include three reasoning m
 Three templates share one structure (an instruction, \texttt{Answer in English.}, and \texttt{Concept: [CONCEPT]}), so the instruction is the only variable. They operationalise two recurring accessibility recommendations: reducing decoding load (short sentences, plain vocabulary, no formal notation) and reducing sustained-attention demand (brevity, a single memorable hook). Condition A (standard) asks for an accurate and clear explanation for a first-year CS student; B (simplified; reading difficulties) asks for simplified language, short sentences, and concrete analogies instead of code or formal definitions; C (highly simplified; attention difficulties) asks for at most five sentences built around one single, vivid, memorable analogy. Verbatim prompts are in Appendix~\ref{appendix:prompts}; the constraint profiles are summarised in Table~\ref{tab:prompt:design}.
 
 \begin{table}[H]
-\caption{Design of the three prompt conditions. $\checkmark$ = present, $\times$ = absent. The conditions are bundles: no single element is isolated.}
+\caption{Design of the three prompt conditions. $1$ = present, $0$ = absent. The conditions are bundles: no single element is isolated.}
 \label{tab:prompt:design}
 \centering
 \small
@@ -259,15 +259,15 @@ Three templates share one structure (an instruction, \texttt{Answer in English.}
 \toprule
 Constraint & A & B & C \\
 \midrule
-Accuracy cue (``accurately'') & $\checkmark$ & $\times$ & $\times$ \\
-Simplified language & $\times$ & $\checkmark$ & $\checkmark$ \\
-Short sentences & $\times$ & $\checkmark$ & $\times$ \\
-Concrete analogies requested & $\times$ & $\checkmark$ & $\checkmark$ \\
-Avoid code and formal definitions & $\times$ & $\checkmark$ & $\times$ \\
-Maximum length (5 sentences) & $\times$ & $\times$ & $\checkmark$ \\
-Single vivid analogy required & $\times$ & $\times$ & $\checkmark$ \\
-Audience label (reading difficulties) & $\times$ & $\checkmark$ & $\times$ \\
-Audience label (attention difficulties) & $\times$ & $\times$ & $\checkmark$ \\
+Accuracy cue (``accurately'') & 1 & 0 & 0 \\
+Simplified language & 0 & 1 & 1 \\
+Short sentences & 0 & 1 & 0 \\
+Concrete analogies requested & 0 & 1 & 1 \\
+Avoid code and formal definitions & 0 & 1 & 0 \\
+Maximum length (5 sentences) & 0 & 0 & 1 \\
+Single vivid analogy required & 0 & 0 & 1 \\
+Audience label (reading difficulties) & 0 & 1 & 0 \\
+Audience label (attention difficulties) & 0 & 0 & 1 \\
 \bottomrule
 \end{tabular}
 \end{table}
