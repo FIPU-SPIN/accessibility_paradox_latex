@@ -62,7 +62,7 @@ Prather, J.; Denny, P.; Leinonen, J.; Becker, B.A.; Albluwi, I.; Craig, M.;
 \newblock The robots are here: Navigating the generative AI revolution in
   computing education.
 \newblock In Proceedings of the Proceedings of the Working Group Reports on
-  Innovation and Technology in Computer Science Education,  2023, pp. 97--149.
+  Innovation and Technology in Computer Science Education,  2023, pp. 108--159.
 \newblock {\url{https://doi.org/10.1145/3623762.3633499}}.
 
 \bibitem[Denny et~al.(2024)Denny, Prather, Becker, Finnie-Ansley, Hellas,
@@ -122,10 +122,10 @@ Sharma, M.; Tong, M.; Korbak, T.; Duvenaud, D.; Askell, A.; Bowman, S.R.;
   Conference on Learning Representations,  2024.
 \newblock {\url{https://doi.org/10.48550/arXiv.2310.13548}}.
 
-\bibitem[Perez et~al.(2023)Perez, Ringer, Luko{\v{s}}i{\=u}t{\.e}, Nguyen,
+\bibitem[Perez et~al.(2023)Perez, Ringer, Luko{\v{s}}i{\={u}}t{\.{e}}, Nguyen,
   Chen, Heiner, Petit, Hernandez, Nadeau, Lasenby,
   et~al.]{perez2023discovering}
-Perez, E.; Ringer, S.; Luko{\v{s}}i{\=u}t{\.e}, K.; Nguyen, K.; Chen, E.;
+Perez, E.; Ringer, S.; Luko{\v{s}}i{\={u}}t{\.{e}}, K.; Nguyen, K.; Chen, E.;
   Heiner, S.; Petit, C.; Hernandez, N.; Nadeau, K.; Lasenby, J.;  et~al.
 \newblock Discovering language model behaviors with model-written evaluations.
 \newblock In Proceedings of the Findings of the Association for Computational
@@ -488,9 +488,8 @@ LaBerge, D.; Samuels, S.J.
 
 \bibitem[Rose and Meyer(2002)]{rose2002teaching}
 Rose, D.H.; Meyer, A.
-\newblock Teaching every student in the digital age: Universal design for
-  learning. In {\em Teaching Every Student in the Digital Age: Universal Design
-  for Learning}; Association for Supervision and Curriculum Development,  2002.
+\newblock {\em Teaching Every Student in the Digital Age: Universal Design for
+  Learning}; Association for Supervision and Curriculum Development,  2002.
 
 \bibitem[Wobbrock et~al.(2011)Wobbrock, Kane, Gajos, Harada, and
   Froehlich]{wobbrock2011ability}
@@ -513,7 +512,7 @@ Hullman, J.; Qiao, X.; Correll, M.; Kale, A.; Kay, M.
   evaluation.
 \newblock {\em IEEE Transactions on Visualization and Computer Graphics} {\bf
   2019}, {\em 25},~903--913.
-\newblock {\url{https://doi.org/10.1145/3209808}}.
+\newblock {\url{https://doi.org/10.1109/TVCG.2018.2864889}}.
 
 \bibitem[{W3C}(2023)]{w3c2023wcag}
 {W3C}.

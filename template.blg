@@ -9,43 +9,43 @@ Warning--string name "apr" is undefined
 --line 765 of file references.bib
 You've used 70 entries,
             2887 wiz_defined-function locations,
-            1027 strings with 20467 characters,
-and the built_in function-call counts, 32663 in all, are:
-= -- 2871
+            1026 strings with 20412 characters,
+and the built_in function-call counts, 32661 in all, are:
+= -- 2866
 > -- 2116
 < -- 52
 + -- 925
 - -- 574
-* -- 2734
-:= -- 4960
-add.period$ -- 268
+* -- 2733
+:= -- 4957
+add.period$ -- 267
 call.type$ -- 70
 change.case$ -- 72
 chr.to.int$ -- 70
 cite$ -- 70
-duplicate$ -- 1430
+duplicate$ -- 1431
 empty$ -- 2508
 format.name$ -- 734
-if$ -- 6978
+if$ -- 6976
 int.to.chr$ -- 1
 int.to.str$ -- 70
-missing$ -- 67
+missing$ -- 68
 newline$ -- 406
 num.names$ -- 218
-pop$ -- 656
+pop$ -- 658
 preamble$ -- 0
 purify$ -- 70
 quote$ -- 0
-skip$ -- 1085
+skip$ -- 1088
 stack$ -- 0
-substring$ -- 1538
-swap$ -- 374
+substring$ -- 1543
+swap$ -- 376
 text.length$ -- 18
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 484
+type$ -- 481
 warning$ -- 0
 while$ -- 266
 width$ -- 0
-write$ -- 978
+write$ -- 977
 (There was 1 warning)
