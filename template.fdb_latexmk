@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex template"] 1794304867.43115 "template.aux" "template.bbl" "template" 1794305243.01552 0
+["bibtex template"] 1794389653.9218 "template.aux" "template.bbl" "template" 1794389663.64876 0
   "./Definitions/mdpi.bst" 1781511511 23683 4afe8e0b352a18c39ff91c43fd26f4b2 ""
-  "./references.bib" 1794303512 31327 224d5e89ff05213efc5fd3a38e851712 ""
-  "template.aux" 1794305241 34592 c61b7215bed3800caa903af3b3fb6b7d "pdflatex"
+  "./references.bib" 1794389574 31099 5b3786cd5d047247a1a90ea62ccb63fb ""
+  "template.aux" 1794389662 35651 19d4faa64a6922ecd1d04689b2e2fccb "pdflatex"
   (generated)
   "template.bbl"
   "template.blg"
   (rewritten before read)
-["pdflatex"] 1794305232.83754 "c:/Users/milic/Documents/GitHub/accessibility_paradox_latex/template.tex" "template.pdf" "template" 1794305243.01658 0
+["pdflatex"] 1794389654.30467 "c:/Users/milic/Documents/GitHub/accessibility_paradox_latex/template.tex" "template.pdf" "template" 1794389663.64987 0
   "C:/Users/milic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1793269861 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/milic/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi375/ecss0800.pk" 1773665370 10028 2b5e2e3d0bb1733bb2dc239aafe1f06c ""
   "C:/Users/milic/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ectt0900.pk" 1780659056 17512 2e11e61b9b15d9ba9eece0f72830060a ""
@@ -303,16 +303,16 @@
   "Definitions/logo-mdpi.eps" 1781511511 563678 5cdc8f4064e4e6cc8ec19e9f9b0d5b7c ""
   "Definitions/logo-orcid.pdf" 1781511511 12671 39a20ba789123aa897c7efc569fb5270 ""
   "Definitions/mdpi.cls" 1781511511 62350 57238b5ebd7ff11d314cfe2d16f3cb4a ""
-  "c:/Users/milic/Documents/GitHub/accessibility_paradox_latex/template.tex" 1794305232 106430 b2c9309f6bd0325fbf48c85cdf426653 ""
-  "figures/fig_accuracy_by_condition.png" 1794304085 163611 c6fcfd53f2a052b4a5c6cb77d14f4e87 ""
-  "figures/fig_model_delta_smr.png" 1794304087 212827 f160e1363020d9b4400d731e297bb718 ""
-  "figures/fig_rates_by_condition.png" 1794304087 182440 67edf1913a00d8b7b012c40eec789cec ""
-  "figures/fig_smr_by_model.png" 1794304088 226418 12208adc46476e9bbe9fa869141858ca ""
-  "figures/fig_subfield_heatmap.png" 1794304090 222081 cc9cfe5e4c51a86753d35d53b646d147 ""
-  "template.aux" 1794305241 34592 c61b7215bed3800caa903af3b3fb6b7d "pdflatex"
-  "template.bbl" 1794304867 25574 baff57d046cfc01454ca4963c5f3fb4e "bibtex template"
-  "template.out" 1794305241 7999 94c02b0f3235c9ecc931d12c0677f77d "pdflatex"
-  "template.tex" 1794305232 106430 b2c9309f6bd0325fbf48c85cdf426653 ""
+  "c:/Users/milic/Documents/GitHub/accessibility_paradox_latex/template.tex" 1794389632 115757 1f29e393983d9e9a246df34659f41e20 ""
+  "figures/fig_accuracy_by_condition.png" 1794389500 159492 aa897936f09df09b332dfc42ce4d9c79 ""
+  "figures/fig_model_delta_smr.png" 1794389481 252525 43f15d0cb0cfa33104b2639307cf005e ""
+  "figures/fig_rates_by_condition.png" 1794389485 181269 b374fe7de8bb2632e497c03bacc936e0 ""
+  "figures/fig_smr_by_model.png" 1794389466 259897 fbfd8c0440ae65933d78eca669c009b9 ""
+  "figures/fig_subfield_heatmap.png" 1794389507 217428 07a62d2b282177b0b3a89ab9c5097bd1 ""
+  "template.aux" 1794389662 35651 19d4faa64a6922ecd1d04689b2e2fccb "pdflatex"
+  "template.bbl" 1794389654 25365 0b1cafbbd0bec48abb408452956e1fc7 "bibtex template"
+  "template.out" 1794389662 7999 94c02b0f3235c9ecc931d12c0677f77d "pdflatex"
+  "template.tex" 1794389632 115757 1f29e393983d9e9a246df34659f41e20 ""
   (generated)
   "template.aux"
   "template.log"

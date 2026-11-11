@@ -35,8 +35,8 @@ Kasneci, E.; Se{\ss}ler, K.; K{\"u}chemann, S.; Bannert, M.; Dementieva, D.;
 Rello, L.; Baeza-Yates, R.; Bott, S.; Saggion, H.
 \newblock Simplify or help? Text simplification strategies for people with
   dyslexia.
-\newblock In Proceedings of the Proceedings of the 10th International
-  Cross-Disciplinary Conference on Web Accessibility,  2013, pp. 1--10.
+\newblock In Proceedings of the 10th International Cross-Disciplinary
+  Conference on Web Accessibility,  2013, pp. 1--10.
 \newblock {\url{https://doi.org/10.1145/2461121.2461126}}.
 
 \bibitem[{\v{S}}tajner and Saggion(2021)]{stajner2021automatic}
@@ -51,8 +51,8 @@ Rello, L.; Baeza-Yates, R.; Bott, S.; Saggion, H.
 Finnie-Ansley, J.; Denny, P.; Becker, B.A.; Luxton-Reilly, A.; Prather, J.
 \newblock The robots are coming: Exploring the implications of OpenAI Codex on
   introductory programming.
-\newblock In Proceedings of the Proceedings of the 24th Australasian Computing
-  Education Conference,  2022, pp. 10--19.
+\newblock In Proceedings of the 24th Australasian Computing Education
+  Conference,  2022, pp. 10--19.
 \newblock {\url{https://doi.org/10.1145/3511861.3511863}}.
 
 \bibitem[Prather et~al.(2023)Prather, Denny, Leinonen, Becker, Albluwi, Craig,
@@ -61,8 +61,8 @@ Prather, J.; Denny, P.; Leinonen, J.; Becker, B.A.; Albluwi, I.; Craig, M.;
   Keuning, H.; Kiesler, N.; Kohn, T.; Luxton-Reilly, A.;  et~al.
 \newblock The robots are here: Navigating the generative AI revolution in
   computing education.
-\newblock In Proceedings of the Proceedings of the Working Group Reports on
-  Innovation and Technology in Computer Science Education,  2023, pp. 108--159.
+\newblock In Proceedings of the Working Group Reports on Innovation and
+  Technology in Computer Science Education,  2023, pp. 108--159.
 \newblock {\url{https://doi.org/10.1145/3623762.3633499}}.
 
 \bibitem[Denny et~al.(2024)Denny, Prather, Becker, Finnie-Ansley, Hellas,
@@ -118,8 +118,8 @@ Ouyang, L.; Wu, J.; Jiang, X.; Almeida, D.; Wainwright, C.; Mishkin, P.; Zhang,
 Sharma, M.; Tong, M.; Korbak, T.; Duvenaud, D.; Askell, A.; Bowman, S.R.;
   Cheng, N.; Durmus, E.; Hatfield-Dodds, Z.; Johnston, S.R.;  et~al.
 \newblock Towards understanding sycophancy in language models.
-\newblock In Proceedings of the Proceedings of the 12th International
-  Conference on Learning Representations,  2024.
+\newblock In Proceedings of the 12th International Conference on Learning
+  Representations,  2024.
 \newblock {\url{https://doi.org/10.48550/arXiv.2310.13548}}.
 
 \bibitem[Perez et~al.(2023)Perez, Ringer, Luko{\v{s}}i{\={u}}t{\.{e}}, Nguyen,
@@ -135,8 +135,8 @@ Perez, E.; Ringer, S.; Luko{\v{s}}i{\={u}}t{\.{e}}, K.; Nguyen, K.; Chen, E.;
 \bibitem[Lin et~al.(2022)Lin, Hilton, and Evans]{lin2022truthfulqa}
 Lin, S.; Hilton, J.; Evans, O.
 \newblock TruthfulQA: Measuring how models mimic human falsehoods.
-\newblock In Proceedings of the Proceedings of the 60th Annual Meeting of the
-  Association for Computational Linguistics,  2022, pp. 3214--3252.
+\newblock In Proceedings of the 60th Annual Meeting of the Association for
+  Computational Linguistics,  2022, pp. 3214--3252.
 \newblock {\url{https://doi.org/10.18653/v1/2022.acl-long.229}}.
 
 \bibitem[Posner et~al.(1982)Posner, Strike, Hewson, and
@@ -219,8 +219,8 @@ Martinussen, R.; Hayden, J.; Hogg-Johnson, S.; Tannock, R.
 Stone, M.; Liao, Y.; Szafir, D.; Boyer, K.E.
 \newblock Analogies in the age of LLMs: When explanatory metaphors mislead CS
   learners.
-\newblock In Proceedings of the Proceedings of the 55th ACM Technical Symposium
-  on Computer Science Education,  2024, pp. 1256--1262.
+\newblock In Proceedings of the 55th ACM Technical Symposium on Computer
+  Science Education,  2024, pp. 1256--1262.
 \newblock {\url{https://doi.org/10.1145/3626253.3635473}}.
 
 \bibitem[Ben-Ari(2001)]{benari2001constructivism}
@@ -234,16 +234,16 @@ Ben-Ari, M.
 Gadiraju, V.; Kane, S.; Dev, S.; Taylor, A.; Wang, D.; Denton, E.; Brewer, R.
 \newblock ``{I} wouldn't say offensive but...'': Disability-centered
   perspectives on large language models.
-\newblock In Proceedings of the Proceedings of the 2023 ACM Conference on
-  Fairness, Accountability, and Transparency,  2023, pp. 205--216.
+\newblock In Proceedings of the 2023 ACM Conference on Fairness,
+  Accountability, and Transparency,  2023, pp. 205--216.
 \newblock {\url{https://doi.org/10.1145/3593013.3593989}}.
 
 \bibitem[Devaraj et~al.(2022)Devaraj, Sheffield, Wallace, and
   Li]{devaraj2022evaluating}
 Devaraj, A.; Sheffield, W.; Wallace, B.C.; Li, J.J.
 \newblock Evaluating factuality in text simplification.
-\newblock In Proceedings of the Proceedings of the 60th Annual Meeting of the
-  Association for Computational Linguistics,  2022, pp. 7331--7345.
+\newblock In Proceedings of the 60th Annual Meeting of the Association for
+  Computational Linguistics,  2022, pp. 7331--7345.
 \newblock {\url{https://doi.org/10.18653/v1/2022.acl-long.505}}.
 
 \bibitem[Trienes et~al.(2024)Trienes, Joseph, Schl{\"o}tterer, Seifert, Lo, Xu,
@@ -252,8 +252,8 @@ Trienes, J.; Joseph, S.; Schl{\"o}tterer, J.; Seifert, C.; Lo, K.; Xu, W.;
   Wallace, B.C.; Li, J.J.
 \newblock InfoLossQA: Characterizing and recovering information loss in text
   simplification.
-\newblock In Proceedings of the Proceedings of the 62nd Annual Meeting of the
-  Association for Computational Linguistics,  2024, pp. 4263--4294.
+\newblock In Proceedings of the 62nd Annual Meeting of the Association for
+  Computational Linguistics,  2024, pp. 4263--4294.
 \newblock {\url{https://doi.org/10.18653/v1/2024.acl-long.234}}.
 
 \bibitem[Zheng et~al.(2023)Zheng, Chiang, Sheng, Zhuang, Wu, Zhuang, Lin, Li,
@@ -291,8 +291,8 @@ Peng, P.; Fuchs, D.
 \bibitem[Rello and Baeza-Yates(2013)]{rello2013simplify}
 Rello, L.; Baeza-Yates, R.
 \newblock Good fonts for dyslexia.
-\newblock In Proceedings of the Proceedings of the 15th International ACM
-  SIGACCESS Conference on Computers and Accessibility,  2013, pp. 1--8.
+\newblock In Proceedings of the 15th International ACM SIGACCESS Conference on
+  Computers and Accessibility,  2013, pp. 1--8.
 \newblock {\url{https://doi.org/10.1145/2513383.2513447}}.
 
 \bibitem[Ji et~al.(2023)Ji, Lee, Frieske, Yu, Su, Xu, Ishii, Bang, Madotto, and
@@ -316,8 +316,8 @@ Huang, L.; Yu, W.; Ma, W.; Zhong, W.; Feng, Z.; Wang, H.; Chen, Q.; Peng, W.;
 \bibitem[Liu et~al.(2023)Liu, Iter, Xu, Wang, Xu, and Zhu]{liu2023geval}
 Liu, Y.; Iter, D.; Xu, Y.; Wang, S.; Xu, R.; Zhu, C.
 \newblock G-Eval: NLG evaluation using GPT-4 with better human alignment.
-\newblock In Proceedings of the Proceedings of the 2023 Conference on Empirical
-  Methods in Natural Language Processing,  2023, pp. 2511--2522.
+\newblock In Proceedings of the 2023 Conference on Empirical Methods in Natural
+  Language Processing,  2023, pp. 2511--2522.
 \newblock {\url{https://doi.org/10.18653/v1/2023.emnlp-main.153}}.
 
 \bibitem[Wang et~al.(2023)Wang, Li, Chen, Cai, Zhu, Lin, Cao, Liu, Liu, and

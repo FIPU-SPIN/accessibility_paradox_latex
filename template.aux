@@ -70,16 +70,16 @@
 \citation{ollama2023}
 \citation{srce2023supek}
 \def\@LN@column{1}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces AccessTrap-CS pipeline: from concept ground truth to statistical analysis.}}{5}{figure.caption.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces AccessTrap-CS pipeline: from concept ground truth to statistical analysis. The primary LLM judge scored 720 responses and the secondary judge all 735; two human annotators labelled a stratified subsample of 90 responses, adjudicated to consensus labels that serve as the reference standard.}}{5}{figure.caption.1}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:pipeline}{{1}{5}{AccessTrap-CS pipeline: from concept ground truth to statistical analysis}{figure.caption.1}{}}
+\newlabel{fig:pipeline}{{1}{5}{AccessTrap-CS pipeline: from concept ground truth to statistical analysis. The primary LLM judge scored 720 responses and the secondary judge all 735; two human annotators labelled a stratified subsample of 90 responses, adjudicated to consensus labels that serve as the reference standard}{figure.caption.1}{}}
 \newlabel{fig:pipeline@cref}{{[figure][1][]1}{[1][5][]5}{}{}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Selected open-weight LLMs. Ollama tags and parameter counts were verified with \texttt  {ollama show}.}}{5}{table.caption.2}\protected@file@percent }
 \newlabel{tab:models:selected}{{1}{5}{Selected open-weight LLMs. Ollama tags and parameter counts were verified with \texttt {ollama show}}{table.caption.2}{}}
 \newlabel{tab:models:selected@cref}{{[table][1][]1}{[1][5][]5}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Prompt Conditions and Their Construct Validity}{5}{subsection.3.2}\protected@file@percent }
 \citation{zheng2023judging}
 \def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Prompt Conditions and Their Construct Validity}{6}{subsection.3.2}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Design of the three prompt conditions. $1$ = present, $0$ = absent. The conditions are bundles: no single element is isolated.}}{6}{table.caption.3}\protected@file@percent }
 \newlabel{tab:prompt:design}{{2}{6}{Design of the three prompt conditions. $1$ = present, $0$ = absent. The conditions are bundles: no single element is isolated}{table.caption.3}{}}
 \newlabel{tab:prompt:design@cref}{{[table][2][]2}{[1][6][]6}{}{}{}}
@@ -98,7 +98,7 @@
 \def\@LN@column{1}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Pilot Ablation: Simplification Without an Analogy Request}{8}{subsection.3.5}\protected@file@percent }
 \newlabel{sec:method:pilot}{{3.5}{8}{Pilot Ablation: Simplification Without an Analogy Request}{subsection.3.5}{}}
-\newlabel{sec:method:pilot@cref}{{[subsection][5][3]3.5}{[1][7][]8}{}{}{}}
+\newlabel{sec:method:pilot@cref}{{[subsection][5][3]3.5}{[1][8][]8}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Readability and Statistical Analysis}{8}{subsection.3.6}\protected@file@percent }
 \newlabel{sec:method:stat}{{3.6}{8}{Readability and Statistical Analysis}{subsection.3.6}{}}
 \newlabel{sec:method:stat@cref}{{[subsection][6][3]3.6}{[1][8][]8}{}{}{}}
@@ -115,14 +115,14 @@
 \def\@LN@column{1}
 \@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Readability metrics by condition (mean (SD)) and omnibus ANOVA. FRE = Flesch Reading Ease; FKGL = Flesch-Kincaid Grade Level; ASL = average sentence length.}}{10}{table.caption.5}\protected@file@percent }
 \newlabel{tab:readability}{{4}{10}{Readability metrics by condition (mean (SD)) and omnibus ANOVA. FRE = Flesch Reading Ease; FKGL = Flesch-Kincaid Grade Level; ASL = average sentence length}{table.caption.5}{}}
-\newlabel{tab:readability@cref}{{[table][4][]4}{[1][9][]10}{}{}{}}
+\newlabel{tab:readability@cref}{{[table][4][]4}{[1][10][]10}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Strategic Misconception Rate (SMR)}{10}{subsection.4.2}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Strategic misconception rate (SMR) by model and condition (primary judge), with Wilson 95\% confidence intervals. Models are ordered by mean SMR across conditions.}}{10}{figure.caption.6}\protected@file@percent }
 \newlabel{fig:smr_by_model}{{2}{10}{Strategic misconception rate (SMR) by model and condition (primary judge), with Wilson 95\% confidence intervals. Models are ordered by mean SMR across conditions}{figure.caption.6}{}}
 \newlabel{fig:smr_by_model@cref}{{[figure][2][]2}{[1][10][]10}{}{}{}}
 \def\@LN@column{1}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces SMR by model for conditions A and C (primary judge). The value below each model name is $\Delta = \mathrm  {SMR}_C - \mathrm  {SMR}_A$ in percentage points. Error bars are Wilson 95\% confidence intervals.}}{11}{figure.caption.7}\protected@file@percent }
-\newlabel{fig:model_delta_smr}{{3}{11}{SMR by model for conditions A and C (primary judge). The value below each model name is $\Delta = \mathrm {SMR}_C - \mathrm {SMR}_A$ in percentage points. Error bars are Wilson 95\% confidence intervals}{figure.caption.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces SMR by model for conditions A and C (primary judge), with models in the same order as in Figure~\ref {fig:smr_by_model}. Only the two ends of the prompt range are shown, so that the A-to-C difference can be read directly; all three conditions, including B, are shown in Figure~\ref {fig:smr_by_model}. The value below each model name is $\Delta = \mathrm  {SMR}_C - \mathrm  {SMR}_A$ in percentage points. Error bars are Wilson 95\% confidence intervals.}}{11}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:model_delta_smr}{{3}{11}{SMR by model for conditions A and C (primary judge), with models in the same order as in Figure~\ref {fig:smr_by_model}. Only the two ends of the prompt range are shown, so that the A-to-C difference can be read directly; all three conditions, including B, are shown in Figure~\ref {fig:smr_by_model}. The value below each model name is $\Delta = \mathrm {SMR}_C - \mathrm {SMR}_A$ in percentage points. Error bars are Wilson 95\% confidence intervals}{figure.caption.7}{}}
 \newlabel{fig:model_delta_smr@cref}{{[figure][3][]3}{[1][10][]11}{}{}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Strategic misconception rate (SMR), primary judge: rates with Wilson 95\% CI (Panel A), omnibus tests (Panel B), pairwise McNemar contrasts with Holm correction (Panel C), and regression odds ratios (Panel D). GEE is the primary model; GLMM is the crossed random-effects sensitivity analysis.}}{11}{table.caption.8}\protected@file@percent }
 \newlabel{tab:sm}{{5}{11}{Strategic misconception rate (SMR), primary judge: rates with Wilson 95\% CI (Panel A), omnibus tests (Panel B), pairwise McNemar contrasts with Holm correction (Panel C), and regression odds ratios (Panel D). GEE is the primary model; GLMM is the crossed random-effects sensitivity analysis}{table.caption.8}{}}
@@ -176,8 +176,8 @@
 \newlabel{fig:subfield_heatmap}{{6}{17}{Strategic misconception rate (SMR, \%) by CS subfield and condition (primary judge). Cell values are rounded to whole percentages; darker cells indicate higher SMR}{figure.caption.18}{}}
 \newlabel{fig:subfield_heatmap@cref}{{[figure][6][]6}{[1][17][]17}{}{}{}}
 \def\@LN@column{1}
-\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces Error rates and accuracy by CS subfield and condition (primary judge; Panel A), and one-way ANOVAs of each outcome across subfields within each condition (Panel B). OER is undefined in A.}}{18}{table.caption.19}\protected@file@percent }
-\newlabel{tab:subfield}{{13}{18}{Error rates and accuracy by CS subfield and condition (primary judge; Panel A), and one-way ANOVAs of each outcome across subfields within each condition (Panel B). OER is undefined in A}{table.caption.19}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces Error rates and accuracy by CS subfield and condition (primary judge; Panel A), and one-way ANOVAs of each outcome across subfields within each condition (Panel B), with Benjamini-Hochberg correction over the family of 11 tests. OER is undefined in A.}}{18}{table.caption.19}\protected@file@percent }
+\newlabel{tab:subfield}{{13}{18}{Error rates and accuracy by CS subfield and condition (primary judge; Panel A), and one-way ANOVAs of each outcome across subfields within each condition (Panel B), with Benjamini-Hochberg correction over the family of 11 tests. OER is undefined in A}{table.caption.19}{}}
 \newlabel{tab:subfield@cref}{{[table][13][]13}{[1][17][]18}{}{}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {14}{\ignorespaces Error rates and accuracy by model, pooled over conditions (primary judge).}}{18}{table.caption.20}\protected@file@percent }
 \newlabel{tab:models}{{14}{18}{Error rates and accuracy by model, pooled over conditions (primary judge)}{table.caption.20}{}}
@@ -186,17 +186,17 @@
 \def\@LN@column{1}
 \@writefile{lot}{\contentsline {table}{\numberline {15}{\ignorespaces Two-way ANOVA (Type II) for SM and accuracy by model and condition (primary judge).}}{19}{table.caption.21}\protected@file@percent }
 \newlabel{tab:models:anova}{{15}{19}{Two-way ANOVA (Type II) for SM and accuracy by model and condition (primary judge)}{table.caption.21}{}}
-\newlabel{tab:models:anova@cref}{{[table][15][]15}{[1][18][]19}{}{}{}}
+\newlabel{tab:models:anova@cref}{{[table][15][]15}{[1][19][]19}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.9}Human Evaluation and Judge Validation}{19}{subsection.4.9}\protected@file@percent }
 \newlabel{sec:judgeval}{{4.9}{19}{Human Evaluation and Judge Validation}{subsection.4.9}{}}
 \newlabel{sec:judgeval@cref}{{[subsection][9][4]4.9}{[1][19][]19}{}{}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {16}{\ignorespaces Annotator rates by condition on the validation subsample, before adjudication (30 responses per condition; OER rated for B and C only).}}{19}{table.caption.22}\protected@file@percent }
 \newlabel{tab:reviewer:rates}{{16}{19}{Annotator rates by condition on the validation subsample, before adjudication (30 responses per condition; OER rated for B and C only)}{table.caption.22}{}}
 \newlabel{tab:reviewer:rates@cref}{{[table][16][]16}{[1][19][]19}{}{}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {17}{\ignorespaces Number of the 30 validation responses per condition flagged by the human consensus and by each judge (J1 = primary, Qwen3.6:35b; J2 = secondary, Qwen3:32b). OER is rated for B and C only. Consensus percentages: SM 0.0, 16.7, 26.7; DA 0.0, 30.0, 36.7; OER 16.7 (B), 13.3 (C).}}{19}{table.caption.23}\protected@file@percent }
-\newlabel{tab:reviewer:consensus}{{17}{19}{Number of the 30 validation responses per condition flagged by the human consensus and by each judge (J1 = primary, Qwen3.6:35b; J2 = secondary, Qwen3:32b). OER is rated for B and C only. Consensus percentages: SM 0.0, 16.7, 26.7; DA 0.0, 30.0, 36.7; OER 16.7 (B), 13.3 (C)}{table.caption.23}{}}
-\newlabel{tab:reviewer:consensus@cref}{{[table][17][]17}{[1][19][]19}{}{}{}}
 \def\@LN@column{1}
+\@writefile{lot}{\contentsline {table}{\numberline {17}{\ignorespaces Number of the 30 validation responses per condition flagged by the human consensus and by each judge (J1 = primary, Qwen3.6:35b; J2 = secondary, Qwen3:32b). OER is rated for B and C only. Consensus percentages: SM 0.0, 16.7, 26.7; DA 0.0, 30.0, 36.7; OER 16.7 (B), 13.3 (C).}}{20}{table.caption.23}\protected@file@percent }
+\newlabel{tab:reviewer:consensus}{{17}{20}{Number of the 30 validation responses per condition flagged by the human consensus and by each judge (J1 = primary, Qwen3.6:35b; J2 = secondary, Qwen3:32b). OER is rated for B and C only. Consensus percentages: SM 0.0, 16.7, 26.7; DA 0.0, 30.0, 36.7; OER 16.7 (B), 13.3 (C)}{table.caption.23}{}}
+\newlabel{tab:reviewer:consensus@cref}{{[table][17][]17}{[1][19][]20}{}{}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {18}{\ignorespaces Agreement of the two LLM judges with the human consensus on the 90-response validation subsample (J1 = primary, J2 = secondary). Prev. = prevalence of flags (SM, DA over 90 responses; OER over the 60 simplified responses); for accuracy, quadratic-weighted $\kappa $ is against annotator h1 and prevalence is the mean score.}}{20}{table.caption.24}\protected@file@percent }
 \newlabel{tab:judge:validation}{{18}{20}{Agreement of the two LLM judges with the human consensus on the 90-response validation subsample (J1 = primary, J2 = secondary). Prev. = prevalence of flags (SM, DA over 90 responses; OER over the 60 simplified responses); for accuracy, quadratic-weighted $\kappa $ is against annotator h1 and prevalence is the mean score}{table.caption.24}{}}
 \newlabel{tab:judge:validation@cref}{{[table][18][]18}{[1][20][]20}{}{}{}}
@@ -227,8 +227,6 @@
 \citation{rose2002teaching,wobbrock2011ability}
 \citation{treisman1980feature}
 \citation{hullman2019pursuit}
-\citation{glynn1991explaining}
-\citation{spiro1989multiple}
 \def\@LN@column{1}
 \@writefile{lot}{\contentsline {table}{\numberline {19}{\ignorespaces Concepts with the largest mean increase in SMR (primary judge) from A to mean(B, C). Each value rests on at most seven concept-model pairs and is exploratory.}}{23}{table.caption.25}\protected@file@percent }
 \newlabel{tab:concepts:top10}{{19}{23}{Concepts with the largest mean increase in SMR (primary judge) from A to mean(B, C). Each value rests on at most seven concept-model pairs and is exploratory}{table.caption.25}{}}
@@ -240,6 +238,8 @@
 \@writefile{toc}{\contentsline {section}{\numberline {6}Interface Design Hypotheses}{23}{section.6}\protected@file@percent }
 \newlabel{sec:design}{{6}{23}{Interface Design Hypotheses}{section.6}{}}
 \newlabel{sec:design@cref}{{[section][6][]6}{[1][23][]23}{}{}{}}
+\citation{glynn1991explaining}
+\citation{spiro1989multiple}
 \citation{treisman1980feature}
 \citation{w3c2023wcag}
 \citation{sweller1998cognitive}
@@ -261,7 +261,7 @@
 \def\@LN@column{1}
 \@writefile{toc}{\contentsline {section}{\numberline {B}Appendix~B}{27}{appendix.B}\protected@file@percent }
 \newlabel{appendix:prompts}{{B}{27}{\appendixname ~\thesection }{appendix.B}{}}
-\newlabel{appendix:prompts@cref}{{[section][2][]B}{[1][26][]27}{}{}{}}
+\newlabel{appendix:prompts@cref}{{[section][2][]B}{[1][27][]27}{}{}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {C}Appendix~C}{27}{appendix.C}\protected@file@percent }
 \newlabel{appendix:codebook}{{C}{27}{\appendixname ~\thesection }{appendix.C}{}}
 \newlabel{appendix:codebook@cref}{{[section][3][]C}{[1][27][]27}{}{}{}}
@@ -311,8 +311,8 @@
 \bibcite{lyon2003definition}{{34}{2003}{{Lyon et~al.}}{{Lyon, Shaywitz, and Shaywitz}}}
 \bibcite{faraone2015adhd}{{35}{2015}{{Faraone et~al.}}{{Faraone, Asherson, Banaschewski, Biederman, Buitelaar, Ramos-Quiroga, Rohde, Sonuga-Barke, Tannock, and Franke}}}
 \bibcite{peng2016meta}{{36}{2016}{{Peng and Fuchs}}{{}}}
-\def\@LN@column{1}
 \bibcite{rello2013simplify}{{37}{2013}{{Rello and Baeza-Yates}}{{}}}
+\def\@LN@column{1}
 \bibcite{ji2023survey}{{38}{2023}{{Ji et~al.}}{{Ji, Lee, Frieske, Yu, Su, Xu, Ishii, Bang, Madotto, and Fung}}}
 \bibcite{huang2025survey}{{39}{2025}{{Huang et~al.}}{{Huang, Yu, Ma, Zhong, Feng, Wang, Chen, Peng, Feng, Qin, and Liu}}}
 \bibcite{liu2023geval}{{40}{2023}{{Liu et~al.}}{{Liu, Iter, Xu, Wang, Xu, and Zhu}}}
@@ -338,8 +338,8 @@
 \bibcite{benjamini1995controlling}{{60}{1995}{{Benjamini and Hochberg}}{{}}}
 \bibcite{cohen1988statistical}{{61}{1988}{{Cohen}}{{}}}
 \bibcite{lakens2013calculating}{{62}{2013}{{Lakens}}{{}}}
-\def\@LN@column{1}
 \bibcite{baddeley1974working}{{63}{1974}{{Baddeley and Hitch}}{{}}}
+\def\@LN@column{1}
 \bibcite{laberge1974toward}{{64}{1974}{{LaBerge and Samuels}}{{}}}
 \bibcite{rose2002teaching}{{65}{2002}{{Rose and Meyer}}{{}}}
 \bibcite{wobbrock2011ability}{{66}{2011}{{Wobbrock et~al.}}{{Wobbrock, Kane, Gajos, Harada, and Froehlich}}}

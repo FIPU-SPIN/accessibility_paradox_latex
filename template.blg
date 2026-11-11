@@ -9,7 +9,7 @@ Warning--string name "apr" is undefined
 --line 765 of file references.bib
 You've used 70 entries,
             2887 wiz_defined-function locations,
-            1026 strings with 20412 characters,
+            1026 strings with 20222 characters,
 and the built_in function-call counts, 32661 in all, are:
 = -- 2866
 > -- 2116
